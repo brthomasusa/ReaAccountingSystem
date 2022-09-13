@@ -13,6 +13,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Client\ReaAccountingSys.Client.csproj" />
     <ProjectReference Include="..\Shared\ReaAccountingSys.Shared.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="..\LoggingService\LoggingService.csproj" />
   </ItemGroup>
 
 
