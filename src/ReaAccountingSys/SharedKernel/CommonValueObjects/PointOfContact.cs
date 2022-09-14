@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace SharedKernel.CommonValueObjects
+namespace ReaAccountingSys.SharedKernel.CommonValueObjects
 {
     public class PointOfContact : ValueObject
     {

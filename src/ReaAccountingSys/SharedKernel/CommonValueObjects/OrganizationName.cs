@@ -1,4 +1,4 @@
-namespace SharedKernel.CommonValueObjects
+namespace ReaAccountingSys.SharedKernel.CommonValueObjects
 {
     public class OrganizationName : ValueObject
     {

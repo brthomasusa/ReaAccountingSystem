@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SharedKernel.Utilities
+namespace ReaAccountingSys.SharedKernel.Utilities
 {
     public class ValidationResult
     {

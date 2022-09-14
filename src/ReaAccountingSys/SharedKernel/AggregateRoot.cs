@@ -1,6 +1,6 @@
-using SharedKernel.Interfaces;
+using ReaAccountingSys.SharedKernel.Interfaces;
 
-namespace SharedKernel
+namespace ReaAccountingSys.SharedKernel
 {
     public abstract class AggregateRoot<T> : Entity<T>, IAggregateRoot
     {

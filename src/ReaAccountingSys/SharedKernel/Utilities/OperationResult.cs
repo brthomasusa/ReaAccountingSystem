@@ -1,6 +1,6 @@
 #pragma warning disable CS8618
 
-namespace SharedKernel.Utilities
+namespace ReaAccountingSys.SharedKernel.Utilities
 {
     public class OperationResult<TResult>
     {

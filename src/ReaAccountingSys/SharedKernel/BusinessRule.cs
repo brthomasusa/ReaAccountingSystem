@@ -1,7 +1,7 @@
-using SharedKernel.Interfaces;
-using SharedKernel.Utilities;
+using ReaAccountingSys.SharedKernel.Interfaces;
+using ReaAccountingSys.SharedKernel.Utilities;
 
-namespace SharedKernel
+namespace ReaAccountingSys.SharedKernel
 {
     public abstract class BusinessRule<T> : IBusinessRule<T>
     {

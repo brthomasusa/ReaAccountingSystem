@@ -5,7 +5,7 @@
 
 using System.Reflection;
 
-namespace SharedKernel
+namespace ReaAccountingSys.SharedKernel
 {
     public abstract class ValueObject : IEquatable<ValueObject>
     {

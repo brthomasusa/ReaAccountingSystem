@@ -1,6 +1,6 @@
 #pragma warning disable CS8618
 
-namespace SharedKernel
+namespace ReaAccountingSys.SharedKernel
 {
     public abstract class Entity<T>
     {
