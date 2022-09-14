@@ -3,7 +3,7 @@ using LoggingService.Interfaces;
 using Server.ErrorModel;
 using System.Net;
 
-namespace Server.Extensions
+namespace ReaAccountingSys.Server.Extensions
 {
     public static class ExceptionMiddlewareExtensions
     {

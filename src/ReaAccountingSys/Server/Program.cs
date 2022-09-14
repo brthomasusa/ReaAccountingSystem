@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using NLog;
 using LoggingService.Interfaces;
 using Microsoft.AspNetCore.ResponseCompression;
-using Server.Extensions;
+using ReaAccountingSys.Server.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
