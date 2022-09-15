@@ -9,5 +9,15 @@
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
+	<!-- <Protobuf Include="Protos/weather.proto" Link="weather.proto"/> -->
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.21.4" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.47.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.47.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>    
+  </ItemGroup>  
 </Project>
