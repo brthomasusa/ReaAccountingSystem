@@ -4,7 +4,7 @@ using ReaAccountingSys.Core.HumanResources.EmployeeAggregate;
 
 namespace ReaAccountingSys.Core.Interfaces.HumanResources
 {
-    public interface IEmployeeAggregateRepository : IAggregateRootRepository<Employee>
+    public interface IEmployeeAggregateWriteRepository : IAggregateRootRepository<Employee>
     {
         Task<OperationResult<bool>> DeleteTimeCardAsync(Guid timeCardId);
     }

@@ -12,14 +12,14 @@ using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
 
 namespace ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResources
 {
-    public class EmployeeAggregateRepository : IEmployeeAggregateRepository, IDisposable
+    public class EmployeeAggregateWriteRepository : IEmployeeAggregateWriteRepository, IDisposable
     {
         private bool isDisposed;
         private readonly AppDbContext _dbContext;
 
-        public EmployeeAggregateRepository(AppDbContext ctx) => _dbContext = ctx;
+        public EmployeeAggregateWriteRepository(AppDbContext ctx) => _dbContext = ctx;
 
-        ~EmployeeAggregateRepository() => Dispose(false);
+        ~EmployeeAggregateWriteRepository() => Dispose(false);
 
         public async Task<OperationResult<Employee>> GetByIdAsync(Guid id)
         {

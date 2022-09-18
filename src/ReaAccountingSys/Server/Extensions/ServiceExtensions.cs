@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 using ReaAccountingSys.Core.Interfaces.HumanResources;
 using ReaAccountingSys.Infrastructure.Interfaces;
+using ReaAccountingSys.Infrastructure.Interfaces.HumanResources;
 using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResources;
@@ -57,7 +58,8 @@ namespace ReaAccountingSys.Server.Extensions
         public static IServiceCollection AddRepositoryServices(this IServiceCollection services)
         {
             return services
-                .AddScoped<IEmployeeAggregateRepository, EmployeeAggregateRepository>();
+                .AddScoped<IEmployeeAggregateWriteRepository, EmployeeAggregateWriteRepository>()
+                .AddScoped<IEmployeeBaseReadRepository, EmployeeAggregateReadRepository>();
             // .AddScoped<IFinancierAggregateRepository, FinancierAggregateRepository>()
             // .AddScoped<ILoanAgreementAggregateRepository, LoanAgreementAggregateRepository>()
             // .AddScoped<ICashAccountAggregateRepository, CashAccountAggregateRepository>()

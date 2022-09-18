@@ -21,6 +21,13 @@ namespace ReaAccountingSys.Shared.ReadModels.HumanResources
         public int PageSize { get; set; }
     }
 
+    public class GetEmployeesByStatusParameters
+    {
+        public bool EmployeementStatus { get; set; }
+        public int Page { get; set; }
+        public int PageSize { get; set; }
+    }
+
     public class GetEmployeesByLastNameParameters
     {
         public string? LastName { get; set; }
@@ -28,6 +35,14 @@ namespace ReaAccountingSys.Shared.ReadModels.HumanResources
         public int PageSize { get; set; }
     }
 
+
+    public class GetEmployeesByLastNameAndStatusParameters
+    {
+        public string? LastName { get; set; }
+        public bool EmployeementStatus { get; set; }
+        public int Page { get; set; }
+        public int PageSize { get; set; }
+    }
 
     public class UniqueEmployeeNameParameters
     {
