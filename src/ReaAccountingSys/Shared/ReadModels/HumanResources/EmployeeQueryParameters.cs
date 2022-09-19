@@ -36,7 +36,7 @@ namespace ReaAccountingSys.Shared.ReadModels.HumanResources
     }
 
 
-    public class GetEmployeesByLastNameAndStatusParameters
+    public class GetEmployeesByNameAndStatusParameters
     {
         public string? LastName { get; set; }
         public bool EmployeementStatus { get; set; }

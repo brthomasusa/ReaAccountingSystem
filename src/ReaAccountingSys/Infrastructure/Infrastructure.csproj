@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shared\ReaAccountingSys.Shared.csproj" />
+    <ProjectReference Include="..\LoggingService\LoggingService.csproj" />
     <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
 

@@ -1,16 +1,18 @@
-using ReaAccountingSys.SharedKernel.Utilities;
+using ReaAccountingSys.Core.Interfaces.HumanResources;
+using ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources;
 using ReaAccountingSys.Shared.ReadModels;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
-using ReaAccountingSys.Core.Interfaces.HumanResources;
+using ReaAccountingSys.SharedKernel.Utilities;
 
 namespace ReaAccountingSys.Infrastructure.Interfaces.HumanResources
 {
     public interface IEmployeeAggregateReadRepository : IEmployeeBaseReadRepository
     {
         Task<OperationResult<EmployeeReadModel>> GetReadModelById(GetEmployeeParameter queryParameter);
-        Task<PagedList<OperationResult<EmployeeListItem>>> GetAllListItems(GetEmployeesParameters queryParameter);
-        Task<PagedList<OperationResult<EmployeeListItem>>> GetAllListItemsByStatus(GetEmployeesByStatusParameters queryParameter);
-        Task<PagedList<OperationResult<EmployeeListItem>>> GetAllListItemsByName(GetEmployeesByLastNameParameters queryParameter);
-        Task<PagedList<OperationResult<EmployeeListItem>>> GetAllListItemsByNameAndStatus(GetEmployeesByLastNameAndStatusParameters queryParameter);
+        Task<OperationResult<PagedList<EmployeeListItem>>> GetAllListItems(GetEmployeesParameters queryParameter);
+        Task<OperationResult<PagedList<EmployeeListItem>>> GetAllListItemsByStatus(GetEmployeesByStatusParameters queryParameter);
+        Task<OperationResult<PagedList<EmployeeListItem>>> GetAllListItemsByName(GetEmployeesByLastNameParameters queryParameter);
+        Task<OperationResult<PagedList<EmployeeListItem>>> GetAllListItemsByNameAndStatus(GetEmployeesByNameAndStatusParameters queryParameter);
+        Task<OperationResult<List<EmployeeManager>>> GetEmployeeManagers(GetEmployeeManagersParameters queryParameters);
     }
 }
