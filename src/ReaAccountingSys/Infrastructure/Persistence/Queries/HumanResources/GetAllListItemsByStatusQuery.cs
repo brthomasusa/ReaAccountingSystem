@@ -29,7 +29,7 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources
 
                 using (var connection = ctx.CreateConnection())
                 {
-                    int count = await connection.ExecuteScalarAsync<int>(totalRecordsSql);
+                    int count = await connection.ExecuteScalarAsync<int>(totalRecordsSql, parameters);
                     var items = await connection.QueryAsync<EmployeeListItem>(sql, parameters);
                     var pagedList = PagedList<EmployeeListItem>.CreatePagedList(items.ToList(), count, queryParameters.Page, queryParameters.PageSize);
 
