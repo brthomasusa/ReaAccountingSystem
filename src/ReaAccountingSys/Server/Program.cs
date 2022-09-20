@@ -1,12 +1,15 @@
+using MediatR;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
 using LoggingService.Interfaces;
 using Microsoft.AspNetCore.ResponseCompression;
 using ReaAccountingSys.Server.Extensions;
+using ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddMediatR(typeof(EmployeeAggregateQueries));
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();
@@ -22,6 +25,10 @@ builder.Services.AddApiVersioning(config =>
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureLoggerService();
+builder.Services.AddInfrastructureServices();
+builder.Services.ConfigureEfCoreDbContext(builder.Configuration);
+builder.Services.ConfigureDapper(builder.Configuration);
+builder.Services.AddRepositoryServices();
 
 var app = builder.Build();
 

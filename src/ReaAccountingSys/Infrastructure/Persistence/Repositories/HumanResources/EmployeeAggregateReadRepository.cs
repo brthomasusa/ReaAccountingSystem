@@ -1,5 +1,4 @@
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate;
-using ReaAccountingSys.Core.Interfaces.HumanResources;
 using ReaAccountingSys.Infrastructure.Interfaces.HumanResources;
 using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
 using ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources;

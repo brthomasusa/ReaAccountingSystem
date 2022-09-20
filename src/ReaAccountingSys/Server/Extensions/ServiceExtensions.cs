@@ -59,7 +59,7 @@ namespace ReaAccountingSys.Server.Extensions
         {
             return services
                 .AddScoped<IEmployeeAggregateWriteRepository, EmployeeAggregateWriteRepository>()
-                .AddScoped<IEmployeeBaseReadRepository, EmployeeAggregateReadRepository>();
+                .AddScoped<IEmployeeAggregateReadRepository, EmployeeAggregateReadRepository>();
             // .AddScoped<IFinancierAggregateRepository, FinancierAggregateRepository>()
             // .AddScoped<ILoanAgreementAggregateRepository, LoanAgreementAggregateRepository>()
             // .AddScoped<ICashAccountAggregateRepository, CashAccountAggregateRepository>()
