@@ -4,5 +4,5 @@ using ReaAccountingSys.Shared.ReadModels.HumanResources;
 
 namespace ReaAccountingSys.Infrastructure.Application.Queries.HumanResources
 {
-    public record GetEmployeeByIdQry(GetEmployeeParameter QueryParameters) : IRequest<OperationResult<EmployeeReadModel>>;
+    public record GetEmployeeTypesQry(GetEmployeeTypesParameters QueryParameters) : IRequest<OperationResult<List<EmployeeTypes>>>;
 }

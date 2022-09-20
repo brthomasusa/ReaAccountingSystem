@@ -14,5 +14,6 @@ namespace ReaAccountingSys.Infrastructure.Interfaces.HumanResources
         Task<OperationResult<PagedList<EmployeeListItem>>> GetAllListItemsByName(GetEmployeesByLastNameParameters queryParameter);
         Task<OperationResult<PagedList<EmployeeListItem>>> GetAllListItemsByNameAndStatus(GetEmployeesByNameAndStatusParameters queryParameter);
         Task<OperationResult<List<EmployeeManager>>> GetEmployeeManagers(GetEmployeeManagersParameters queryParameters);
+        Task<OperationResult<List<EmployeeTypes>>> GetEmployeeTypes(GetEmployeeTypesParameters queryParameters);
     }
 }

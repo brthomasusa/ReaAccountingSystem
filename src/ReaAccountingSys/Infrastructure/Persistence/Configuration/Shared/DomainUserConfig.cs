@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ReaAccountingSys.Core.Shared;
+using ReaAccountingSys.SharedKernel.CommonValueObjects;
 
 namespace ReaAccountingSys.Infrastructure.Persistence.Configuration.Shared
 {
@@ -15,6 +16,12 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Configuration.Shared
             entity.Property(p => p.Id).HasColumnType("UNIQUEIDENTIFIER").HasColumnName("UserId").ValueGeneratedNever();
             entity.Property(p => p.UserName).HasColumnType("NVARCHAR(256)").HasColumnName("UserName");
             entity.Property(p => p.Email).HasColumnType("NVARCHAR(256)").HasColumnName("Email");
+            entity.Property(p => p.Email)
+                .HasConversion(p => p!.Value, p => EmailAddress.Create(p!))
+                .HasColumnType("NVARCHAR(256)")
+                .HasColumnName("EmailAddress")
+                .IsRequired();
+
             entity.Property(e => e.CreatedDate).HasColumnType("datetime2(7)");
             entity.Property(e => e.LastModifiedDate).HasColumnType("datetime2(7)");
         }

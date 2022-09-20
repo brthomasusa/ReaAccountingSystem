@@ -59,5 +59,12 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources
         JOIN HumanResources.EmployeeTypes types ON ee.EmployeeTypeId = types.EmployeeTypeId
         WHERE ee.IsSupervisor = 1
         ORDER BY ee.LastName, ee.FirstName";
+
+        public const string SelectEmployeeTypes =
+        @"SELECT 
+            EmployeeTypeId, 
+            EmployeeTypeName 
+        FROM HumanResources.EmployeeTypes
+        ORDER BY EmployeeTypeName";
     }
 }

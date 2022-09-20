@@ -48,5 +48,8 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResource
 
         public async Task<OperationResult<List<EmployeeManager>>> GetEmployeeManagers(GetEmployeeManagersParameters queryParameter)
             => await GetEmployeeManagersQuery.Query(queryParameter, _dapperCtx);
+
+        public async Task<OperationResult<List<EmployeeTypes>>> GetEmployeeTypes(GetEmployeeTypesParameters queryParameters)
+            => await GetEmployeeTypesQuery.Query(queryParameters, _dapperCtx);
     }
 }

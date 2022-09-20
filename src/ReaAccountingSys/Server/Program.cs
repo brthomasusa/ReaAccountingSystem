@@ -1,3 +1,4 @@
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
@@ -6,10 +7,12 @@ using LoggingService.Interfaces;
 using Microsoft.AspNetCore.ResponseCompression;
 using ReaAccountingSys.Server.Extensions;
 using ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources;
+using ReaAccountingSys.Infrastructure.WriteModels.HumanResources;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMediatR(typeof(EmployeeAggregateQueries));
+builder.Services.AddValidatorsFromAssembly(typeof(EmployeeWriteModelValidator).Assembly);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();

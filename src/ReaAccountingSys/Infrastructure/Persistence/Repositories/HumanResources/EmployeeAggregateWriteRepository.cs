@@ -1,6 +1,4 @@
-#pragma warning disable CS8600
-#pragma warning disable CS8602
-#pragma warning disable CS8604
+#pragma warning disable CS8600, CS8602, CS8604
 
 using Microsoft.EntityFrameworkCore;
 using ReaAccountingSys.SharedKernel.CommonValueObjects;
