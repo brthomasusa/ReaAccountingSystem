@@ -1,7 +1,7 @@
 using FluentValidation;
 using EmployeeWriteModel = ReaAccountingSys.Shared.WriteModels.HumanResources.EmployeeWriteModel;
 
-namespace ReaAccountingSys.Infrastructure.WriteModels.HumanResources
+namespace ReaAccountingSys.Shared.WriteModels.HumanResources
 {
     public class EmployeeWriteModelValidator : AbstractValidator<EmployeeWriteModel>
     {

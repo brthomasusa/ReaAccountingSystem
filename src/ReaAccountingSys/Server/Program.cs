@@ -1,18 +1,29 @@
+using System;
+using System.IO;
 using FluentValidation;
-using MediatR;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
 using LoggingService.Interfaces;
 using Microsoft.AspNetCore.ResponseCompression;
-using ReaAccountingSys.Server.Extensions;
+using ReaAccountingSys.Shared;
+using ReaAccountingSys.Infrastructure;
+
 using ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources;
-using ReaAccountingSys.Infrastructure.WriteModels.HumanResources;
+using ReaAccountingSys.Server.Extensions;
+using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMediatR(typeof(EmployeeAggregateQueries));
-builder.Services.AddValidatorsFromAssembly(typeof(EmployeeWriteModelValidator).Assembly);
+var infrastructureAssembly = typeof(ReaAccountingSys.Infrastructure.AssembleReference).Assembly;
+var sharedAssembly = typeof(ReaAccountingSys.Shared.AssemblyReference).Assembly;
+
+builder.Services.AddValidatorsFromAssemblyContaining<EmployeeWriteModelValidator>();
+// builder.Services.AddValidatorsFromAssembly(sharedAssembly);
+// builder.Services.AddScoped<IValidator<EmployeeWriteModel>, EmployeeWriteModelValidator>();
+
+
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();
