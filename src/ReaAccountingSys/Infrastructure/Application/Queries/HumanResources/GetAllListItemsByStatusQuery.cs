@@ -5,27 +5,27 @@ using ReaAccountingSys.SharedKernel.Utilities;
 using ReaAccountingSys.Shared.ReadModels;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
 
-namespace ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources
+namespace ReaAccountingSys.Infrastructure.Application.Queries.HumanResources
 {
-    public class GetAllListItemsByNameQuery
+    public class GetAllListItemsByStatusQuery
     {
         private static int Offset(int page, int pageSize) => (page - 1) * pageSize;
 
-        public async static Task<OperationResult<PagedList<EmployeeListItem>>> Query(GetEmployeesByLastNameParameters queryParameters, DapperContext ctx)
+        public async static Task<OperationResult<PagedList<EmployeeListItem>>> Query(GetEmployeesByStatusParameters queryParameters, DapperContext ctx)
         {
             try
             {
                 var sql = EmployeeAggregateQueries.SelectAllEmployeeListItems +
-                    " WHERE ee.LastName LIKE CONCAT('%',@LastName,'%')" +
+                    " WHERE ee.IsActive = @IsActive" +
                     " ORDER BY ee.LastName, ee.FirstName, ee.MiddleInitial" +
                     " OFFSET @Offset ROWS FETCH NEXT @PageSize ROWS ONLY";
 
                 var parameters = new DynamicParameters();
-                parameters.Add("LastName", queryParameters.LastName, DbType.String);
+                parameters.Add("IsActive", (queryParameters.EmployeementStatus ? 1 : 0), DbType.Int32);
                 parameters.Add("Offset", Offset(queryParameters.Page, queryParameters.PageSize), DbType.Int32);
                 parameters.Add("PageSize", queryParameters.PageSize, DbType.Int32);
 
-                var totalRecordsSql = @"SELECT COUNT(EmployeeId) FROM HumanResources.Employees WHERE LastName LIKE CONCAT('%',@LastName,'%')";
+                var totalRecordsSql = $"SELECT COUNT(EmployeeId) FROM HumanResources.Employees WHERE IsActive = @IsActive";
 
                 using (var connection = ctx.CreateConnection())
                 {

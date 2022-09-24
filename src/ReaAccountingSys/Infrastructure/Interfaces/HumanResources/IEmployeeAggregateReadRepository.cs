@@ -1,5 +1,5 @@
 using ReaAccountingSys.Core.Interfaces.HumanResources;
-using ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources;
+using ReaAccountingSys.Infrastructure.Application.Queries.HumanResources;
 using ReaAccountingSys.Shared.ReadModels;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
 using ReaAccountingSys.SharedKernel.Utilities;

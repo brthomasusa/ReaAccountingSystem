@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.ResponseCompression;
 using ReaAccountingSys.Shared;
 using ReaAccountingSys.Infrastructure;
 
-using ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources;
+using ReaAccountingSys.Infrastructure.Application.Queries.HumanResources;
 using ReaAccountingSys.Server.Extensions;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
 

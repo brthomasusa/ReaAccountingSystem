@@ -1,4 +1,4 @@
-namespace ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources
+namespace ReaAccountingSys.Infrastructure.Application.Queries.HumanResources
 {
     public static class EmployeeAggregateQueries
     {

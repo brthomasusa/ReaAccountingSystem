@@ -4,7 +4,7 @@ using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
 using ReaAccountingSys.SharedKernel.Utilities;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
 
-namespace ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources
+namespace ReaAccountingSys.Infrastructure.Application.Queries.HumanResources
 {
     public class GetReadModelByIdQuery
     {

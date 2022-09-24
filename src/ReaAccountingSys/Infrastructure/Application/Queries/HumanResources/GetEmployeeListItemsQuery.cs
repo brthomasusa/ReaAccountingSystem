@@ -5,32 +5,29 @@ using ReaAccountingSys.SharedKernel.Utilities;
 using ReaAccountingSys.Shared.ReadModels;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
 
-namespace ReaAccountingSys.Infrastructure.Persistence.Queries.HumanResources
+namespace ReaAccountingSys.Infrastructure.Application.Queries.HumanResources
 {
-    public class GetAllListItemsByNameAndStatusQuery
+    public class GetEmployeeListItemsQuery
     {
         private static int Offset(int page, int pageSize) => (page - 1) * pageSize;
 
-        public async static Task<OperationResult<PagedList<EmployeeListItem>>> Query(GetEmployeesByNameAndStatusParameters queryParameters, DapperContext ctx)
+        public async static Task<OperationResult<PagedList<EmployeeListItem>>> Query(GetEmployeesParameters queryParameters, DapperContext ctx)
         {
             try
             {
                 var sql = EmployeeAggregateQueries.SelectAllEmployeeListItems +
-                    " WHERE ee.LastName LIKE CONCAT('%',@LastName,'%') AND ee.IsActive = @IsActive" +
                     " ORDER BY ee.LastName, ee.FirstName, ee.MiddleInitial" +
                     " OFFSET @Offset ROWS FETCH NEXT @PageSize ROWS ONLY";
 
                 var parameters = new DynamicParameters();
-                parameters.Add("LastName", queryParameters.LastName, DbType.String);
-                parameters.Add("IsActive", (queryParameters.EmployeementStatus ? 1 : 0), DbType.Int32);
                 parameters.Add("Offset", Offset(queryParameters.Page, queryParameters.PageSize), DbType.Int32);
                 parameters.Add("PageSize", queryParameters.PageSize, DbType.Int32);
 
-                var totalRecordsSql = @"SELECT COUNT(EmployeeId) FROM HumanResources.Employees WHERE LastName LIKE CONCAT('%',@LastName,'%') AND IsActive = @IsActive";
+                var totalRecordsSql = $"SELECT COUNT(EmployeeId) FROM HumanResources.Employees";
 
                 using (var connection = ctx.CreateConnection())
                 {
-                    int count = await connection.ExecuteScalarAsync<int>(totalRecordsSql, parameters);
+                    int count = await connection.ExecuteScalarAsync<int>(totalRecordsSql);
                     var items = await connection.QueryAsync<EmployeeListItem>(sql, parameters);
                     var pagedList = PagedList<EmployeeListItem>.CreatePagedList(items.ToList(), count, queryParameters.Page, queryParameters.PageSize);
 
