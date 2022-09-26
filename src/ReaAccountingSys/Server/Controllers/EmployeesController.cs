@@ -2,6 +2,7 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using LoggingService.Interfaces;
 
+using ReaAccountingSys.Infrastructure.Interfaces;
 using ReaAccountingSys.Infrastructure.Interfaces.HumanResources;
 using ReaAccountingSys.SharedKernel.Utilities;
 using ReaAccountingSys.Shared.ReadModels;
@@ -16,10 +17,9 @@ namespace ReaAccountingSys.Infrastructure.Controllers
     public class EmployeesController : ControllerBase
     {
         private ILoggerManager _logger;
-        private readonly IEmployeeAggregateReadRepository _readRepository;
-        // private readonly IEmployeeAggregateApplicationService _cmdSvc;
+        private readonly IReadRepositoryManager _readRepository;
 
-        public EmployeesController(ILoggerManager logger, IEmployeeAggregateReadRepository repo)
+        public EmployeesController(ILoggerManager logger, IReadRepositoryManager repo)
             => (_logger, _readRepository) = (logger, repo);
 
         [HttpGet("detail/{employeeId:Guid}", Name = "Details")]
@@ -31,7 +31,7 @@ namespace ReaAccountingSys.Infrastructure.Controllers
                 EmployeeID = employeeId
             };
 
-            OperationResult<EmployeeReadModel> result = await _readRepository.GetReadModelById(queryParams);
+            OperationResult<EmployeeReadModel> result = await _readRepository.EmployeeAggregate.GetReadModelById(queryParams);
 
             if (result.Success)
             {
@@ -51,7 +51,7 @@ namespace ReaAccountingSys.Infrastructure.Controllers
         [HttpGet("list")]
         public async Task<ActionResult<PagedList<EmployeeListItem>>> GetEmployees([FromQuery] GetEmployeesParameters queryParameters)
         {
-            OperationResult<PagedList<EmployeeListItem>> result = await _readRepository.GetAllListItems(queryParameters);
+            OperationResult<PagedList<EmployeeListItem>> result = await _readRepository.EmployeeAggregate.GetAllListItems(queryParameters);
 
             if (result.Success)
             {
@@ -66,7 +66,7 @@ namespace ReaAccountingSys.Infrastructure.Controllers
         [HttpGet("list/bystatus")]
         public async Task<ActionResult<PagedList<EmployeeListItem>>> GetEmployees([FromQuery] GetEmployeesByStatusParameters queryParameters)
         {
-            OperationResult<PagedList<EmployeeListItem>> result = await _readRepository.GetAllListItemsByStatus(queryParameters);
+            OperationResult<PagedList<EmployeeListItem>> result = await _readRepository.EmployeeAggregate.GetAllListItemsByStatus(queryParameters);
 
             if (result.Success)
             {
@@ -81,7 +81,7 @@ namespace ReaAccountingSys.Infrastructure.Controllers
         [HttpGet("search")]
         public async Task<ActionResult<PagedList<EmployeeListItem>>> GetEmployees([FromQuery] GetEmployeesByLastNameParameters queryParameters)
         {
-            OperationResult<PagedList<EmployeeListItem>> result = await _readRepository.GetAllListItemsByName(queryParameters);
+            OperationResult<PagedList<EmployeeListItem>> result = await _readRepository.EmployeeAggregate.GetAllListItemsByName(queryParameters);
 
             if (result.Success)
             {
@@ -96,7 +96,7 @@ namespace ReaAccountingSys.Infrastructure.Controllers
         [HttpGet("search/bystatus")]
         public async Task<ActionResult<PagedList<EmployeeListItem>>> GetEmployees([FromQuery] GetEmployeesByNameAndStatusParameters queryParameters)
         {
-            OperationResult<PagedList<EmployeeListItem>> result = await _readRepository.GetAllListItemsByNameAndStatus(queryParameters);
+            OperationResult<PagedList<EmployeeListItem>> result = await _readRepository.EmployeeAggregate.GetAllListItemsByNameAndStatus(queryParameters);
 
             if (result.Success)
             {
@@ -113,7 +113,7 @@ namespace ReaAccountingSys.Infrastructure.Controllers
         {
             GetEmployeeManagersParameters managersParams = new GetEmployeeManagersParameters() { };
 
-            OperationResult<List<EmployeeManager>> result = await _readRepository.GetEmployeeManagers(managersParams);
+            OperationResult<List<EmployeeManager>> result = await _readRepository.EmployeeAggregate.GetEmployeeManagers(managersParams);
 
             if (result.Success)
             {
@@ -129,7 +129,7 @@ namespace ReaAccountingSys.Infrastructure.Controllers
         {
             GetEmployeeTypesParameters typesParams = new GetEmployeeTypesParameters() { };
 
-            OperationResult<List<EmployeeTypes>> result = await _readRepository.GetEmployeeTypes(typesParams);
+            OperationResult<List<EmployeeTypes>> result = await _readRepository.EmployeeAggregate.GetEmployeeTypes(typesParams);
 
             if (result.Success)
             {
