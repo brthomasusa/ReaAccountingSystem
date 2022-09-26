@@ -44,18 +44,6 @@ namespace ReaAccountingSys.Shared.ReadModels.HumanResources
         public int PageSize { get; set; }
     }
 
-    public class UniqueEmployeeNameParameters
-    {
-        public string? LastName { get; set; }
-        public string? FirstName { get; set; }
-        public string? MiddleInitial { get; set; }
-    }
-
-    public class UniqueEmployeSSNParameter
-    {
-        public string? SSN { get; set; }
-    }
-
     public class GetEmployeeManagersParameters
     {
 

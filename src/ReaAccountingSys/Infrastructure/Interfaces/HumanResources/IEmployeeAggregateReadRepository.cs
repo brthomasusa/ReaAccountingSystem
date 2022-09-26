@@ -1,12 +1,10 @@
-using ReaAccountingSys.Core.Interfaces.HumanResources;
-using ReaAccountingSys.Infrastructure.Application.Queries.HumanResources;
 using ReaAccountingSys.Shared.ReadModels;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
 using ReaAccountingSys.SharedKernel.Utilities;
 
 namespace ReaAccountingSys.Infrastructure.Interfaces.HumanResources
 {
-    public interface IEmployeeAggregateReadRepository : IEmployeeBaseReadRepository
+    public interface IEmployeeAggregateReadRepository
     {
         Task<OperationResult<EmployeeReadModel>> GetReadModelById(GetEmployeeParameter queryParameter);
         Task<OperationResult<PagedList<EmployeeListItem>>> GetAllListItems(GetEmployeesParameters queryParameter);

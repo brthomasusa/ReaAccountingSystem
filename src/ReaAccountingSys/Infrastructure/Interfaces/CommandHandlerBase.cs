@@ -3,6 +3,7 @@ using ReaAccountingSys.Infrastructure.Interfaces;
 using ReaAccountingSys.Shared.Interfaces;
 using ReaAccountingSys.SharedKernel;
 using ReaAccountingSys.SharedKernel.Utilities;
+using ValidationResult = ReaAccountingSys.SharedKernel.ValidationResult;
 
 namespace ReaAccountingSys.Infrastructure.Interfaces
 {

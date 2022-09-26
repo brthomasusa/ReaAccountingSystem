@@ -1,4 +1,6 @@
 using ReaAccountingSys.IntegrationTests.Base;
+using ReaAccountingSys.Infrastructure.Application.Validations.HumanResources.ValidationModels;
+using ReaAccountingSys.Infrastructure.Application.Validations.HumanResources.ValidationQueries;
 using ReaAccountingSys.Infrastructure.Interfaces;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories;
 using ReaAccountingSys.Shared.ReadModels;
@@ -108,6 +110,74 @@ namespace ReaAccountingSys.IntegrationTests.HumanResources
             Assert.True(result.Success);
             int count = result.Result.Count;
             Assert.Equal(0, count);
+        }
+
+        /*    Validation queries   */
+
+        [Fact]
+        public async Task VerifyEmployeeNameIsUnique_EmployeeAggregateValidationRepository_ShouldReturnFalse()
+        {
+            UniqueEmployeeNameParameters queryParameters = new("Sharon", "Salavaria", "C");
+
+            OperationResult<UniqueEmployeeNameModel> result = await _readRepository.EmployeeValidation.VerifyEmployeeNameIsUnique(queryParameters);
+
+            Assert.True(result.Success);
+            Assert.False(result.Result.IsUnique);
+        }
+
+        [Fact]
+        public async Task VerifyEmployeeNameIsUnique_EmployeeAggregateValidationRepository_ShouldReturnTrue()
+        {
+            UniqueEmployeeNameParameters queryParameters = new("Joey", "Blowhard", "C");
+
+            OperationResult<UniqueEmployeeNameModel> result = await _readRepository.EmployeeValidation.VerifyEmployeeNameIsUnique(queryParameters);
+
+            Assert.True(result.Success);
+            Assert.True(result.Result.IsUnique);
+        }
+
+        [Fact]
+        public async Task VerifyEmployeeEmailIsUnique_EmployeeAggregateValidationRepository_ShouldReturnFalse()
+        {
+            UniqueEmployeeEmailParameters queryParameters = new("sharon.Salavaria@pipefitterssupply.com");
+
+            OperationResult<UniqueEmployeeEmailModel> result = await _readRepository.EmployeeValidation.VerifyEmployeeEmailIsUnique(queryParameters);
+
+            Assert.True(result.Success);
+            Assert.False(result.Result.IsUnique);
+        }
+
+        [Fact]
+        public async Task VerifyEmployeeEmailIsUnique_EmployeeAggregateValidationRepository_ShouldReturnTrue()
+        {
+            UniqueEmployeeEmailParameters queryParameters = new("peter.pan@pipefitterssupply.com");
+
+            OperationResult<UniqueEmployeeEmailModel> result = await _readRepository.EmployeeValidation.VerifyEmployeeEmailIsUnique(queryParameters);
+
+            Assert.True(result.Success);
+            Assert.True(result.Result.IsUnique);
+        }
+
+        [Fact]
+        public async Task VerifyEmployeeSSNIsUnique_EmployeeAggregateValidationRepository_ShouldReturnFalse()
+        {
+            UniqueEmployeeSSNParameters queryParameters = new("825559874");
+
+            OperationResult<UniqueEmployeeSSNModel> result = await _readRepository.EmployeeValidation.VerifyEmployeeSSNIsUnique(queryParameters);
+
+            Assert.True(result.Success);
+            Assert.False(result.Result.IsUnique);
+        }
+
+        [Fact]
+        public async Task VerifyEmployeeSSNIsUnique_EmployeeAggregateValidationRepository_ShouldReturnTrue()
+        {
+            UniqueEmployeeSSNParameters queryParameters = new("825559111");
+
+            OperationResult<UniqueEmployeeSSNModel> result = await _readRepository.EmployeeValidation.VerifyEmployeeSSNIsUnique(queryParameters);
+
+            Assert.True(result.Success);
+            Assert.True(result.Result.IsUnique);
         }
     }
 }

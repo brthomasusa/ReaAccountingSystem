@@ -8,11 +8,11 @@ using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
 namespace ReaAccountingSys.Infrastructure.Application.Validations.HumanResources
 {
-    public class EmployeeDataValidationHandler : CommandHandler<CreateEmployeeCommand>
+    public class EmployeeDataValidationProcessor : CommandHandler<CreateEmployeeCommand>
     {
         private readonly IValidator<EmployeeWriteModel> _validator;
 
-        public EmployeeDataValidationHandler(IValidator<EmployeeWriteModel> validator)
+        public EmployeeDataValidationProcessor(IValidator<EmployeeWriteModel> validator)
             : base()
             => _validator = validator;
 

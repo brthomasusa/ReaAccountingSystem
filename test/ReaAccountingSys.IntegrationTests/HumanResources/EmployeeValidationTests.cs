@@ -11,7 +11,7 @@ namespace ReaAccountingSys.IntegrationTests.HumanResources
         [Fact]
         public void Constructor_EmployeeDataValidationHandler_ShouldSucceed()
         {
-            EmployeeDataValidationHandler handler = new(new EmployeeWriteModelValidator());
+            EmployeeDataValidationProcessor handler = new(new EmployeeWriteModelValidator());
 
             Assert.NotNull(handler);
         }
@@ -21,7 +21,7 @@ namespace ReaAccountingSys.IntegrationTests.HumanResources
         {
             EmployeeWriteModel model = EmployeeAggregateTestData.GetEmployeeWriteModelCreate();
             CreateEmployeeCommand command = new CreateEmployeeCommand { WriteModel = model };
-            EmployeeDataValidationHandler handler = new(new EmployeeWriteModelValidator());
+            EmployeeDataValidationProcessor handler = new(new EmployeeWriteModelValidator());
 
             OperationResult<bool> result = await handler.Handle(command);
 
@@ -34,7 +34,7 @@ namespace ReaAccountingSys.IntegrationTests.HumanResources
             EmployeeWriteModel model = EmployeeAggregateTestData.GetEmployeeWriteModelCreate();
             model.PayRate = 6.00M;
             CreateEmployeeCommand command = new CreateEmployeeCommand { WriteModel = model };
-            EmployeeDataValidationHandler handler = new(new EmployeeWriteModelValidator());
+            EmployeeDataValidationProcessor handler = new(new EmployeeWriteModelValidator());
 
             OperationResult<bool> result = await handler.Handle(command);
 
