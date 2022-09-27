@@ -1,12 +1,7 @@
-using System.Text;
 using Microsoft.EntityFrameworkCore;
-
-using ReaAccountingSys.Core.Interfaces.HumanResources;
 using ReaAccountingSys.Infrastructure.Interfaces;
-using ReaAccountingSys.Infrastructure.Interfaces.HumanResources;
 using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories;
-using ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResources;
 using LoggingService;
 using LoggingService.Interfaces;
 
@@ -24,9 +19,7 @@ namespace ReaAccountingSys.Server.Extensions
             });
 
         public static void ConfigureIISIntegration(this IServiceCollection services) =>
-            services.Configure<IISOptions>(options =>
-            {
-            });
+            services.Configure<IISOptions>(options => { });
 
         public static void ConfigureLoggerService(this IServiceCollection services) =>
             services.AddSingleton<ILoggerManager, LoggerManager>();
@@ -58,8 +51,9 @@ namespace ReaAccountingSys.Server.Extensions
         public static IServiceCollection AddRepositoryServices(this IServiceCollection services)
         {
             return services
-                .AddScoped<IEmployeeAggregateWriteRepository, EmployeeAggregateWriteRepository>()
-                .AddScoped<IEmployeeAggregateReadRepository, EmployeeAggregateReadRepository>();
+            .AddScoped<IWriteRepositoryManager, WriteRepositoryManager>()
+            .AddScoped<IReadRepositoryManager, ReadRepositoryManager>();
+
             // .AddScoped<IFinancierAggregateRepository, FinancierAggregateRepository>()
             // .AddScoped<ILoanAgreementAggregateRepository, LoanAgreementAggregateRepository>()
             // .AddScoped<ICashAccountAggregateRepository, CashAccountAggregateRepository>()

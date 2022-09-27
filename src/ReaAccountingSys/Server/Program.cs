@@ -19,7 +19,6 @@ var infrastructureAssembly = typeof(ReaAccountingSys.Infrastructure.AssembleRefe
 var sharedAssembly = typeof(ReaAccountingSys.Shared.AssemblyReference).Assembly;
 
 builder.Services.AddValidatorsFromAssemblyContaining<EmployeeWriteModelValidator>();
-// builder.Services.AddValidatorsFromAssembly(sharedAssembly);
 // builder.Services.AddScoped<IValidator<EmployeeWriteModel>, EmployeeWriteModelValidator>();
 
 
