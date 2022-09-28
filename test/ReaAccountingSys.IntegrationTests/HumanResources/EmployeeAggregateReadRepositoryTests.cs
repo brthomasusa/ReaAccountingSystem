@@ -1,6 +1,5 @@
 using ReaAccountingSys.IntegrationTests.Base;
 using ReaAccountingSys.Infrastructure.Application.Validations.HumanResources.ValidationModels;
-using ReaAccountingSys.Infrastructure.Application.Validations.HumanResources.ValidationQueries;
 using ReaAccountingSys.Infrastructure.Interfaces;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories;
 using ReaAccountingSys.Shared.ReadModels;

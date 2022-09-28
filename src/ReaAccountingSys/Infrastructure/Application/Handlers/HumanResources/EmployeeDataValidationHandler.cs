@@ -1,23 +1,17 @@
 using System.Text;
-using FluentValidation;
-using ReaAccountingSys.SharedKernel;
-using ReaAccountingSys.SharedKernel.Utilities;
 using ReaAccountingSys.Infrastructure.Application.Commands.HumanResources;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
+using ReaAccountingSys.SharedKernel;
+using ReaAccountingSys.SharedKernel.Utilities;
 
-namespace ReaAccountingSys.Infrastructure.Application.Validations.HumanResources
+namespace ReaAccountingSys.Infrastructure.Application.Handlers.HumanResources
 {
-    public class EmployeeDataValidationProcessor : CommandHandler<CreateEmployeeCommand>
+    public class EmployeeDataValidationHandler : CommandHandler<CreateEmployeeCommand>
     {
-        private readonly IValidator<EmployeeWriteModel> _validator;
-
-        public EmployeeDataValidationProcessor(IValidator<EmployeeWriteModel> validator)
-            : base()
-            => _validator = validator;
-
         public override async Task<OperationResult<bool>> Handle(CreateEmployeeCommand command)
         {
-            var result = await _validator.ValidateAsync(command.WriteModel);
+            EmployeeWriteModelValidator validation = new();
+            var result = await validation.ValidateAsync(command.WriteModel);
 
             if (result.IsValid)
             {

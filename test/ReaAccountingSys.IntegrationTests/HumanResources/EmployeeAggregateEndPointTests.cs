@@ -156,36 +156,36 @@ namespace ReaAccountingSys.IntegrationTests.HumanResources
             Assert.Equal(6, employeeTypes.Count);
         }
 
-        // [Fact]
-        // public async Task Create_EmployeesController_ShouldSucceed()
-        // {
-        //     string uri = $"{_urlRoot}/employees/create";
-        //     EmployeeWriteModel model = EmployeeAggregateTestData.GetEmployeeWriteModelCreate();
+        [Fact]
+        public async Task Create_EmployeesController_ShouldSucceed()
+        {
+            string uri = $"{_urlRoot}/employees/create";
+            EmployeeWriteModel model = EmployeeAggregateTestData.GetEmployeeWriteModelCreate();
 
-        //     var memStream = new MemoryStream();
-        //     await JsonSerializer.SerializeAsync(memStream, model);
-        //     memStream.Seek(0, SeekOrigin.Begin);
+            var memStream = new MemoryStream();
+            await JsonSerializer.SerializeAsync(memStream, model);
+            memStream.Seek(0, SeekOrigin.Begin);
 
-        //     var request = new HttpRequestMessage(HttpMethod.Post, uri);
-        //     request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            var request = new HttpRequestMessage(HttpMethod.Post, uri);
+            request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-        //     using (var requestContent = new StreamContent(memStream))
-        //     {
-        //         request.Content = requestContent;
-        //         requestContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            using (var requestContent = new StreamContent(memStream))
+            {
+                request.Content = requestContent;
+                requestContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-        //         using (var response = await _client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead))
-        //         {
-        //             response.EnsureSuccessStatusCode();
+                using (var response = await _client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead))
+                {
+                    response.EnsureSuccessStatusCode();
 
-        //             var content = await response.Content.ReadAsStreamAsync();
-        //             var employeeDetails = JsonSerializer.Deserialize<EmployeeReadModel>(content, _options);
+                    var content = await response.Content.ReadAsStreamAsync();
+                    var employeeDetails = JsonSerializer.Deserialize<EmployeeReadModel>(content, _options);
 
-        //             Assert.Equal(model.FirstName, employeeDetails.FirstName);
-        //             Assert.Equal(model.LastName, employeeDetails.LastName);
-        //         }
-        //     }
-        // }
+                    Assert.Equal(model.FirstName, employeeDetails.FirstName);
+                    Assert.Equal(model.LastName, employeeDetails.LastName);
+                }
+            }
+        }
 
 
 

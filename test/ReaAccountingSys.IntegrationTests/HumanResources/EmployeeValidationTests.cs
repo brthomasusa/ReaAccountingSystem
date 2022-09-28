@@ -1,5 +1,5 @@
 using ReaAccountingSys.Infrastructure.Application.Commands.HumanResources;
-using ReaAccountingSys.Infrastructure.Application.Validations.HumanResources;
+using ReaAccountingSys.Infrastructure.Application.Handlers.HumanResources;
 using ReaAccountingSys.Infrastructure.Application.Validations.HumanResources.BusinessRules;
 using ReaAccountingSys.Infrastructure.Interfaces;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories;
@@ -20,19 +20,11 @@ namespace ReaAccountingSys.IntegrationTests.HumanResources
         /*     Employee data validation (FluentValidation)     */
 
         [Fact]
-        public void Constructor_EmployeeDataValidationHandler_ShouldSucceed()
-        {
-            EmployeeDataValidationProcessor handler = new(new EmployeeWriteModelValidator());
-
-            Assert.NotNull(handler);
-        }
-
-        [Fact]
         public async void Handle_EmployeeDataValidationHandler_ValidModel_ShouldSucceed()
         {
             EmployeeWriteModel model = EmployeeAggregateTestData.GetEmployeeWriteModelCreate();
             CreateEmployeeCommand command = new CreateEmployeeCommand { WriteModel = model };
-            EmployeeDataValidationProcessor handler = new(new EmployeeWriteModelValidator());
+            EmployeeDataValidationHandler handler = new();
 
             OperationResult<bool> result = await handler.Handle(command);
 
@@ -45,7 +37,7 @@ namespace ReaAccountingSys.IntegrationTests.HumanResources
             EmployeeWriteModel model = EmployeeAggregateTestData.GetEmployeeWriteModelCreate();
             model.PayRate = 6.00M;
             CreateEmployeeCommand command = new CreateEmployeeCommand { WriteModel = model };
-            EmployeeDataValidationProcessor handler = new(new EmployeeWriteModelValidator());
+            EmployeeDataValidationHandler handler = new();
 
             OperationResult<bool> result = await handler.Handle(command);
 
@@ -131,55 +123,59 @@ namespace ReaAccountingSys.IntegrationTests.HumanResources
         /*     Employee chained business rules validation     */
 
         [Fact]
-        public async void Validate_CreateEmployeeRulesValidationProcessor_ValidModel_ShouldSucceed()
+        public async void Handle_EmployeeBusinessRuleValidationHandler_ValidModel_ShouldSucceed()
         {
             EmployeeWriteModel model = EmployeeAggregateTestData.GetEmployeeWriteModelCreate();
-            CreateEmployeeRulesValidationProcessor processor = new(model, _repository);
+            CreateEmployeeCommand command = new CreateEmployeeCommand { WriteModel = model };
+            EmployeeBusinessRuleValidationHandler handler = new(_repository);
 
-            ValidationResult result = await processor.Validate();
+            OperationResult<bool> result = await handler.Handle(command);
 
-            Assert.True(result.IsValid);
+            Assert.True(result.Success);
         }
 
         [Fact]
-        public async void Validate_CreateEmployeeRulesValidationProcessor_DuplicateName_ShouldFail()
+        public async void Handle_EmployeeBusinessRuleValidationHandler_DuplicateName_ShouldFail()
         {
             EmployeeWriteModel model = EmployeeAggregateTestData.GetEmployeeWriteModelCreate();
             model.FirstName = "Jeffery";
             model.MiddleInitial = "W";
             model.LastName = "Beck";
 
-            CreateEmployeeRulesValidationProcessor processor = new(model, _repository);
+            CreateEmployeeCommand command = new CreateEmployeeCommand { WriteModel = model };
+            EmployeeBusinessRuleValidationHandler handler = new(_repository);
 
-            ValidationResult result = await processor.Validate();
+            OperationResult<bool> result = await handler.Handle(command);
 
-            Assert.False(result.IsValid);
+            Assert.False(result.Success);
         }
 
         [Fact]
-        public async void Validate_CreateEmployeeRulesValidationProcessor_DuplicateEmail_ShouldFail()
+        public async void Handle_EmployeeBusinessRuleValidationHandler_DuplicateEmail_ShouldFail()
         {
             EmployeeWriteModel model = EmployeeAggregateTestData.GetEmployeeWriteModelCreate();
             model.EmailAddress = "jeffery.beck@pipefitterssupply.com";
 
-            CreateEmployeeRulesValidationProcessor processor = new(model, _repository);
+            CreateEmployeeCommand command = new CreateEmployeeCommand { WriteModel = model };
+            EmployeeBusinessRuleValidationHandler handler = new(_repository);
 
-            ValidationResult result = await processor.Validate();
+            OperationResult<bool> result = await handler.Handle(command);
 
-            Assert.False(result.IsValid);
+            Assert.False(result.Success);
         }
 
         [Fact]
-        public async void Validate_CreateEmployeeRulesValidationProcessor_DuplicateSSN_ShouldFail()
+        public async void Handle_EmployeeBusinessRuleValidationHandler_DuplicateSSN_ShouldFail()
         {
             EmployeeWriteModel model = EmployeeAggregateTestData.GetEmployeeWriteModelCreate();
             model.SSN = "825559874";
 
-            CreateEmployeeRulesValidationProcessor processor = new(model, _repository);
+            CreateEmployeeCommand command = new CreateEmployeeCommand { WriteModel = model };
+            EmployeeBusinessRuleValidationHandler handler = new(_repository);
 
-            ValidationResult result = await processor.Validate();
+            OperationResult<bool> result = await handler.Handle(command);
 
-            Assert.False(result.IsValid);
+            Assert.False(result.Success);
         }
 
     }

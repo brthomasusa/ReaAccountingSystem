@@ -37,7 +37,7 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResource
             }
             catch (Exception ex)
             {
-                return OperationResult<Employee>.CreateFailure(ex.Message);
+                return OperationResult<Employee>.CreateFailure(GetExceptionMessage(ex));
             }
         }
 
@@ -57,7 +57,7 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResource
             }
             catch (Exception ex)
             {
-                return OperationResult<bool>.CreateFailure(ex.Message);
+                return OperationResult<bool>.CreateFailure(GetExceptionMessage(ex));
             }
         }
 
@@ -81,7 +81,7 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResource
             }
             catch (Exception ex)
             {
-                return OperationResult<bool>.CreateFailure(ex.Message);
+                return OperationResult<bool>.CreateFailure(GetExceptionMessage(ex));
             }
         }
 
@@ -105,7 +105,7 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResource
             }
             catch (Exception ex)
             {
-                return OperationResult<bool>.CreateFailure(ex.Message);
+                return OperationResult<bool>.CreateFailure(GetExceptionMessage(ex));
             }
         }
 
@@ -123,7 +123,7 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResource
             }
             catch (Exception ex)
             {
-                return OperationResult<bool>.CreateFailure(ex.Message);
+                return OperationResult<bool>.CreateFailure(GetExceptionMessage(ex));
             }
         }
 
@@ -165,5 +165,8 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResource
 
             isDisposed = true;
         }
+
+        private string GetExceptionMessage(Exception ex)
+                => ex.InnerException == null ? ex.Message : ex.InnerException.Message;
     }
 }

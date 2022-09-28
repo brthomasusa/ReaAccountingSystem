@@ -2,6 +2,8 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using LoggingService.Interfaces;
 
+using ReaAccountingSys.Infrastructure.Application.Commands.HumanResources;
+using ReaAccountingSys.Infrastructure.Application.Handlers.HumanResources;
 using ReaAccountingSys.Infrastructure.Interfaces;
 using ReaAccountingSys.Infrastructure.Interfaces.HumanResources;
 using ReaAccountingSys.SharedKernel.Utilities;
@@ -18,9 +20,18 @@ namespace ReaAccountingSys.Infrastructure.Controllers
     {
         private ILoggerManager _logger;
         private readonly IReadRepositoryManager _readRepository;
+        private readonly IWriteRepositoryManager _writeRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public EmployeesController(ILoggerManager logger, IReadRepositoryManager repo)
-            => (_logger, _readRepository) = (logger, repo);
+        public EmployeesController
+        (
+            ILoggerManager logger,
+            IReadRepositoryManager readRepository,
+            IWriteRepositoryManager writeRepository,
+            IUnitOfWork unitOfWork
+        )
+            => (_logger, _readRepository, _writeRepository, _unitOfWork) =
+               (logger, readRepository, writeRepository, unitOfWork);
 
         [HttpGet("detail/{employeeId:Guid}", Name = "Details")]
         public async Task<ActionResult<EmployeeReadModel>> Details(Guid employeeId)
@@ -140,33 +151,30 @@ namespace ReaAccountingSys.Infrastructure.Controllers
             return StatusCode(500, result.Exception.Message);
         }
 
-        // [HttpPost("create")]
-        // public async Task<IActionResult> CreateEmployeeInfo([FromBody] EmployeeWriteModel writeModel)
-        // {
-        //     OperationResult<bool> writeResult = await _cmdSvc.CreateEmployeeInfo(writeModel);
-        //     if (writeResult.Success)
-        //     {
-        //         GetEmployeeParameter queryParams = new() { EmployeeID = writeModel.EmployeeId };
-        //         OperationResult<EmployeeReadModel> queryResult = await _qrySvc.GetEmployeeReadModel(queryParams);
+        [HttpPost("create")]
+        public async Task<IActionResult> CreateEmployeeInfo([FromBody] EmployeeWriteModel writeModel)
+        {
+            CreateEmployeeCommand command = new CreateEmployeeCommand { WriteModel = writeModel };
+            CreateEmployeeCommandHandler handler = new(_readRepository, _writeRepository, _unitOfWork);
 
-        //         if (queryResult.Success)
-        //         {
-        //             return CreatedAtAction(nameof(Details), new { employeeId = writeModel.EmployeeId }, queryResult.Result);
-        //         }
-        //         else
-        //         {
-        //             return StatusCode(201, "Create employee succeeded; unable to return newly created employee.");
-        //         }
-        //     }
+            OperationResult<bool> result = await handler.Handle(command);
 
-        //     if (writeResult.Exception is null)
-        //     {
-        //         _logger.LogWarning(writeResult.NonSuccessMessage);
-        //         return StatusCode(400, writeResult.NonSuccessMessage);
-        //     }
+            if (result.Success)
+            {
+                GetEmployeeParameter queryParams = new() { EmployeeID = writeModel.EmployeeId };
+                OperationResult<EmployeeReadModel> queryResult = await _readRepository.EmployeeAggregate.GetReadModelById(queryParams);
 
-        //     _logger.LogError(writeResult.Exception.Message);
-        //     return StatusCode(500, writeResult.Exception.Message);
-        // }
+                if (queryResult.Success)
+                {
+                    return CreatedAtAction(nameof(Details), new { employeeId = writeModel.EmployeeId }, queryResult.Result);
+                }
+                else
+                {
+                    return StatusCode(201, "Create employee succeeded; unable to return newly created employee.");
+                }
+            }
+            _logger.LogWarn(result.NonSuccessMessage!);
+            return StatusCode(400, result.NonSuccessMessage);
+        }
     }
 }
