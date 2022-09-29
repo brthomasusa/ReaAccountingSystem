@@ -1,6 +1,6 @@
-using ReaAccountingSys.Infrastructure.Interfaces;
-using ReaAccountingSys.Infrastructure.Interfaces.HumanResources;
 using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
+using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
+using ReaAccountingSys.Infrastructure.Persistence.Interfaces.HumanResources;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResources;
 
 namespace ReaAccountingSys.Infrastructure.Persistence.Repositories

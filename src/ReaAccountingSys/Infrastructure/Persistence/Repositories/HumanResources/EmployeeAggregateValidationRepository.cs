@@ -1,7 +1,7 @@
-using ReaAccountingSys.Infrastructure.Application.Validations.HumanResources.ValidationModels;
-using ReaAccountingSys.Infrastructure.Application.Validations.HumanResources.ValidationQueries;
-using ReaAccountingSys.Infrastructure.Interfaces.HumanResources;
+using ReaAccountingSys.Shared.ValidationModels.HumanResources;
+using ReaAccountingSys.Infrastructure.Persistence.Dapper.HumanResources.ValidationQueries;
 using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
+using ReaAccountingSys.Infrastructure.Persistence.Interfaces.HumanResources;
 using ReaAccountingSys.SharedKernel.Utilities;
 
 namespace ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResources

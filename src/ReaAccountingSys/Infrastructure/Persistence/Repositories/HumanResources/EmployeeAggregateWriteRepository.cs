@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using ReaAccountingSys.SharedKernel.CommonValueObjects;
 using ReaAccountingSys.SharedKernel.Utilities;
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate;
-using ReaAccountingSys.Core.Interfaces.HumanResources;
+using ReaAccountingSys.Infrastructure.Persistence.Interfaces.HumanResources;
 using ReaAccountingSys.Core.Shared;
 using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
 

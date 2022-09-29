@@ -1,0 +1,4 @@
+syntax = "proto3";
+
+option csharp_namespace = "ReaAccountingSys.Shared.EmployeeService.gRPC.v1";
+

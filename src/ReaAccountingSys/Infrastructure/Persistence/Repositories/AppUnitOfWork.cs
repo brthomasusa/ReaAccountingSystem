@@ -1,4 +1,4 @@
-using ReaAccountingSys.Infrastructure.Interfaces;
+using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
 using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
 
 namespace ReaAccountingSys.Infrastructure.Persistence.Repositories

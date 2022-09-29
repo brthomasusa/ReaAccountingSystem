@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ReaAccountingSys.Infrastructure.Interfaces;
+using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
 using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories;
 using LoggingService;

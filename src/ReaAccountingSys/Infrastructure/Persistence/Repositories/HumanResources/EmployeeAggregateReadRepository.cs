@@ -1,7 +1,7 @@
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate;
-using ReaAccountingSys.Infrastructure.Interfaces.HumanResources;
 using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
-using ReaAccountingSys.Infrastructure.Application.Queries.HumanResources;
+using ReaAccountingSys.Infrastructure.Persistence.Dapper.HumanResources.Queries;
+using ReaAccountingSys.Infrastructure.Persistence.Interfaces.HumanResources;
 using ReaAccountingSys.SharedKernel.Utilities;
 using ReaAccountingSys.Shared.ReadModels;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;

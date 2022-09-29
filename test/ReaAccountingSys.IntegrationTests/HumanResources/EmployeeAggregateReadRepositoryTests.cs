@@ -1,10 +1,11 @@
 using ReaAccountingSys.IntegrationTests.Base;
-using ReaAccountingSys.Infrastructure.Application.Validations.HumanResources.ValidationModels;
-using ReaAccountingSys.Infrastructure.Interfaces;
+using ReaAccountingSys.Shared.ValidationModels.HumanResources;
+using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories;
 using ReaAccountingSys.Shared.ReadModels;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
 using ReaAccountingSys.SharedKernel.Utilities;
+
 
 namespace ReaAccountingSys.IntegrationTests.HumanResources
 {

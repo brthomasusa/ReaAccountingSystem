@@ -1,8 +1,8 @@
 using ReaAccountingSys.IntegrationTests.Base;
-using ReaAccountingSys.Infrastructure.Application.Commands.HumanResources;
-using ReaAccountingSys.Infrastructure.Application.Handlers.HumanResources;
-using ReaAccountingSys.Infrastructure.Application.Validations.HumanResources.ValidationModels;
-using ReaAccountingSys.Infrastructure.Interfaces;
+using ReaAccountingSys.Application.Commands.HumanResources;
+using ReaAccountingSys.Application.Handlers.HumanResources;
+using ReaAccountingSys.Shared.ValidationModels.HumanResources;
+using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
 using ReaAccountingSys.SharedKernel.Utilities;

@@ -2,10 +2,9 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using LoggingService.Interfaces;
 
-using ReaAccountingSys.Infrastructure.Application.Commands.HumanResources;
-using ReaAccountingSys.Infrastructure.Application.Handlers.HumanResources;
-using ReaAccountingSys.Infrastructure.Interfaces;
-using ReaAccountingSys.Infrastructure.Interfaces.HumanResources;
+using ReaAccountingSys.Application.Commands.HumanResources;
+using ReaAccountingSys.Application.Handlers.HumanResources;
+using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
 using ReaAccountingSys.SharedKernel.Utilities;
 using ReaAccountingSys.Shared.ReadModels;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
