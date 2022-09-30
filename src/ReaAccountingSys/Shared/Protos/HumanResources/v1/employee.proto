@@ -6,6 +6,7 @@ package EmployeeService.v1;
 
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
+// import "Protos/HumanResources/v1/employee.shared.proto";
 
 service EmployeeService{
     rpc GetAll (GetEmployeesRequest) returns (stream EmployeeListItemResponse) {}
@@ -21,27 +22,27 @@ service EmployeeService{
 }
 
 message GetEmployeesRequest {
-    int32 Page = 1;
-    int32 PageSize = 2;
+    int32 page_size = 1;
+    string page_token = 2;
 }
 
 message GetEmployeesStatusRequest {
     bool EmployeementStatus = 1;
-    int32 Page = 2;
-    int32 PageSize = 3;    
+    int32 page_size = 2;
+    string page_token = 3;   
 }
 
 message GetEmployeesByLastNameRequest {
     string LastName = 1;
     bool EmployeementStatus = 2;
-    int32 Page = 3;
-    int32 PageSize = 4; 
+    int32 page_size = 3;
+    string page_token = 4; 
 }
 
 message GetEmployeesByNameAndStatusRequest {
     string LastName = 1;
-    int32 Page = 2;
-    int32 PageSize = 3; 
+    int32 page_size = 2;
+    string page_token = 3; 
 }
 
 message GetEmployeeRequest {
@@ -72,6 +73,11 @@ message EmployeeWriteModelRequest {
 }
 
 message EmployeeListItemResponse {
+    repeated EmployeeListItem EmployeeListItems = 1; 
+    map<string, int32> MetaData = 2;   
+}
+
+message EmployeeListItem {
     string EmployeeId = 1;
     string EmployeeFullName = 2;
     string Telephone = 3;
@@ -110,12 +116,20 @@ message EmployeeReadModelResponse {
 }
 
 message EmployeeManagerResponse {
+    repeated EmployeeManager EmployeeManagers = 1;
+}
+
+message EmployeeManager {
     string ManagerId = 1;
     string ManagerFullName = 2;
     string Group = 3;
 }
 
 message EmployeeTypeResponse {
+    repeated EmployeeType EmployeeTypes = 1;
+}
+
+message EmployeeType {
     int32 EmployeeTypeId = 1;
     string EmployeeTypeName = 2;
 }

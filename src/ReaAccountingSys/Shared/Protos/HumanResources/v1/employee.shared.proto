@@ -2,3 +2,115 @@ syntax = "proto3";
 
 option csharp_namespace = "ReaAccountingSys.Shared.EmployeeService.gRPC.v1";
 
+message GetEmployeesRequest {
+    int32 page_size = 1;
+    string page_token = 2;
+}
+
+message GetEmployeesStatusRequest {
+    bool EmployeementStatus = 1;
+    int32 page_size = 2;
+    string page_token = 3;   
+}
+
+message GetEmployeesByLastNameRequest {
+    string LastName = 1;
+    bool EmployeementStatus = 2;
+    int32 page_size = 3;
+    string page_token = 4; 
+}
+
+message GetEmployeesByNameAndStatusRequest {
+    string LastName = 1;
+    int32 page_size = 2;
+    string page_token = 3; 
+}
+
+message GetEmployeeRequest {
+    string EmployeeId = 1;
+}
+
+message EmployeeWriteModelRequest {
+    string EmployeeId = 1;
+    int32 EmployeeType = 2;
+    string SupervisorId = 3;
+    string LastName = 4;
+    string FirstName = 5;
+    string MiddleInitial = 6;
+    string SSN = 7;
+    string EmailAddress = 8;
+    string Telephone = 9;
+    string AddressLine1 = 10;
+    string AddressLine2 = 11;
+    string City = 12;
+    string StateCode = 13;
+    string Zipcode = 14;
+    string MaritalStatus = 15;
+    int32 Exemptions = 16;
+    double PayRate = 17;
+    google.protobuf.Timestamp StartDate = 18;
+    bool IsActive = 19;
+    bool IsSupervisor = 20; 
+}
+
+message EmployeeListItemResponse {
+    repeated EmployeeListItem EmployeeListItems = 1; 
+    map<string, int32> MetaData = 2;   
+}
+
+message EmployeeListItem {
+    string EmployeeId = 1;
+    string EmployeeFullName = 2;
+    string Telephone = 3;
+    bool IsActive = 4;
+    bool IsSupervisor = 5;
+    string ManagerFullName = 6;
+    int32 TimeCards = 7;
+}
+
+message EmployeeReadModelResponse {
+    string EmployeeId = 1;
+    string SupervisorId = 2;
+    int32 EmployeeTypeId = 3;
+    string EmployeeTypeName = 4;
+    string ManagerFullName = 5;
+    string LastName = 6;
+    string FirstName = 7;
+    string MiddleInitial = 8;
+    string EmployeeFullName = 9;
+    string SSN = 10;
+    string EmailAddress = 11;
+    string Telephone = 12;
+    string AddressLine1 = 13;
+    string AddressLine2 = 14;
+    string City = 15;
+    string StateCode = 16;
+    string Zipcode = 17;
+    string MaritalStatus = 18;
+    int32 Exemptions = 19;
+    double PayRate = 20;
+    google.protobuf.Timestamp StartDate = 21;
+    bool IsActive = 22;
+    bool IsSupervisor = 23;
+    google.protobuf.Timestamp CreatedDate = 24;
+    google.protobuf.Timestamp LastModifiedDate = 25;    
+}
+
+message EmployeeManagerResponse {
+    repeated EmployeeManager EmployeeManagers = 1;
+}
+
+message EmployeeManager {
+    string ManagerId = 1;
+    string ManagerFullName = 2;
+    string Group = 3;
+}
+
+message EmployeeTypeResponse {
+    repeated EmployeeType EmployeeTypes = 1;
+}
+
+message EmployeeType {
+    int32 EmployeeTypeId = 1;
+    string EmployeeTypeName = 2;
+}
