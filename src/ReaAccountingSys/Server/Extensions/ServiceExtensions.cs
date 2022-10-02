@@ -2,8 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
 using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories;
-using LoggingService;
-using LoggingService.Interfaces;
 
 namespace ReaAccountingSys.Server.Extensions
 {
@@ -21,8 +19,8 @@ namespace ReaAccountingSys.Server.Extensions
         public static void ConfigureIISIntegration(this IServiceCollection services) =>
             services.Configure<IISOptions>(options => { });
 
-        public static void ConfigureLoggerService(this IServiceCollection services) =>
-            services.AddSingleton<ILoggerManager, LoggerManager>();
+        // public static void ConfigureLoggerService(this IServiceCollection services) =>
+        //     services.AddSingleton<ILoggerManager, LoggerManager>();
 
         public static void ConfigureEfCoreDbContext(this IServiceCollection services, IConfiguration configuration)
         {

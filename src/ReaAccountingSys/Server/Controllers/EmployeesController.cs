@@ -1,6 +1,6 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
-using LoggingService.Interfaces;
+using Microsoft.Extensions.Logging;
 
 using ReaAccountingSys.Application.Commands.HumanResources;
 using ReaAccountingSys.Application.Handlers.HumanResources;
@@ -17,14 +17,14 @@ namespace ReaAccountingSys.Server.Controllers
     [ApiController]
     public class EmployeesController : ControllerBase
     {
-        private ILoggerManager _logger;
+        private readonly ILogger<EmployeesController> _logger;
         private readonly IReadRepositoryManager _readRepository;
         private readonly IWriteRepositoryManager _writeRepository;
         private readonly IUnitOfWork _unitOfWork;
 
         public EmployeesController
         (
-            ILoggerManager logger,
+            ILogger<EmployeesController> logger,
             IReadRepositoryManager readRepository,
             IWriteRepositoryManager writeRepository,
             IUnitOfWork unitOfWork
@@ -50,7 +50,7 @@ namespace ReaAccountingSys.Server.Controllers
 
             if (result.Exception is null)
             {
-                _logger.LogWarn(result.NonSuccessMessage!);
+                _logger.LogWarning(result.NonSuccessMessage!);
                 return StatusCode(400, result.NonSuccessMessage);
             }
 
@@ -172,7 +172,7 @@ namespace ReaAccountingSys.Server.Controllers
                     return StatusCode(201, "Create employee succeeded; unable to return newly created employee.");
                 }
             }
-            _logger.LogWarn(result.NonSuccessMessage!);
+            _logger.LogWarning(result.NonSuccessMessage!);
             return StatusCode(400, result.NonSuccessMessage);
         }
     }

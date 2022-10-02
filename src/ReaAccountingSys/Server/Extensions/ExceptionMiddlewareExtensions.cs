@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Diagnostics;
-using LoggingService.Interfaces;
 using ReaAccountingSys.Server.ErrorModel;
 using System.Net;
 
@@ -7,7 +6,7 @@ namespace ReaAccountingSys.Server.Extensions
 {
     public static class ExceptionMiddlewareExtensions
     {
-        public static void ConfigureExceptionHandler(this WebApplication app, ILoggerManager logger)
+        public static void ConfigureExceptionHandler(this WebApplication app, ILogger<WebApplication> logger)
         {
             app.UseExceptionHandler(appError =>
             {

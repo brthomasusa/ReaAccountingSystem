@@ -4,23 +4,26 @@ using FluentValidation;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
-using LoggingService.Interfaces;
+using NLog.Web;
 using Microsoft.AspNetCore.ResponseCompression;
 using ReaAccountingSys.Shared;
 using ReaAccountingSys.Infrastructure;
 
 using ReaAccountingSys.Server.Extensions;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
+var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+logger.Debug("init main");
 
 var builder = WebApplication.CreateBuilder(args);
 
 var infrastructureAssembly = typeof(ReaAccountingSys.Infrastructure.AssembleReference).Assembly;
 var sharedAssembly = typeof(ReaAccountingSys.Shared.AssemblyReference).Assembly;
 
+builder.Logging.ClearProviders();
+builder.Host.UseNLog();
+
 builder.Services.AddValidatorsFromAssemblyContaining<EmployeeWriteModelValidator>();
 // builder.Services.AddScoped<IValidator<EmployeeWriteModel>, EmployeeWriteModelValidator>();
-
-
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
@@ -36,7 +39,7 @@ builder.Services.AddApiVersioning(config =>
 // Add services from namespace Server.Extensions to the container.
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
-builder.Services.ConfigureLoggerService();
+// builder.Services.ConfigureLoggerService();
 builder.Services.AddInfrastructureServices();
 builder.Services.ConfigureEfCoreDbContext(builder.Configuration);
 builder.Services.ConfigureDapper(builder.Configuration);
@@ -44,8 +47,7 @@ builder.Services.AddRepositoryServices();
 
 var app = builder.Build();
 
-var logger = app.Services.GetRequiredService<ILoggerManager>();
-app.ConfigureExceptionHandler(logger);
+// app.ConfigureExceptionHandler(logger);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
