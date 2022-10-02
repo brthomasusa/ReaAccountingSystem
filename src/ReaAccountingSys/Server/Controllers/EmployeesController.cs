@@ -1,6 +1,5 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 using ReaAccountingSys.Application.Commands.HumanResources;
 using ReaAccountingSys.Application.Handlers.HumanResources;

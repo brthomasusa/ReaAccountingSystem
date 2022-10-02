@@ -11,75 +11,91 @@ using ReaAccountingSys.Infrastructure;
 
 using ReaAccountingSys.Server.Extensions;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
+
 var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 logger.Debug("init main");
 
-var builder = WebApplication.CreateBuilder(args);
-
-var infrastructureAssembly = typeof(ReaAccountingSys.Infrastructure.AssembleReference).Assembly;
-var sharedAssembly = typeof(ReaAccountingSys.Shared.AssemblyReference).Assembly;
-
-builder.Logging.ClearProviders();
-builder.Host.UseNLog();
-
-builder.Services.AddValidatorsFromAssemblyContaining<EmployeeWriteModelValidator>();
-// builder.Services.AddScoped<IValidator<EmployeeWriteModel>, EmployeeWriteModelValidator>();
-
-builder.Services.AddControllersWithViews();
-builder.Services.AddRazorPages();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddApiVersioning(config =>
+try
 {
-    config.DefaultApiVersion = new ApiVersion(1, 0);
-    config.AssumeDefaultVersionWhenUnspecified = true;
-    config.ReportApiVersions = true;
-});
 
-// Add services from namespace Server.Extensions to the container.
-builder.Services.ConfigureCors();
-builder.Services.ConfigureIISIntegration();
-// builder.Services.ConfigureLoggerService();
-builder.Services.AddInfrastructureServices();
-builder.Services.ConfigureEfCoreDbContext(builder.Configuration);
-builder.Services.ConfigureDapper(builder.Configuration);
-builder.Services.AddRepositoryServices();
+    var builder = WebApplication.CreateBuilder(args);
 
-var app = builder.Build();
+    var infrastructureAssembly = typeof(ReaAccountingSys.Infrastructure.AssembleReference).Assembly;
+    var sharedAssembly = typeof(ReaAccountingSys.Shared.AssemblyReference).Assembly;
 
-// app.ConfigureExceptionHandler(logger);
+    builder.Logging.ClearProviders();
+    builder.Host.UseNLog();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseWebAssemblyDebugging();
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    builder.Services.AddValidatorsFromAssemblyContaining<EmployeeWriteModelValidator>();
+    // builder.Services.AddScoped<IValidator<EmployeeWriteModel>, EmployeeWriteModelValidator>();
+
+    builder.Services.AddControllersWithViews();
+    builder.Services.AddRazorPages();
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
+    builder.Services.AddApiVersioning(config =>
+    {
+        config.DefaultApiVersion = new ApiVersion(1, 0);
+        config.AssumeDefaultVersionWhenUnspecified = true;
+        config.ReportApiVersions = true;
+    });
+
+    // Add services from namespace Server.Extensions to the container.
+    builder.Services.ConfigureCors();
+    builder.Services.ConfigureIISIntegration();
+    // builder.Services.ConfigureLoggerService();
+    builder.Services.AddInfrastructureServices();
+    builder.Services.ConfigureEfCoreDbContext(builder.Configuration);
+    builder.Services.ConfigureDapper(builder.Configuration);
+    builder.Services.AddRepositoryServices();
+
+    var app = builder.Build();
+
+    // app.ConfigureExceptionHandler(logger);
+
+    // Configure the HTTP request pipeline.
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseWebAssemblyDebugging();
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
+    else
+    {
+        // The default HSTS value is 30 days. You may want to change this 
+        // for production scenarios, see https://aka.ms/aspnetcore-hsts.
+        app.UseHsts();
+    }
+
+    app.UseHttpsRedirection();
+
+    app.UseBlazorFrameworkFiles();
+    app.UseStaticFiles();
+    app.UseForwardedHeaders(new ForwardedHeadersOptions
+    {
+        ForwardedHeaders = ForwardedHeaders.All
+    });
+
+    app.UseCors("CorsPolicy");
+    app.UseRouting();
+
+    app.MapRazorPages();
+    app.MapControllers();
+    app.MapFallbackToFile("index.html");
+
+    app.Run();
+
 }
-else
+catch (Exception exception)
 {
-    // The default HSTS value is 30 days. You may want to change this 
-    // for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    logger.Error(exception, "Stopped program because of exception");
+    throw;
 }
-
-app.UseHttpsRedirection();
-
-app.UseBlazorFrameworkFiles();
-app.UseStaticFiles();
-app.UseForwardedHeaders(new ForwardedHeadersOptions
+finally
 {
-    ForwardedHeaders = ForwardedHeaders.All
-});
-
-app.UseCors("CorsPolicy");
-app.UseRouting();
-
-app.MapRazorPages();
-app.MapControllers();
-app.MapFallbackToFile("index.html");
-
-app.Run();
+    // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
+    NLog.LogManager.Shutdown();
+}
 
 public partial class Program { }
 
