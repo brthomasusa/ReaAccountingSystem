@@ -19,6 +19,7 @@ namespace ReaAccountingSys.Server.Services.HumanResources
             ServerCallContext context
         )
         {
+            _logger.LogError("Not implementated");
             throw new RpcException(new Status(StatusCode.Unimplemented, ""));
         }
     }
