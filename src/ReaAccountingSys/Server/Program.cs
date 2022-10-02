@@ -1,14 +1,10 @@
-using System;
-using System.IO;
 using FluentValidation;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
 using NLog.Web;
-using Microsoft.AspNetCore.ResponseCompression;
-using ReaAccountingSys.Shared;
-using ReaAccountingSys.Infrastructure;
-
+// using Microsoft.AspNetCore.ResponseCompression;
+using ReaAccountingSys.Server.Interceptors;
 using ReaAccountingSys.Server.Extensions;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
@@ -25,6 +21,21 @@ try
 
     builder.Logging.ClearProviders();
     builder.Host.UseNLog();
+
+    builder.Services.AddGrpc(options => {
+        options.EnableDetailedErrors = true;
+        options.MaxReceiveMessageSize = 6291456; // 6 MB
+        options.MaxSendMessageSize = 6291456; // 6 MB
+        options.CompressionProviders = new List<ICompressionProvider>
+        {
+            new BrotliCompressionProvider() // br
+        };
+        options.ResponseCompressionAlgorithm = "br"; // grpc-accept-encoding
+        options.ResponseCompressionLevel = CompressionLevel.Optimal; // compression level used if not set on the provider
+        options.Interceptors.Add<ExceptionInterceptor>(); // Register custom ExceptionInterceptor interceptor
+    });
+    builder.Services.AddGrpcReflection();
+
 
     builder.Services.AddValidatorsFromAssemblyContaining<EmployeeWriteModelValidator>();
     // builder.Services.AddScoped<IValidator<EmployeeWriteModel>, EmployeeWriteModelValidator>();
