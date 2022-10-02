@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Diagnostics;
 using LoggingService.Interfaces;
-using Server.ErrorModel;
+using ReaAccountingSys.Server.ErrorModel;
 using System.Net;
 
 namespace ReaAccountingSys.Server.Extensions

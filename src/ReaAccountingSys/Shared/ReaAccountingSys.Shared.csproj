@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
+    <!-- <Protobuf Include="**/*.proto" /> -->
 	  <Protobuf Include="Protos/HumanResources/v1/employee.proto" Link="employee.proto"/>
   </ItemGroup>
 

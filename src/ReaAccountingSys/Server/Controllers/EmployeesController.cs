@@ -10,7 +10,7 @@ using ReaAccountingSys.Shared.ReadModels;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
-namespace ReaAccountingSys.Infrastructure.Controllers
+namespace ReaAccountingSys.Server.Controllers
 {
     [ApiVersion("1.0")]
     [Route("api/{v:apiVersion}/[controller]")]

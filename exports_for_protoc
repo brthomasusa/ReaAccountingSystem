@@ -1,0 +1,7 @@
+protoc -I=$SRC_DIR --csharp_out=$DST_DIR $SRC_DIR/addressbook.proto
+
+export SRC_DIR=/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Shared/Protos/HumanResources/v1/employee.proto
+export DST_DIR=/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Shared/obj/Debug/net6.0/Protos/HumanResources/v1
+
+From within /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Shared/Protos/HumanResources/v1
+protoc --csharp_out=../../../obj/Debug/net6.0/Protos/HumanResources/v1/ employee.proto
