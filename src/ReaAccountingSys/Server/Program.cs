@@ -6,6 +6,7 @@ using NLog.Web;
 // using Microsoft.AspNetCore.ResponseCompression;
 using ReaAccountingSys.Server.Interceptors;
 using ReaAccountingSys.Server.Extensions;
+using ReaAccountingSys.Server.Services.HumanResources;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
 var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
@@ -54,13 +55,17 @@ try
     // Add services from namespace Server.Extensions to the container.
     builder.Services.ConfigureCors();
     builder.Services.ConfigureIISIntegration();
-    // builder.Services.ConfigureLoggerService();
     builder.Services.AddInfrastructureServices();
     builder.Services.ConfigureEfCoreDbContext(builder.Configuration);
     builder.Services.ConfigureDapper(builder.Configuration);
     builder.Services.AddRepositoryServices();
 
     var app = builder.Build();
+
+app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
+app.MapGrpcReflectionService();
+app.MapGrpcService<EmployeeGrpcService>();
+// app.MapGrpcService<CountryGrpcServiceBrowser>();
 
     // app.ConfigureExceptionHandler(logger);
 
