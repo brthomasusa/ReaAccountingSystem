@@ -16,7 +16,7 @@ using GrpcEmployeeManager = ReaAccountingSys.Shared.EmployeeService.gRPC.v1.Empl
 using ReadModelEmployeeTypes = ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeTypes;
 using GrpcEmployeeType = ReaAccountingSys.Shared.EmployeeService.gRPC.v1.EmployeeType;
 
-namespace ReaAccountingSys.Server.Services.HumanResources
+namespace ReaAccountingSys.Server.GrpcServices.HumanResources
 {
     public class EmployeeGrpcService : EmployeeServiceBase
     {

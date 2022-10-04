@@ -1,0 +1,753 @@
+2022-10-04 09:15:41.5898|0|DEBUG|Program|init main 
+2022-10-04 09:15:41.7340|3|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'. 
+2022-10-04 09:15:41.7555|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-04 09:15:41.7617|62|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/home/bthomas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest. 
+2022-10-04 09:15:41.8115|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-04 09:15:41.8115|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-cf0c6397-c129-4f0d-baed-7cbbba02e4b2.xml'. 
+2022-10-04 09:15:41.8115|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-62c1834c-86f7-419a-abf4-c7af249ae278.xml'. 
+2022-10-04 09:15:41.8115|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-04b24c34-adeb-46fb-8794-a461c7c2c36d.xml'. 
+2022-10-04 09:15:41.8115|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-e9d0ea64-fe22-4a99-80bf-f8d745526a7d.xml'. 
+2022-10-04 09:15:41.8115|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-952f204c-ebf6-4528-a097-d33ece63c52e.xml'. 
+2022-10-04 09:15:41.8115|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-4695af4c-6350-4172-b2a3-5928763ff7cb.xml'. 
+2022-10-04 09:15:41.8115|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-af4fca88-cc4d-41ac-8af9-7fb8b9d679ab.xml'. 
+2022-10-04 09:15:41.8115|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6.xml'. 
+2022-10-04 09:15:41.8167|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {cf0c6397-c129-4f0d-baed-7cbbba02e4b2}. 
+2022-10-04 09:15:41.8167|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {62c1834c-86f7-419a-abf4-c7af249ae278}. 
+2022-10-04 09:15:41.8167|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {04b24c34-adeb-46fb-8794-a461c7c2c36d}. 
+2022-10-04 09:15:41.8167|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e9d0ea64-fe22-4a99-80bf-f8d745526a7d}. 
+2022-10-04 09:15:41.8167|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {952f204c-ebf6-4528-a097-d33ece63c52e}. 
+2022-10-04 09:15:41.8167|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {4695af4c-6350-4172-b2a3-5928763ff7cb}. 
+2022-10-04 09:15:41.8167|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab}. 
+2022-10-04 09:15:41.8167|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6}. 
+2022-10-04 09:15:41.8219|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} with expiration date 2022-10-07 21:41:56Z as default key. 
+2022-10-04 09:15:41.8232|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-04 09:15:41.8232|11|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed symmetric algorithm 'System.Security.Cryptography.Aes'. 
+2022-10-04 09:15:41.8232|10|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'. 
+2022-10-04 09:15:41.8286|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} as the default key. 
+2022-10-04 09:15:41.8286|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} was loaded during application startup. 
+2022-10-04 09:15:41.8752|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 4C10E7CE8CE935963A0D9F602B88FCAA41ADFE10) 
+2022-10-04 09:15:41.9190|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7127 
+2022-10-04 09:15:41.9190|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5246 
+2022-10-04 09:15:41.9190|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ReaAccountingSys.Server 
+2022-10-04 09:15:41.9190|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-10-04 09:15:41.9190|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-04 09:15:41.9190|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-04 09:15:41.9190|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Server/ 
+2022-10-04 09:15:41.9190|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-04 09:15:42.1765|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62BLSGKVL" accepted. 
+2022-10-04 09:15:42.1765|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62BLSGKVL" started. 
+2022-10-04 09:15:42.2859|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62BLSGKVM" accepted. 
+2022-10-04 09:15:42.2859|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62BLSGKVL" received FIN. 
+2022-10-04 09:15:42.2859|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62BLSGKVM" started. 
+2022-10-04 09:15:42.2970|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML62BLSGKVM established using the following protocol: Tls13 
+2022-10-04 09:15:42.2901|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-04 09:15:42.3009|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62BLSGKVL" stopped. 
+2022-10-04 09:15:42.3009|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62BLSGKVL" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-04 09:15:42.3264|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/ - - 
+2022-10-04 09:15:42.3324|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-04 09:15:42.3444|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:15:42.3444|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-04 09:15:42.3676|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|2 candidate(s) found for the request path '/' 
+2022-10-04 09:15:42.3676|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HTTP: GET /' with route pattern '/' is valid for the request path '/' 
+2022-10-04 09:15:42.3676|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/' 
+2022-10-04 09:15:42.3676|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HTTP: GET /' 
+2022-10-04 09:15:42.3676|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HTTP: GET /' 
+2022-10-04 09:15:42.3720|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HTTP: GET /' 
+2022-10-04 09:15:42.3720|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/ - - - 200 - text/plain;+charset=utf-8 47.7359ms 
+2022-10-04 09:17:53.8654|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML62BLSGKVM" is closing. 
+2022-10-04 09:17:53.8654|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML62BLSGKVM" is closed. The last processed stream ID was 1. 
+2022-10-04 09:17:53.8654|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62BLSGKVM" received FIN. 
+2022-10-04 09:17:53.8654|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62BLSGKVM" sending FIN because: "The client closed the connection." 
+2022-10-04 09:17:53.8713|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62BLSGKVM" stopped. 
+2022-10-04 09:18:49.2762|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2022-10-04 09:18:49.2762|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2022-10-04 09:18:49.2879|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2022-10-04 09:22:59.1861|0|DEBUG|Program|init main 
+2022-10-04 09:22:59.3482|3|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'. 
+2022-10-04 09:22:59.3617|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-04 09:22:59.3678|62|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/home/bthomas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest. 
+2022-10-04 09:22:59.4163|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-04 09:22:59.4163|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-cf0c6397-c129-4f0d-baed-7cbbba02e4b2.xml'. 
+2022-10-04 09:22:59.4196|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-62c1834c-86f7-419a-abf4-c7af249ae278.xml'. 
+2022-10-04 09:22:59.4196|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-04b24c34-adeb-46fb-8794-a461c7c2c36d.xml'. 
+2022-10-04 09:22:59.4196|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-e9d0ea64-fe22-4a99-80bf-f8d745526a7d.xml'. 
+2022-10-04 09:22:59.4196|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-952f204c-ebf6-4528-a097-d33ece63c52e.xml'. 
+2022-10-04 09:22:59.4196|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-4695af4c-6350-4172-b2a3-5928763ff7cb.xml'. 
+2022-10-04 09:22:59.4196|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-af4fca88-cc4d-41ac-8af9-7fb8b9d679ab.xml'. 
+2022-10-04 09:22:59.4196|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6.xml'. 
+2022-10-04 09:22:59.4196|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {cf0c6397-c129-4f0d-baed-7cbbba02e4b2}. 
+2022-10-04 09:22:59.4248|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {62c1834c-86f7-419a-abf4-c7af249ae278}. 
+2022-10-04 09:22:59.4248|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {04b24c34-adeb-46fb-8794-a461c7c2c36d}. 
+2022-10-04 09:22:59.4248|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e9d0ea64-fe22-4a99-80bf-f8d745526a7d}. 
+2022-10-04 09:22:59.4248|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {952f204c-ebf6-4528-a097-d33ece63c52e}. 
+2022-10-04 09:22:59.4248|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {4695af4c-6350-4172-b2a3-5928763ff7cb}. 
+2022-10-04 09:22:59.4248|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab}. 
+2022-10-04 09:22:59.4248|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6}. 
+2022-10-04 09:22:59.4291|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} with expiration date 2022-10-07 21:41:56Z as default key. 
+2022-10-04 09:22:59.4291|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-04 09:22:59.4321|11|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed symmetric algorithm 'System.Security.Cryptography.Aes'. 
+2022-10-04 09:22:59.4321|10|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'. 
+2022-10-04 09:22:59.4369|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} as the default key. 
+2022-10-04 09:22:59.4369|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} was loaded during application startup. 
+2022-10-04 09:22:59.4891|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 4C10E7CE8CE935963A0D9F602B88FCAA41ADFE10) 
+2022-10-04 09:22:59.5353|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7127 
+2022-10-04 09:22:59.5353|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5246 
+2022-10-04 09:22:59.5353|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ReaAccountingSys.Server 
+2022-10-04 09:22:59.5353|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-10-04 09:22:59.5353|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-04 09:22:59.5353|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-04 09:22:59.5353|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Server/ 
+2022-10-04 09:22:59.5353|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-04 09:23:00.6844|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62FOIEGJ8" accepted. 
+2022-10-04 09:23:00.6844|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62FOIEGJ8" started. 
+2022-10-04 09:23:00.7085|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62FOIEGJ8" received FIN. 
+2022-10-04 09:23:00.7144|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-04 09:23:00.7265|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62FOIEGJ8" stopped. 
+2022-10-04 09:23:00.7270|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62FOIEGJ8" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-04 09:23:00.8479|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62FOIEGJ9" accepted. 
+2022-10-04 09:23:00.8479|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62FOIEGJ9" started. 
+2022-10-04 09:23:00.8604|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML62FOIEGJ9 established using the following protocol: Tls13 
+2022-10-04 09:23:00.8911|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/ - - 
+2022-10-04 09:23:00.8983|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-04 09:23:00.9152|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:23:00.9152|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-04 09:23:00.9393|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|2 candidate(s) found for the request path '/' 
+2022-10-04 09:23:00.9393|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HTTP: GET /' with route pattern '/' is valid for the request path '/' 
+2022-10-04 09:23:00.9393|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/' 
+2022-10-04 09:23:00.9393|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HTTP: GET /' 
+2022-10-04 09:23:00.9393|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HTTP: GET /' 
+2022-10-04 09:23:00.9436|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HTTP: GET /' 
+2022-10-04 09:23:00.9436|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/ - - - 200 - text/plain;+charset=utf-8 55.0028ms 
+2022-10-04 09:23:21.0853|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2022-10-04 09:23:21.0853|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2022-10-04 09:23:21.0965|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML62FOIEGJ9" is closing. 
+2022-10-04 09:23:21.0965|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML62FOIEGJ9" is closed. The last processed stream ID was 1. 
+2022-10-04 09:23:21.0965|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62FOIEGJ9" received FIN. 
+2022-10-04 09:23:21.0965|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62FOIEGJ9" sending FIN because: "The client closed the connection." 
+2022-10-04 09:23:21.1000|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62FOIEGJ9" stopped. 
+2022-10-04 09:23:21.1000|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2022-10-04 09:24:28.7895|0|DEBUG|Program|init main 
+2022-10-04 09:24:28.9426|3|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'. 
+2022-10-04 09:24:28.9639|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-04 09:24:28.9700|62|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/home/bthomas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest. 
+2022-10-04 09:24:29.0240|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-04 09:24:29.0240|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-cf0c6397-c129-4f0d-baed-7cbbba02e4b2.xml'. 
+2022-10-04 09:24:29.0278|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-62c1834c-86f7-419a-abf4-c7af249ae278.xml'. 
+2022-10-04 09:24:29.0278|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-04b24c34-adeb-46fb-8794-a461c7c2c36d.xml'. 
+2022-10-04 09:24:29.0278|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-e9d0ea64-fe22-4a99-80bf-f8d745526a7d.xml'. 
+2022-10-04 09:24:29.0278|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-952f204c-ebf6-4528-a097-d33ece63c52e.xml'. 
+2022-10-04 09:24:29.0278|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-4695af4c-6350-4172-b2a3-5928763ff7cb.xml'. 
+2022-10-04 09:24:29.0278|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-af4fca88-cc4d-41ac-8af9-7fb8b9d679ab.xml'. 
+2022-10-04 09:24:29.0278|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6.xml'. 
+2022-10-04 09:24:29.0278|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {cf0c6397-c129-4f0d-baed-7cbbba02e4b2}. 
+2022-10-04 09:24:29.0317|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {62c1834c-86f7-419a-abf4-c7af249ae278}. 
+2022-10-04 09:24:29.0317|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {04b24c34-adeb-46fb-8794-a461c7c2c36d}. 
+2022-10-04 09:24:29.0317|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e9d0ea64-fe22-4a99-80bf-f8d745526a7d}. 
+2022-10-04 09:24:29.0317|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {952f204c-ebf6-4528-a097-d33ece63c52e}. 
+2022-10-04 09:24:29.0317|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {4695af4c-6350-4172-b2a3-5928763ff7cb}. 
+2022-10-04 09:24:29.0317|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab}. 
+2022-10-04 09:24:29.0317|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6}. 
+2022-10-04 09:24:29.0352|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} with expiration date 2022-10-07 21:41:56Z as default key. 
+2022-10-04 09:24:29.0352|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-04 09:24:29.0352|11|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed symmetric algorithm 'System.Security.Cryptography.Aes'. 
+2022-10-04 09:24:29.0352|10|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'. 
+2022-10-04 09:24:29.0422|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} as the default key. 
+2022-10-04 09:24:29.0422|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} was loaded during application startup. 
+2022-10-04 09:24:29.0974|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 4C10E7CE8CE935963A0D9F602B88FCAA41ADFE10) 
+2022-10-04 09:24:29.1430|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7127 
+2022-10-04 09:24:29.1430|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5246 
+2022-10-04 09:24:29.1430|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ReaAccountingSys.Server 
+2022-10-04 09:24:29.1430|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-10-04 09:24:29.1430|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-04 09:24:29.1430|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-04 09:24:29.1430|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Server/ 
+2022-10-04 09:24:29.1430|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-04 09:24:29.4501|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015H" accepted. 
+2022-10-04 09:24:29.4509|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015H" started. 
+2022-10-04 09:24:29.4729|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62GJ1015H" received FIN. 
+2022-10-04 09:24:29.4773|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-04 09:24:29.4905|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015H" stopped. 
+2022-10-04 09:24:29.4905|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62GJ1015H" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-04 09:24:30.2864|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015I" accepted. 
+2022-10-04 09:24:30.2864|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015I" started. 
+2022-10-04 09:24:30.2996|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML62GJ1015I established using the following protocol: Tls13 
+2022-10-04 09:24:30.3345|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/ - - 
+2022-10-04 09:24:30.3402|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-04 09:24:30.3511|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:24:30.3511|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-04 09:24:30.3751|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|2 candidate(s) found for the request path '/' 
+2022-10-04 09:24:30.3751|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HTTP: GET /' with route pattern '/' is valid for the request path '/' 
+2022-10-04 09:24:30.3751|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/' 
+2022-10-04 09:24:30.3751|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HTTP: GET /' 
+2022-10-04 09:24:30.3751|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HTTP: GET /' 
+2022-10-04 09:24:30.3809|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HTTP: GET /' 
+2022-10-04 09:24:30.3809|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/ - - - 200 - text/plain;+charset=utf-8 49.7129ms 
+2022-10-04 09:25:16.8156|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015J" accepted. 
+2022-10-04 09:25:16.8156|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015J" started. 
+2022-10-04 09:25:16.8156|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015K" accepted. 
+2022-10-04 09:25:16.8156|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015K" started. 
+2022-10-04 09:25:16.8156|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62GJ1015J" received FIN. 
+2022-10-04 09:25:16.8156|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-04 09:25:16.8156|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015J" stopped. 
+2022-10-04 09:25:16.8156|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62GJ1015J" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-04 09:25:16.8196|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML62GJ1015K established using the following protocol: Tls13 
+2022-10-04 09:25:16.8278|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7127/api/1.0/employees/list?Page=1&PageSize=4 - - 
+2022-10-04 09:25:16.8278|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:25:16.8278|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /api/1.0/employees/list does not match a supported file type 
+2022-10-04 09:25:16.8278|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|2 candidate(s) found for the request path '/api/1.0/employees/list' 
+2022-10-04 09:25:16.8278|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ReaAccountingSys.Server.Controllers.EmployeesController.GetEmployees (ReaAccountingSys.Server)' with route pattern 'api/{v:apiVersion}/Employees/list' is valid for the request path '/api/1.0/employees/list' 
+2022-10-04 09:25:16.8278|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/api/1.0/employees/list' 
+2022-10-04 09:25:16.8318|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ReaAccountingSys.Server.Controllers.EmployeesController.GetEmployees (ReaAccountingSys.Server)' 
+2022-10-04 09:25:16.8318|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ReaAccountingSys.Server.Controllers.EmployeesController.GetEmployees (ReaAccountingSys.Server)' 
+2022-10-04 09:25:16.8545|3|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetEmployees", controller = "Employees", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ReaAccountingSys.Shared.ReadModels.PagedList`1[ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeListItem]]] GetEmployees(ReaAccountingSys.Shared.ReadModels.HumanResources.GetEmployeesParameters) on controller ReaAccountingSys.Server.Controllers.EmployeesController (ReaAccountingSys.Server). 
+2022-10-04 09:25:16.8550|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-10-04 09:25:16.8550|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-04 09:25:16.8550|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ReportApiVersionsAttribute (Order: 0) 
+2022-10-04 09:25:16.8550|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-10-04 09:25:16.8550|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter, Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ReportApiVersionsAttribute (Order: 0) 
+2022-10-04 09:25:16.8550|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ReaAccountingSys.Server.Controllers.EmployeesController (ReaAccountingSys.Server) 
+2022-10-04 09:25:16.9564|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-10-04 09:25:16.9738|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ReaAccountingSys.Server.Controllers.EmployeesController (ReaAccountingSys.Server) 
+2022-10-04 09:25:16.9799|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'queryParameters' of type 'ReaAccountingSys.Shared.ReadModels.HumanResources.GetEmployeesParameters' ... 
+2022-10-04 09:25:16.9799|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder|Attempting to bind parameter 'queryParameters' of type 'ReaAccountingSys.Shared.ReadModels.HumanResources.GetEmployeesParameters' using the name '' in request data ... 
+2022-10-04 09:25:16.9840|13|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind property 'ReaAccountingSys.Shared.ReadModels.HumanResources.GetEmployeesParameters.Page' of type 'System.Int32' using the name 'Page' in request data ... 
+2022-10-04 09:25:16.9840|14|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind property 'ReaAccountingSys.Shared.ReadModels.HumanResources.GetEmployeesParameters.Page' of type 'System.Int32'. 
+2022-10-04 09:25:16.9840|13|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind property 'ReaAccountingSys.Shared.ReadModels.HumanResources.GetEmployeesParameters.PageSize' of type 'System.Int32' using the name 'PageSize' in request data ... 
+2022-10-04 09:25:16.9840|14|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind property 'ReaAccountingSys.Shared.ReadModels.HumanResources.GetEmployeesParameters.PageSize' of type 'System.Int32'. 
+2022-10-04 09:25:16.9840|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder|Done attempting to bind parameter 'queryParameters' of type 'ReaAccountingSys.Shared.ReadModels.HumanResources.GetEmployeesParameters'. 
+2022-10-04 09:25:16.9840|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'queryParameters' of type 'ReaAccountingSys.Shared.ReadModels.HumanResources.GetEmployeesParameters'. 
+2022-10-04 09:25:16.9840|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'queryParameters' of type 'ReaAccountingSys.Shared.ReadModels.HumanResources.GetEmployeesParameters' ... 
+2022-10-04 09:25:16.9908|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'queryParameters' of type 'ReaAccountingSys.Shared.ReadModels.HumanResources.GetEmployeesParameters'. 
+2022-10-04 09:25:17.3163|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2022-10-04 09:25:17.3163|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-10-04 09:25:17.3163|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-10-04 09:25:17.3163|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-10-04 09:25:17.3163|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-10-04 09:25:17.3163|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ReaAccountingSys.Shared.ReadModels.PagedList`1[[ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeListItem, ReaAccountingSys.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2022-10-04 09:25:17.3260|2|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ReaAccountingSys.Server.Controllers.EmployeesController.GetEmployees (ReaAccountingSys.Server) in 469.2242ms 
+2022-10-04 09:25:17.3260|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ReaAccountingSys.Server.Controllers.EmployeesController.GetEmployees (ReaAccountingSys.Server)' 
+2022-10-04 09:25:17.3271|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015K" completed keep alive response. 
+2022-10-04 09:25:17.3271|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7127/api/1.0/employees/list?Page=1&PageSize=4 - - - 200 - application/json;+charset=utf-8 500.2908ms 
+2022-10-04 09:26:42.0821|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML62GJ1015I" is closing. 
+2022-10-04 09:26:42.0850|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML62GJ1015I" is closed. The last processed stream ID was 1. 
+2022-10-04 09:26:42.0850|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62GJ1015I" received FIN. 
+2022-10-04 09:26:42.0850|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62GJ1015I" sending FIN because: "The client closed the connection." 
+2022-10-04 09:26:42.0874|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015I" stopped. 
+2022-10-04 09:27:28.0993|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015K" disconnecting. 
+2022-10-04 09:27:28.0993|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015K" stopped. 
+2022-10-04 09:27:28.0993|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62GJ1015K" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-04 09:28:00.4083|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015L" accepted. 
+2022-10-04 09:28:00.4083|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015L" started. 
+2022-10-04 09:28:00.4083|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62GJ1015L" received FIN. 
+2022-10-04 09:28:00.4083|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-04 09:28:00.4110|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015L" stopped. 
+2022-10-04 09:28:00.4110|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015M" accepted. 
+2022-10-04 09:28:00.4110|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62GJ1015L" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-04 09:28:00.4110|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015M" started. 
+2022-10-04 09:28:00.4110|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML62GJ1015M established using the following protocol: Tls13 
+2022-10-04 09:28:00.4110|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/fetchdata - - 
+2022-10-04 09:28:00.4153|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:00.4153|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /fetchdata does not match a supported file type 
+2022-10-04 09:28:00.4153|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/fetchdata' 
+2022-10-04 09:28:00.4153|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/fetchdata' 
+2022-10-04 09:28:00.4153|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fallback {*path:nonfile}' 
+2022-10-04 09:28:00.4153|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fallback {*path:nonfile}' 
+2022-10-04 09:28:00.4200|1|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection. 
+2022-10-04 09:28:00.4257|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/index.html'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/index.html' 
+2022-10-04 09:28:00.4257|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fallback {*path:nonfile}' 
+2022-10-04 09:28:00.4257|2|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection. 
+2022-10-04 09:28:00.4257|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/fetchdata - - - 200 - text/html 11.2783ms 
+2022-10-04 09:28:00.4598|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/bootstrap/bootstrap.min.css - - 
+2022-10-04 09:28:00.4598|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/app.css - - 
+2022-10-04 09:28:00.4598|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - 
+2022-10-04 09:28:00.4598|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:00.4598|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/ReaAccountingSys.Client.styles.css - - 
+2022-10-04 09:28:00.4598|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - 
+2022-10-04 09:28:00.4598|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:00.4598|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:00.4598|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:00.4598|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/ReaAccountingSys.Client.styles.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/obj/Debug/net6.0/scopedcss/bundle/ReaAccountingSys.Client.styles.css' 
+2022-10-04 09:28:00.4598|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/app.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/app.css' 
+2022-10-04 09:28:00.4598|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/ReaAccountingSys.Client.styles.css - - - 200 2944 text/css 1.4694ms 
+2022-10-04 09:28:00.4598|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/app.css - - - 200 2813 text/css 1.5477ms 
+2022-10-04 09:28:00.4638|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 3.8436ms 
+2022-10-04 09:28:00.4638|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/bootstrap/bootstrap.min.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/bootstrap/bootstrap.min.css' 
+2022-10-04 09:28:00.4638|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/bootstrap/bootstrap.min.css - - - 200 162720 text/css 4.8817ms 
+2022-10-04 09:28:00.4673|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - 
+2022-10-04 09:28:00.4673|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:00.4673|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/open-iconic/font/css/open-iconic-bootstrap.min.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css' 
+2022-10-04 09:28:00.4673|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 200 9395 text/css 0.5420ms 
+2022-10-04 09:28:00.4783|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.webassembly.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.webassembly.js.gz' 
+2022-10-04 09:28:00.4783|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - - 200 19181 application/javascript 18.6121ms 
+2022-10-04 09:28:00.4834|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - 
+2022-10-04 09:28:00.4834|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:00.4834|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.boot.json'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json' 
+2022-10-04 09:28:00.4834|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - - 200 20139 application/json 0.6381ms 
+2022-10-04 09:28:00.5052|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.9.c7b72bsklh.js - - 
+2022-10-04 09:28:00.5052|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:00.5052|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/dotnet.6.0.9.c7b72bsklh.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/dotnet.6.0.9.c7b72bsklh.js.gz' 
+2022-10-04 09:28:00.5052|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.9.c7b72bsklh.js - - - 200 64595 application/javascript 0.8621ms 
+2022-10-04 09:28:00.5226|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Shared.dll - - 
+2022-10-04 09:28:00.5226|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Client.pdb - - 
+2022-10-04 09:28:00.5226|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Shared.pdb - - 
+2022-10-04 09:28:00.5226|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:00.5226|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:00.5226|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:00.5226|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Client.dll - - 
+2022-10-04 09:28:00.5226|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:00.5232|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/ReaAccountingSys.Client.pdb.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/ReaAccountingSys.Client.pdb.gz' 
+2022-10-04 09:28:00.5232|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/ReaAccountingSys.Shared.pdb.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/ReaAccountingSys.Shared.pdb.gz' 
+2022-10-04 09:28:00.5232|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/ReaAccountingSys.Client.dll.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/ReaAccountingSys.Client.dll.gz' 
+2022-10-04 09:28:00.5232|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/ReaAccountingSys.Shared.dll.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/ReaAccountingSys.Shared.dll.gz' 
+2022-10-04 09:28:00.5232|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Shared.pdb - - - 200 21282 application/octet-stream 0.6807ms 
+2022-10-04 09:28:00.5232|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Client.pdb - - - 200 17367 application/octet-stream 0.7296ms 
+2022-10-04 09:28:00.5232|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Shared.dll - - - 200 40367 application/octet-stream 0.8367ms 
+2022-10-04 09:28:00.5232|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Client.dll - - - 200 7876 application/octet-stream 0.7218ms 
+2022-10-04 09:28:00.9404|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - 
+2022-10-04 09:28:00.9404|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - - 200 743 application/javascript;+charset=utf-8 0.2098ms 
+2022-10-04 09:28:00.9580|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - 
+2022-10-04 09:28:00.9596|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - - 204 - - 1.6296ms 
+2022-10-04 09:28:01.0550|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/WeatherForecast - - 
+2022-10-04 09:28:01.0550|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:01.0550|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /WeatherForecast does not match a supported file type 
+2022-10-04 09:28:01.0550|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|2 candidate(s) found for the request path '/WeatherForecast' 
+2022-10-04 09:28:01.0550|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ReaAccountingSys.Server.Controllers.WeatherForecastController.Get (ReaAccountingSys.Server)' with route pattern 'WeatherForecast' is valid for the request path '/WeatherForecast' 
+2022-10-04 09:28:01.0550|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/WeatherForecast' 
+2022-10-04 09:28:01.0598|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ReaAccountingSys.Server.Controllers.WeatherForecastController.Get (ReaAccountingSys.Server)' 
+2022-10-04 09:28:01.0598|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ReaAccountingSys.Server.Controllers.WeatherForecastController.Get (ReaAccountingSys.Server)' 
+2022-10-04 09:28:01.0598|3|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Get", controller = "WeatherForecast", page = ""}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[ReaAccountingSys.Shared.WeatherForecast] Get() on controller ReaAccountingSys.Server.Controllers.WeatherForecastController (ReaAccountingSys.Server). 
+2022-10-04 09:28:01.0598|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-10-04 09:28:01.0598|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-04 09:28:01.0598|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ReportApiVersionsAttribute (Order: 0) 
+2022-10-04 09:28:01.0598|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-10-04 09:28:01.0598|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter, Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ReportApiVersionsAttribute (Order: 0) 
+2022-10-04 09:28:01.0598|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ReaAccountingSys.Server.Controllers.WeatherForecastController (ReaAccountingSys.Server) 
+2022-10-04 09:28:01.0598|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ReaAccountingSys.Server.Controllers.WeatherForecastController (ReaAccountingSys.Server) 
+2022-10-04 09:28:01.0598|0|INFO|ReaAccountingSys.Server.Controllers.WeatherForecastController|Here is info message from our values controller. 
+2022-10-04 09:28:01.0598|0|DEBUG|ReaAccountingSys.Server.Controllers.WeatherForecastController|Here is debug message from our values controller. 
+2022-10-04 09:28:01.0598|0|WARN|ReaAccountingSys.Server.Controllers.WeatherForecastController|Here is warn message from our values controller. 
+2022-10-04 09:28:01.0598|0|ERROR|ReaAccountingSys.Server.Controllers.WeatherForecastController|Here is an error message from our values controller. 
+2022-10-04 09:28:01.0598|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2022-10-04 09:28:01.0598|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-10-04 09:28:01.0598|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-10-04 09:28:01.0598|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-10-04 09:28:01.0598|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-10-04 09:28:01.0598|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ReaAccountingSys.Shared.WeatherForecast[]'. 
+2022-10-04 09:28:01.0656|2|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ReaAccountingSys.Server.Controllers.WeatherForecastController.Get (ReaAccountingSys.Server) in 4.6868ms 
+2022-10-04 09:28:01.0656|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ReaAccountingSys.Server.Controllers.WeatherForecastController.Get (ReaAccountingSys.Server)' 
+2022-10-04 09:28:01.0656|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/WeatherForecast - - - 200 - application/json;+charset=utf-8 10.6988ms 
+2022-10-04 09:28:01.0912|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/open-iconic/font/fonts/open-iconic.woff - - 
+2022-10-04 09:28:01.0912|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:28:01.0912|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/open-iconic/font/fonts/open-iconic.woff'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/open-iconic/font/fonts/open-iconic.woff' 
+2022-10-04 09:28:01.0912|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/open-iconic/font/fonts/open-iconic.woff - - - 200 14984 application/font-woff 0.4485ms 
+2022-10-04 09:30:06.1152|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/_framework/blazor-hotreload application/json 3667 
+2022-10-04 09:30:06.1152|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML62GJ1015M", Request id "0HML62GJ1015M:00000023": started reading request body. 
+2022-10-04 09:30:06.1152|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML62GJ1015M", Request id "0HML62GJ1015M:00000023": done reading request body. 
+2022-10-04 09:30:06.1152|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/_framework/blazor-hotreload application/json 3667 - 200 0 - 3.4908ms 
+2022-10-04 09:32:17.1482|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML62GJ1015M" is closing. 
+2022-10-04 09:32:17.1482|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML62GJ1015M" is closed. The last processed stream ID was 35. 
+2022-10-04 09:32:17.1482|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62GJ1015M" received FIN. 
+2022-10-04 09:32:17.1482|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62GJ1015M" sending FIN because: "The client closed the connection." 
+2022-10-04 09:32:17.1482|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62GJ1015M" stopped. 
+2022-10-04 09:44:33.5688|0|DEBUG|Program|init main 
+2022-10-04 09:44:33.7461|3|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'. 
+2022-10-04 09:44:33.7692|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-04 09:44:33.7758|62|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/home/bthomas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest. 
+2022-10-04 09:44:33.8387|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-04 09:44:33.8410|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-cf0c6397-c129-4f0d-baed-7cbbba02e4b2.xml'. 
+2022-10-04 09:44:33.8410|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-62c1834c-86f7-419a-abf4-c7af249ae278.xml'. 
+2022-10-04 09:44:33.8410|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-04b24c34-adeb-46fb-8794-a461c7c2c36d.xml'. 
+2022-10-04 09:44:33.8410|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-e9d0ea64-fe22-4a99-80bf-f8d745526a7d.xml'. 
+2022-10-04 09:44:33.8410|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-952f204c-ebf6-4528-a097-d33ece63c52e.xml'. 
+2022-10-04 09:44:33.8410|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-4695af4c-6350-4172-b2a3-5928763ff7cb.xml'. 
+2022-10-04 09:44:33.8410|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-af4fca88-cc4d-41ac-8af9-7fb8b9d679ab.xml'. 
+2022-10-04 09:44:33.8410|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6.xml'. 
+2022-10-04 09:44:33.8441|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {cf0c6397-c129-4f0d-baed-7cbbba02e4b2}. 
+2022-10-04 09:44:33.8441|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {62c1834c-86f7-419a-abf4-c7af249ae278}. 
+2022-10-04 09:44:33.8441|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {04b24c34-adeb-46fb-8794-a461c7c2c36d}. 
+2022-10-04 09:44:33.8441|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e9d0ea64-fe22-4a99-80bf-f8d745526a7d}. 
+2022-10-04 09:44:33.8441|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {952f204c-ebf6-4528-a097-d33ece63c52e}. 
+2022-10-04 09:44:33.8441|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {4695af4c-6350-4172-b2a3-5928763ff7cb}. 
+2022-10-04 09:44:33.8441|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab}. 
+2022-10-04 09:44:33.8441|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6}. 
+2022-10-04 09:44:33.8498|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} with expiration date 2022-10-07 21:41:56Z as default key. 
+2022-10-04 09:44:33.8515|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-04 09:44:33.8515|11|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed symmetric algorithm 'System.Security.Cryptography.Aes'. 
+2022-10-04 09:44:33.8515|10|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'. 
+2022-10-04 09:44:33.8589|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} as the default key. 
+2022-10-04 09:44:33.8593|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} was loaded during application startup. 
+2022-10-04 09:44:33.9303|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 4C10E7CE8CE935963A0D9F602B88FCAA41ADFE10) 
+2022-10-04 09:44:33.9802|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7127 
+2022-10-04 09:44:33.9802|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5246 
+2022-10-04 09:44:33.9802|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ReaAccountingSys.Server 
+2022-10-04 09:44:33.9802|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-10-04 09:44:33.9802|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-04 09:44:33.9802|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-04 09:44:33.9802|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Server/ 
+2022-10-04 09:44:33.9802|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-04 09:44:34.0011|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62RQ0FI36" accepted. 
+2022-10-04 09:44:34.0011|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62RQ0FI36" started. 
+2022-10-04 09:44:34.0293|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62RQ0FI36" received FIN. 
+2022-10-04 09:44:34.0293|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62RQ0FI37" accepted. 
+2022-10-04 09:44:34.0293|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62RQ0FI37" started. 
+2022-10-04 09:44:34.0385|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML62RQ0FI37 established using the following protocol: Tls13 
+2022-10-04 09:44:34.0335|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-04 09:44:34.0425|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62RQ0FI36" stopped. 
+2022-10-04 09:44:34.0425|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62RQ0FI36" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-04 09:44:34.0652|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/ - - 
+2022-10-04 09:44:34.0724|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-04 09:44:34.0836|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:44:34.0836|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-04 09:44:34.1117|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|2 candidate(s) found for the request path '/' 
+2022-10-04 09:44:34.1117|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HTTP: GET /' with route pattern '/' is valid for the request path '/' 
+2022-10-04 09:44:34.1117|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/' 
+2022-10-04 09:44:34.1117|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HTTP: GET /' 
+2022-10-04 09:44:34.1117|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HTTP: GET /' 
+2022-10-04 09:44:34.1175|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HTTP: GET /' 
+2022-10-04 09:44:34.1193|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/ - - - 200 - text/plain;+charset=utf-8 55.0792ms 
+2022-10-04 09:44:34.1490|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/favicon.ico - - 
+2022-10-04 09:44:34.1490|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 09:44:34.1562|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/favicon.ico'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/favicon.ico' 
+2022-10-04 09:44:34.1562|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/favicon.ico - - - 200 5430 image/x-icon 8.8630ms 
+2022-10-04 09:45:38.6588|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2022-10-04 09:45:38.6598|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2022-10-04 09:45:38.6690|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML62RQ0FI37" is closing. 
+2022-10-04 09:45:38.6714|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML62RQ0FI37" is closed. The last processed stream ID was 3. 
+2022-10-04 09:45:38.6714|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62RQ0FI37" received FIN. 
+2022-10-04 09:45:38.6714|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML62RQ0FI37" sending FIN because: "The client closed the connection." 
+2022-10-04 09:45:38.6714|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML62RQ0FI37" stopped. 
+2022-10-04 09:45:38.6752|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2022-10-04 12:20:05.0290|0|DEBUG|Program|init main 
+2022-10-04 12:20:05.1883|3|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'. 
+2022-10-04 12:20:05.2100|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-04 12:20:05.2162|62|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/home/bthomas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest. 
+2022-10-04 12:20:05.2726|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-04 12:20:05.2726|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-cf0c6397-c129-4f0d-baed-7cbbba02e4b2.xml'. 
+2022-10-04 12:20:05.2756|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-62c1834c-86f7-419a-abf4-c7af249ae278.xml'. 
+2022-10-04 12:20:05.2756|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-04b24c34-adeb-46fb-8794-a461c7c2c36d.xml'. 
+2022-10-04 12:20:05.2756|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-e9d0ea64-fe22-4a99-80bf-f8d745526a7d.xml'. 
+2022-10-04 12:20:05.2756|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-952f204c-ebf6-4528-a097-d33ece63c52e.xml'. 
+2022-10-04 12:20:05.2756|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-4695af4c-6350-4172-b2a3-5928763ff7cb.xml'. 
+2022-10-04 12:20:05.2756|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-af4fca88-cc4d-41ac-8af9-7fb8b9d679ab.xml'. 
+2022-10-04 12:20:05.2756|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6.xml'. 
+2022-10-04 12:20:05.2756|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {cf0c6397-c129-4f0d-baed-7cbbba02e4b2}. 
+2022-10-04 12:20:05.2797|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {62c1834c-86f7-419a-abf4-c7af249ae278}. 
+2022-10-04 12:20:05.2797|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {04b24c34-adeb-46fb-8794-a461c7c2c36d}. 
+2022-10-04 12:20:05.2797|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e9d0ea64-fe22-4a99-80bf-f8d745526a7d}. 
+2022-10-04 12:20:05.2797|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {952f204c-ebf6-4528-a097-d33ece63c52e}. 
+2022-10-04 12:20:05.2797|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {4695af4c-6350-4172-b2a3-5928763ff7cb}. 
+2022-10-04 12:20:05.2797|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab}. 
+2022-10-04 12:20:05.2797|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6}. 
+2022-10-04 12:20:05.2832|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} with expiration date 2022-10-07 21:41:56Z as default key. 
+2022-10-04 12:20:05.2832|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-04 12:20:05.2832|11|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed symmetric algorithm 'System.Security.Cryptography.Aes'. 
+2022-10-04 12:20:05.2832|10|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'. 
+2022-10-04 12:20:05.2898|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} as the default key. 
+2022-10-04 12:20:05.2898|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} was loaded during application startup. 
+2022-10-04 12:20:05.3422|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 4C10E7CE8CE935963A0D9F602B88FCAA41ADFE10) 
+2022-10-04 12:20:05.3905|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7127 
+2022-10-04 12:20:05.3905|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5246 
+2022-10-04 12:20:05.3905|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ReaAccountingSys.Server 
+2022-10-04 12:20:05.3905|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-10-04 12:20:05.3905|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-04 12:20:05.3905|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-04 12:20:05.3905|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Server/ 
+2022-10-04 12:20:05.3905|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-04 12:20:05.6633|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSH" accepted. 
+2022-10-04 12:20:05.6633|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSH" started. 
+2022-10-04 12:20:06.4711|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSH" received FIN. 
+2022-10-04 12:20:06.4711|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSI" accepted. 
+2022-10-04 12:20:06.4711|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSI" started. 
+2022-10-04 12:20:06.4711|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-04 12:20:06.4875|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML65IN24TSI established using the following protocol: Tls13 
+2022-10-04 12:20:06.4875|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSH" stopped. 
+2022-10-04 12:20:06.4875|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSH" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-04 12:20:06.5222|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/ - - 
+2022-10-04 12:20:06.5306|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-04 12:20:06.5432|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-04 12:20:06.5432|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-04 12:20:06.5623|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|2 candidate(s) found for the request path '/' 
+2022-10-04 12:20:06.5636|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HTTP: GET /' with route pattern '/' is valid for the request path '/' 
+2022-10-04 12:20:06.5636|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/' 
+2022-10-04 12:20:06.5636|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HTTP: GET /' 
+2022-10-04 12:20:06.5636|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HTTP: GET /' 
+2022-10-04 12:20:06.5636|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HTTP: GET /' 
+2022-10-04 12:20:06.5676|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/ - - - 200 - text/plain;+charset=utf-8 47.2113ms 
+2022-10-04 12:21:04.7182|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSJ" accepted. 
+2022-10-04 12:21:04.7182|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSJ" started. 
+2022-10-04 12:21:04.7343|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSJ" received FIN. 
+2022-10-04 12:21:04.7343|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094412:SSL routines:ssl3_read_bytes:sslv3 alert bad certificate
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-04 12:21:04.7350|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSJ" stopped. 
+2022-10-04 12:21:04.7350|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSJ" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-04 12:22:18.3264|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML65IN24TSI" is closing. 
+2022-10-04 12:22:18.3281|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML65IN24TSI" is closed. The last processed stream ID was 1. 
+2022-10-04 12:22:18.3281|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSI" received FIN. 
+2022-10-04 12:22:18.3281|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSI" sending FIN because: "The client closed the connection." 
+2022-10-04 12:22:18.3281|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSI" stopped. 
+2022-10-04 12:24:18.2892|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSK" accepted. 
+2022-10-04 12:24:18.2892|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSK" started. 
+2022-10-04 12:24:18.2917|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML65IN24TSK established using the following protocol: Tls13 
+2022-10-04 12:24:18.2917|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo application/grpc - 
+2022-10-04 12:24:18.2917|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 12:24:18.2917|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 12:24:18.2917|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:24:18.2917|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' with route pattern '/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' is valid for the request path '/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:24:18.2917|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for grpc.reflection.v1alpha.ServerReflection' with route pattern 'grpc.reflection.v1alpha.ServerReflection/{unimplementedMethod}' is valid for the request path '/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:24:18.2917|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:24:18.2917|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:24:18.2917|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:24:18.2949|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:24:18.3657|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 12:24:18.3657|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSK", Request id "0HML65IN24TSK:00000001": started reading request body. 
+2022-10-04 12:24:18.3725|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:24:18.3757|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 12:24:18.3757|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSK", Request id "0HML65IN24TSK:00000001": done reading request body. 
+2022-10-04 12:24:18.3847|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:24:18.3847|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo application/grpc - - 200 - application/grpc 92.6267ms 
+2022-10-04 12:24:18.3847|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSK" received FIN. 
+2022-10-04 12:24:18.3847|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML65IN24TSK" is closed. The last processed stream ID was 1. 
+2022-10-04 12:24:18.3847|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSK" sending FIN because: "The client closed the connection." 
+2022-10-04 12:24:18.3847|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSK" stopped. 
+2022-10-04 12:50:45.5153|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSL" accepted. 
+2022-10-04 12:50:45.5153|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSL" started. 
+2022-10-04 12:50:45.5308|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSL" received FIN. 
+2022-10-04 12:50:45.5314|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094412:SSL routines:ssl3_read_bytes:sslv3 alert bad certificate
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-04 12:50:45.5314|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSL" stopped. 
+2022-10-04 12:50:45.5314|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSL" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-04 12:50:52.3724|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSM" accepted. 
+2022-10-04 12:50:52.3724|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSM" started. 
+2022-10-04 12:50:52.3724|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML65IN24TSM established using the following protocol: Tls13 
+2022-10-04 12:50:52.3754|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo application/grpc - 
+2022-10-04 12:50:52.3754|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 12:50:52.3754|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 12:50:52.3754|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:50:52.3754|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' with route pattern '/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' is valid for the request path '/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:50:52.3754|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for grpc.reflection.v1alpha.ServerReflection' with route pattern 'grpc.reflection.v1alpha.ServerReflection/{unimplementedMethod}' is valid for the request path '/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:50:52.3754|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:50:52.3754|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:50:52.3754|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:50:52.3754|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:50:52.3754|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 12:50:52.3754|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSM", Request id "0HML65IN24TSM:00000001": started reading request body. 
+2022-10-04 12:50:52.3754|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:50:52.3754|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 12:50:52.3814|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:50:52.3829|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 12:50:52.3829|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:50:52.3829|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 12:50:52.3829|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:50:52.3829|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 12:50:52.3829|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSM", Request id "0HML65IN24TSM:00000001": done reading request body. 
+2022-10-04 12:50:52.3829|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo' 
+2022-10-04 12:50:52.3829|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo application/grpc - - 200 - application/grpc 8.7564ms 
+2022-10-04 12:52:59.1477|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/GetManagers application/grpc - 
+2022-10-04 12:52:59.1477|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 12:52:59.1477|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 12:52:59.1477|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/EmployeeService.v1.EmployeeService/GetManagers' 
+2022-10-04 12:52:59.1477|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetManagers' with route pattern '/EmployeeService.v1.EmployeeService/GetManagers' is valid for the request path '/EmployeeService.v1.EmployeeService/GetManagers' 
+2022-10-04 12:52:59.1477|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for EmployeeService.v1.EmployeeService' with route pattern 'EmployeeService.v1.EmployeeService/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetManagers' 
+2022-10-04 12:52:59.1477|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetManagers' 
+2022-10-04 12:52:59.1477|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetManagers' 
+2022-10-04 12:52:59.1477|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetManagers' 
+2022-10-04 12:52:59.1477|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetManagers' 
+2022-10-04 12:52:59.1546|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 12:52:59.1546|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSM", Request id "0HML65IN24TSM:00000003": started reading request body. 
+2022-10-04 12:52:59.1546|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSM", Request id "0HML65IN24TSM:00000003": done reading request body. 
+2022-10-04 12:52:59.2671|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-10-04 12:52:59.5694|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:52:59.5694|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:52:59.5694|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:52:59.5694|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:52:59.5694|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:52:59.5694|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:52:59.5712|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetManagers' 
+2022-10-04 12:52:59.5712|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/GetManagers application/grpc - - 200 - application/grpc 424.5273ms 
+2022-10-04 12:55:10.8039|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML65IN24TSM" is closing. 
+2022-10-04 12:55:10.8039|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML65IN24TSM" is closed. The last processed stream ID was 3. 
+2022-10-04 12:55:10.8039|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSM" stopped. 
+2022-10-04 12:55:10.8039|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSM" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-04 12:56:23.5205|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSN" accepted. 
+2022-10-04 12:56:23.5205|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSN" started. 
+2022-10-04 12:56:23.5232|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML65IN24TSN established using the following protocol: Tls13 
+2022-10-04 12:56:23.5232|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/GetTypes application/grpc - 
+2022-10-04 12:56:23.5232|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 12:56:23.5232|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 12:56:23.5232|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/EmployeeService.v1.EmployeeService/GetTypes' 
+2022-10-04 12:56:23.5232|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetTypes' with route pattern '/EmployeeService.v1.EmployeeService/GetTypes' is valid for the request path '/EmployeeService.v1.EmployeeService/GetTypes' 
+2022-10-04 12:56:23.5232|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for EmployeeService.v1.EmployeeService' with route pattern 'EmployeeService.v1.EmployeeService/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetTypes' 
+2022-10-04 12:56:23.5232|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetTypes' 
+2022-10-04 12:56:23.5232|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetTypes' 
+2022-10-04 12:56:23.5232|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetTypes' 
+2022-10-04 12:56:23.5232|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetTypes' 
+2022-10-04 12:56:23.5232|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 12:56:23.5232|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSN", Request id "0HML65IN24TSN:00000001": started reading request body. 
+2022-10-04 12:56:23.5232|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSN", Request id "0HML65IN24TSN:00000001": done reading request body. 
+2022-10-04 12:56:23.5401|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:56:23.5401|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:56:23.5401|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:56:23.5401|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:56:23.5401|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:56:23.5401|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:56:23.5401|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetTypes' 
+2022-10-04 12:56:23.5401|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/GetTypes application/grpc - - 200 - application/grpc 17.0903ms 
+2022-10-04 12:57:23.9517|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/GetAll application/grpc - 
+2022-10-04 12:57:23.9517|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 12:57:23.9517|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 12:57:23.9517|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:57:23.9517|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetAll' with route pattern '/EmployeeService.v1.EmployeeService/GetAll' is valid for the request path '/EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:57:23.9517|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for EmployeeService.v1.EmployeeService' with route pattern 'EmployeeService.v1.EmployeeService/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:57:23.9517|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:57:23.9517|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:57:23.9517|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:57:23.9517|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:57:23.9517|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 12:57:23.9517|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSN", Request id "0HML65IN24TSN:00000003": started reading request body. 
+2022-10-04 12:57:23.9517|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSN", Request id "0HML65IN24TSN:00000003": done reading request body. 
+2022-10-04 12:57:24.0107|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:57:24.0143|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:57:24.0143|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/GetAll application/grpc - - 200 - application/grpc 62.7655ms 
+2022-10-04 12:59:01.2096|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/GetAll application/grpc - 
+2022-10-04 12:59:01.2096|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 12:59:01.2096|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 12:59:01.2096|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:59:01.2096|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetAll' with route pattern '/EmployeeService.v1.EmployeeService/GetAll' is valid for the request path '/EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:59:01.2096|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for EmployeeService.v1.EmployeeService' with route pattern 'EmployeeService.v1.EmployeeService/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:59:01.2096|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:59:01.2096|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:59:01.2096|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:59:01.2096|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:59:01.2096|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 12:59:01.2096|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSN", Request id "0HML65IN24TSN:00000005": started reading request body. 
+2022-10-04 12:59:01.2096|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSN", Request id "0HML65IN24TSN:00000005": done reading request body. 
+2022-10-04 12:59:01.2157|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 12:59:01.2157|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetAll' 
+2022-10-04 12:59:01.2157|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/GetAll application/grpc - - 200 - application/grpc 6.2874ms 
+2022-10-04 13:01:11.8632|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML65IN24TSN" is closing. 
+2022-10-04 13:01:11.8632|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML65IN24TSN" is closed. The last processed stream ID was 5. 
+2022-10-04 13:01:11.8632|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSN" received FIN. 
+2022-10-04 13:01:11.8632|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSN" sending FIN because: "The client closed the connection." 
+2022-10-04 13:01:11.8632|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSN" stopped. 
+2022-10-04 13:05:07.8143|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSO" accepted. 
+2022-10-04 13:05:07.8143|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSO" started. 
+2022-10-04 13:05:07.8168|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML65IN24TSO established using the following protocol: Tls13 
+2022-10-04 13:05:07.8168|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/GetAllByStatus application/grpc - 
+2022-10-04 13:05:07.8168|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 13:05:07.8168|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 13:05:07.8168|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/EmployeeService.v1.EmployeeService/GetAllByStatus' 
+2022-10-04 13:05:07.8168|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetAllByStatus' with route pattern '/EmployeeService.v1.EmployeeService/GetAllByStatus' is valid for the request path '/EmployeeService.v1.EmployeeService/GetAllByStatus' 
+2022-10-04 13:05:07.8168|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for EmployeeService.v1.EmployeeService' with route pattern 'EmployeeService.v1.EmployeeService/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetAllByStatus' 
+2022-10-04 13:05:07.8168|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetAllByStatus' 
+2022-10-04 13:05:07.8168|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/EmployeeService.v1.EmployeeService/GetAllByStatus' 
+2022-10-04 13:05:07.8168|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetAllByStatus' 
+2022-10-04 13:05:07.8168|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetAllByStatus' 
+2022-10-04 13:05:07.8168|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 13:05:07.8168|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSO", Request id "0HML65IN24TSO:00000001": started reading request body. 
+2022-10-04 13:05:07.8168|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSO", Request id "0HML65IN24TSO:00000001": done reading request body. 
+2022-10-04 13:05:07.9828|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 13:05:07.9828|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /EmployeeService.v1.EmployeeService/GetAllByStatus' 
+2022-10-04 13:05:07.9830|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/GetAllByStatus application/grpc - - 200 - application/grpc 165.7239ms 
+2022-10-04 13:06:51.9218|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/SearchByName application/grpc - 
+2022-10-04 13:06:51.9218|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 13:06:51.9218|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 13:06:51.9218|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:06:51.9218|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /EmployeeService.v1.EmployeeService/SearchByName' with route pattern '/EmployeeService.v1.EmployeeService/SearchByName' is valid for the request path '/EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:06:51.9218|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for EmployeeService.v1.EmployeeService' with route pattern 'EmployeeService.v1.EmployeeService/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:06:51.9218|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:06:51.9218|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:06:51.9218|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:06:51.9218|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:06:51.9218|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 13:06:51.9218|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSO", Request id "0HML65IN24TSO:00000003": started reading request body. 
+2022-10-04 13:06:51.9218|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSO", Request id "0HML65IN24TSO:00000003": done reading request body. 
+2022-10-04 13:06:51.9461|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 13:06:51.9461|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:06:51.9461|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/SearchByName application/grpc - - 200 - application/grpc 24.5102ms 
+2022-10-04 13:07:55.6073|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/SearchByName application/grpc - 
+2022-10-04 13:07:55.6073|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 13:07:55.6073|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-04 13:07:55.6073|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:07:55.6073|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /EmployeeService.v1.EmployeeService/SearchByName' with route pattern '/EmployeeService.v1.EmployeeService/SearchByName' is valid for the request path '/EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:07:55.6073|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for EmployeeService.v1.EmployeeService' with route pattern 'EmployeeService.v1.EmployeeService/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:07:55.6073|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:07:55.6073|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:07:55.6073|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:07:55.6073|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:07:55.6073|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-04 13:07:55.6073|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSO", Request id "0HML65IN24TSO:00000005": started reading request body. 
+2022-10-04 13:07:55.6073|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HML65IN24TSO", Request id "0HML65IN24TSO:00000005": done reading request body. 
+2022-10-04 13:07:55.6137|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-04 13:07:55.6137|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /EmployeeService.v1.EmployeeService/SearchByName' 
+2022-10-04 13:07:55.6137|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/EmployeeService.v1.EmployeeService/SearchByName application/grpc - - 200 - application/grpc 6.4569ms 
+2022-10-04 13:10:05.9428|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML65IN24TSO" is closing. 
+2022-10-04 13:10:05.9430|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML65IN24TSO" is closed. The last processed stream ID was 5. 
+2022-10-04 13:10:05.9430|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSO" received FIN. 
+2022-10-04 13:10:05.9430|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML65IN24TSO" sending FIN because: "The client closed the connection." 
+2022-10-04 13:10:05.9430|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML65IN24TSO" stopped. 

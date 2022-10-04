@@ -6,7 +6,7 @@ using NLog.Web;
 // using Microsoft.AspNetCore.ResponseCompression;
 using ReaAccountingSys.Server.Interceptors;
 using ReaAccountingSys.Server.Extensions;
-using ReaAccountingSys.Server.Services.HumanResources;
+using ReaAccountingSys.Server.GrpcServices.HumanResources;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
 var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
@@ -23,7 +23,8 @@ try
     builder.Logging.ClearProviders();
     builder.Host.UseNLog();
 
-    builder.Services.AddGrpc(options => {
+    builder.Services.AddGrpc(options =>
+    {
         options.EnableDetailedErrors = true;
         options.MaxReceiveMessageSize = 6291456; // 6 MB
         options.MaxSendMessageSize = 6291456; // 6 MB
@@ -62,10 +63,10 @@ try
 
     var app = builder.Build();
 
-app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
-app.MapGrpcReflectionService();
-app.MapGrpcService<EmployeeGrpcService>();
-// app.MapGrpcService<CountryGrpcServiceBrowser>();
+    app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
+    app.MapGrpcReflectionService();
+    app.MapGrpcService<EmployeeGrpcService>();
+    // app.MapGrpcService<EmployeeGrpcServiceBrowser>();
 
     // app.ConfigureExceptionHandler(logger);
 
@@ -99,8 +100,11 @@ app.MapGrpcService<EmployeeGrpcService>();
     app.MapControllers();
     app.MapFallbackToFile("index.html");
 
-    app.Run();
+    app.MapGet("/", () =>
+        "Communication with gRPC endpoints must be made through a gRPC client."
+    );
 
+    app.Run();
 }
 catch (Exception exception)
 {
