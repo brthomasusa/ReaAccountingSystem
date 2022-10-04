@@ -1,0 +1,138 @@
+2022-10-02 21:21:53.1221|0|DEBUG|Program|init main 
+2022-10-02 21:21:53.2711|3|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'. 
+2022-10-02 21:21:53.2924|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-02 21:21:53.2984|62|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/home/bthomas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest. 
+2022-10-02 21:21:53.3510|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-02 21:21:53.3510|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-cf0c6397-c129-4f0d-baed-7cbbba02e4b2.xml'. 
+2022-10-02 21:21:53.3510|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-62c1834c-86f7-419a-abf4-c7af249ae278.xml'. 
+2022-10-02 21:21:53.3510|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-04b24c34-adeb-46fb-8794-a461c7c2c36d.xml'. 
+2022-10-02 21:21:53.3510|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-e9d0ea64-fe22-4a99-80bf-f8d745526a7d.xml'. 
+2022-10-02 21:21:53.3510|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-952f204c-ebf6-4528-a097-d33ece63c52e.xml'. 
+2022-10-02 21:21:53.3549|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-4695af4c-6350-4172-b2a3-5928763ff7cb.xml'. 
+2022-10-02 21:21:53.3549|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-af4fca88-cc4d-41ac-8af9-7fb8b9d679ab.xml'. 
+2022-10-02 21:21:53.3549|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6.xml'. 
+2022-10-02 21:21:53.3549|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {cf0c6397-c129-4f0d-baed-7cbbba02e4b2}. 
+2022-10-02 21:21:53.3595|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {62c1834c-86f7-419a-abf4-c7af249ae278}. 
+2022-10-02 21:21:53.3595|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {04b24c34-adeb-46fb-8794-a461c7c2c36d}. 
+2022-10-02 21:21:53.3595|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e9d0ea64-fe22-4a99-80bf-f8d745526a7d}. 
+2022-10-02 21:21:53.3595|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {952f204c-ebf6-4528-a097-d33ece63c52e}. 
+2022-10-02 21:21:53.3595|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {4695af4c-6350-4172-b2a3-5928763ff7cb}. 
+2022-10-02 21:21:53.3595|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab}. 
+2022-10-02 21:21:53.3595|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6}. 
+2022-10-02 21:21:53.3636|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} with expiration date 2022-10-07 21:41:56Z as default key. 
+2022-10-02 21:21:53.3636|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-02 21:21:53.3636|11|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed symmetric algorithm 'System.Security.Cryptography.Aes'. 
+2022-10-02 21:21:53.3636|10|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'. 
+2022-10-02 21:21:53.3710|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} as the default key. 
+2022-10-02 21:21:53.3710|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab} was loaded during application startup. 
+2022-10-02 21:21:53.4256|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 4C10E7CE8CE935963A0D9F602B88FCAA41ADFE10) 
+2022-10-02 21:21:53.4732|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7127 
+2022-10-02 21:21:53.4732|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5246 
+2022-10-02 21:21:53.4732|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ReaAccountingSys.Server 
+2022-10-02 21:21:53.4732|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-10-02 21:21:53.4732|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-02 21:21:53.4732|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-02 21:21:53.4732|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Server/ 
+2022-10-02 21:21:53.4732|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-02 21:21:53.7669|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML4SO4QBRE7" accepted. 
+2022-10-02 21:21:53.7669|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML4SO4QBRE7" started. 
+2022-10-02 21:21:53.7887|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML4SO4QBRE8" accepted. 
+2022-10-02 21:21:53.7887|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML4SO4QBRE7" received FIN. 
+2022-10-02 21:21:53.7887|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML4SO4QBRE8" started. 
+2022-10-02 21:21:53.8027|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML4SO4QBRE8 established using the following protocol: Tls13 
+2022-10-02 21:21:53.7946|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-02 21:21:53.8064|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML4SO4QBRE7" stopped. 
+2022-10-02 21:21:53.8064|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML4SO4QBRE7" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-02 21:21:53.8381|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/ - - 
+2022-10-02 21:21:53.8464|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-02 21:21:53.8576|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-02 21:21:53.8576|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-02 21:21:53.8762|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/' 
+2022-10-02 21:21:53.8762|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/' 
+2022-10-02 21:21:53.8762|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fallback {*path:nonfile}' 
+2022-10-02 21:21:53.8762|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fallback {*path:nonfile}' 
+2022-10-02 21:21:53.8808|1|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection. 
+2022-10-02 21:21:53.8874|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/index.html'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/index.html' 
+2022-10-02 21:21:53.8874|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fallback {*path:nonfile}' 
+2022-10-02 21:21:53.8874|2|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection. 
+2022-10-02 21:21:53.8874|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/ - - - 200 - text/html 54.7385ms 
+2022-10-02 21:21:53.9200|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/bootstrap/bootstrap.min.css - - 
+2022-10-02 21:21:53.9200|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/app.css - - 
+2022-10-02 21:21:53.9200|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/ReaAccountingSys.Client.styles.css - - 
+2022-10-02 21:21:53.9200|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - 
+2022-10-02 21:21:53.9200|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - 
+2022-10-02 21:21:53.9200|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-02 21:21:53.9200|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-02 21:21:53.9200|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-02 21:21:53.9200|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-02 21:21:53.9200|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/ReaAccountingSys.Client.styles.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/obj/Debug/net6.0/scopedcss/bundle/ReaAccountingSys.Client.styles.css' 
+2022-10-02 21:21:53.9200|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/ReaAccountingSys.Client.styles.css - - - 200 2944 text/css 1.3217ms 
+2022-10-02 21:21:53.9240|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 3.9650ms 
+2022-10-02 21:21:53.9395|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.webassembly.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.webassembly.js.gz' 
+2022-10-02 21:21:53.9395|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - - 200 19181 application/javascript 19.8613ms 
+2022-10-02 21:21:53.9513|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/app.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/app.css' 
+2022-10-02 21:21:53.9513|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/app.css - - - 200 2813 text/css 31.4353ms 
+2022-10-02 21:21:53.9513|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/bootstrap/bootstrap.min.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/bootstrap/bootstrap.min.css' 
+2022-10-02 21:21:53.9513|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/bootstrap/bootstrap.min.css - - - 200 162720 text/css 32.2143ms 
+2022-10-02 21:21:53.9513|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - 
+2022-10-02 21:21:53.9552|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-02 21:21:53.9552|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/open-iconic/font/css/open-iconic-bootstrap.min.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css' 
+2022-10-02 21:21:53.9552|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 200 9395 text/css 0.9742ms 
+2022-10-02 21:21:53.9609|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - 
+2022-10-02 21:21:53.9609|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-02 21:21:53.9609|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.boot.json'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json' 
+2022-10-02 21:21:53.9609|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - - 200 20140 application/json 0.6882ms 
+2022-10-02 21:21:53.9755|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.9.c7b72bsklh.js - - 
+2022-10-02 21:21:53.9755|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-02 21:21:53.9755|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/dotnet.6.0.9.c7b72bsklh.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/dotnet.6.0.9.c7b72bsklh.js.gz' 
+2022-10-02 21:21:53.9755|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.9.c7b72bsklh.js - - - 200 64595 application/javascript 0.9932ms 
+2022-10-02 21:21:54.4755|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - 
+2022-10-02 21:21:54.4755|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - - 200 743 application/javascript;+charset=utf-8 0.3220ms 
+2022-10-02 21:21:54.4986|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - 
+2022-10-02 21:21:54.4994|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - - 204 - - 0.7965ms 
+2022-10-02 21:21:54.6356|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/open-iconic/font/fonts/open-iconic.woff - - 
+2022-10-02 21:21:54.6356|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-02 21:21:54.6356|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/open-iconic/font/fonts/open-iconic.woff'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/open-iconic/font/fonts/open-iconic.woff' 
+2022-10-02 21:21:54.6356|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/open-iconic/font/fonts/open-iconic.woff - - - 200 14984 application/font-woff 0.6454ms 
+2022-10-02 21:21:57.5278|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/WeatherForecast - - 
+2022-10-02 21:21:57.5278|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-02 21:21:57.5278|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /WeatherForecast does not match a supported file type 
+2022-10-02 21:21:57.5278|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|2 candidate(s) found for the request path '/WeatherForecast' 
+2022-10-02 21:21:57.5278|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ReaAccountingSys.Server.Controllers.WeatherForecastController.Get (ReaAccountingSys.Server)' with route pattern 'WeatherForecast' is valid for the request path '/WeatherForecast' 
+2022-10-02 21:21:57.5278|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/WeatherForecast' 
+2022-10-02 21:21:57.5397|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ReaAccountingSys.Server.Controllers.WeatherForecastController.Get (ReaAccountingSys.Server)' 
+2022-10-02 21:21:57.5397|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ReaAccountingSys.Server.Controllers.WeatherForecastController.Get (ReaAccountingSys.Server)' 
+2022-10-02 21:21:57.5446|3|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Get", controller = "WeatherForecast", page = ""}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[ReaAccountingSys.Shared.WeatherForecast] Get() on controller ReaAccountingSys.Server.Controllers.WeatherForecastController (ReaAccountingSys.Server). 
+2022-10-02 21:21:57.5446|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-10-02 21:21:57.5446|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 21:21:57.5446|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ReportApiVersionsAttribute (Order: 0) 
+2022-10-02 21:21:57.5446|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-10-02 21:21:57.5446|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter, Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ReportApiVersionsAttribute (Order: 0) 
+2022-10-02 21:21:57.5446|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ReaAccountingSys.Server.Controllers.WeatherForecastController (ReaAccountingSys.Server) 
+2022-10-02 21:21:57.5446|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ReaAccountingSys.Server.Controllers.WeatherForecastController (ReaAccountingSys.Server) 
+2022-10-02 21:21:57.5446|0|INFO|ReaAccountingSys.Server.Controllers.WeatherForecastController|Here is info message from our values controller. 
+2022-10-02 21:21:57.5446|0|DEBUG|ReaAccountingSys.Server.Controllers.WeatherForecastController|Here is debug message from our values controller. 
+2022-10-02 21:21:57.5446|0|WARN|ReaAccountingSys.Server.Controllers.WeatherForecastController|Here is warn message from our values controller. 
+2022-10-02 21:21:57.5446|0|ERROR|ReaAccountingSys.Server.Controllers.WeatherForecastController|Here is an error message from our values controller. 
+2022-10-02 21:21:57.5480|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2022-10-02 21:21:57.5480|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-10-02 21:21:57.5480|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-10-02 21:21:57.5480|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-10-02 21:21:57.5480|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-10-02 21:21:57.5480|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ReaAccountingSys.Shared.WeatherForecast[]'. 
+2022-10-02 21:21:57.5564|2|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ReaAccountingSys.Server.Controllers.WeatherForecastController.Get (ReaAccountingSys.Server) in 9.6462ms 
+2022-10-02 21:21:57.5564|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ReaAccountingSys.Server.Controllers.WeatherForecastController.Get (ReaAccountingSys.Server)' 
+2022-10-02 21:21:57.5564|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/WeatherForecast - - - 200 - application/json;+charset=utf-8 28.7379ms 
+2022-10-02 21:24:09.4117|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML4SO4QBRE8" is closing. 
+2022-10-02 21:24:09.4117|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML4SO4QBRE8" is closed. The last processed stream ID was 25. 
+2022-10-02 21:24:09.4154|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML4SO4QBRE8" received FIN. 
+2022-10-02 21:24:09.4154|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML4SO4QBRE8" sending FIN because: "The client closed the connection." 
+2022-10-02 21:24:09.4154|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML4SO4QBRE8" stopped. 

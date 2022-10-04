@@ -9,12 +9,12 @@ import "google/protobuf/timestamp.proto";
 // import "Protos/HumanResources/v1/employee.shared.proto";
 
 service EmployeeService{
-    rpc GetAll (GetEmployeesRequest) returns (stream EmployeeListItemResponse) {}
-    rpc GetAllByStatus (GetEmployeesStatusRequest) returns (stream EmployeeListItemResponse) {}
-    rpc SearchByName (GetEmployeesByLastNameRequest) returns (stream EmployeeListItemResponse) {}
-    rpc SearchByNameAndStatus (GetEmployeesByNameAndStatusRequest) returns (stream EmployeeListItemResponse) {}
-    rpc GetManagers (google.protobuf.Empty) returns (stream EmployeeManagerResponse) {}
-    rpc GetTypes (google.protobuf.Empty) returns (stream EmployeeTypeResponse) {}
+    rpc GetAll (GetEmployeesRequest) returns (EmployeeListItemResponse) {}
+    rpc GetAllByStatus (GetEmployeesStatusRequest) returns (EmployeeListItemResponse) {}
+    rpc SearchByName (GetEmployeesByLastNameRequest) returns (EmployeeListItemResponse) {}
+    rpc SearchByNameAndStatus (GetEmployeesByNameAndStatusRequest) returns (EmployeeListItemResponse) {}
+    rpc GetManagers (google.protobuf.Empty) returns (stream EmployeeManager) {}
+    rpc GetTypes (google.protobuf.Empty) returns (stream EmployeeType) {}
     rpc GetById (GetEmployeeRequest) returns (EmployeeReadModelResponse) {}
     rpc Create (EmployeeWriteModelRequest) returns (EmployeeReadModelResponse) {}
     rpc Delete (GetEmployeeRequest) returns (google.protobuf.Empty) {}
@@ -32,14 +32,14 @@ message GetEmployeesStatusRequest {
     string page_token = 3;   
 }
 
-message GetEmployeesByLastNameRequest {
+message GetEmployeesByNameAndStatusRequest {
     string LastName = 1;
     bool EmployeementStatus = 2;
     int32 page_size = 3;
     string page_token = 4; 
 }
 
-message GetEmployeesByNameAndStatusRequest {
+message GetEmployeesByLastNameRequest {
     string LastName = 1;
     int32 page_size = 2;
     string page_token = 3; 
@@ -115,18 +115,10 @@ message EmployeeReadModelResponse {
     google.protobuf.Timestamp LastModifiedDate = 25;    
 }
 
-message EmployeeManagerResponse {
-    repeated EmployeeManager EmployeeManagers = 1;
-}
-
 message EmployeeManager {
     string ManagerId = 1;
     string ManagerFullName = 2;
     string Group = 3;
-}
-
-message EmployeeTypeResponse {
-    repeated EmployeeType EmployeeTypes = 1;
 }
 
 message EmployeeType {
