@@ -100,9 +100,9 @@ try
     app.MapControllers();
     app.MapFallbackToFile("index.html");
 
-    app.MapGet("/", () =>
-        "Communication with gRPC endpoints must be made through a gRPC client."
-    );
+    // app.MapGet("/", () =>
+    //     "Communication with gRPC endpoints must be made through a gRPC client."
+    // );
 
     app.Run();
 }
