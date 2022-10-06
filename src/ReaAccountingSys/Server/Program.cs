@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
 using NLog.Web;
-// using Microsoft.AspNetCore.ResponseCompression;
+
 using ReaAccountingSys.Server.Interceptors;
 using ReaAccountingSys.Server.Extensions;
 using ReaAccountingSys.Server.GrpcServices.HumanResources;

@@ -1,24 +1,20 @@
-using ReaAccountingSys.Shared.EmployeeService.gRPC.v1;
-using ReaAccountingSys.Application.Commands.HumanResources;
-using ReaAccountingSys.Application.Handlers.HumanResources;
+using ReaAccountingSys.Server.gRPC.HumanResources;
 using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
 using ReaAccountingSys.SharedKernel.Utilities;
 using ReaAccountingSys.Shared.ReadModels;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
-using ReaAccountingSys.Shared.WriteModels.HumanResources;
-using ReaAccountingSys.Shared.gRpcMappers.HumanResources;
 
-using EmployeeServiceBase = ReaAccountingSys.Shared.EmployeeService.gRPC.v1.EmployeeService.EmployeeServiceBase;
+using EmployeeService = ReaAccountingSys.Server.gRPC.HumanResources.EmployeeService;
 using ReadModelEmployeeListItem = ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeListItem;
-using GrpcEmployeeListItem = ReaAccountingSys.Shared.EmployeeService.gRPC.v1.EmployeeListItem;
+using GrpcEmployeeListItem = ReaAccountingSys.Server.gRPC.HumanResources.EmployeeListItem;
 using ReadModelEmployeeManager = ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeManager;
-using GrpcEmployeeManager = ReaAccountingSys.Shared.EmployeeService.gRPC.v1.EmployeeManager;
+using GrpcEmployeeManager = ReaAccountingSys.Server.gRPC.HumanResources.EmployeeManager;
 using ReadModelEmployeeTypes = ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeTypes;
-using GrpcEmployeeType = ReaAccountingSys.Shared.EmployeeService.gRPC.v1.EmployeeType;
+using GrpcEmployeeType = ReaAccountingSys.Server.gRPC.HumanResources.EmployeeType;
 
 namespace ReaAccountingSys.Server.GrpcServices.HumanResources
 {
-    public class EmployeeGrpcService : EmployeeServiceBase
+    public class EmployeeGrpcService : EmployeeService.EmployeeServiceBase
     {
         private readonly ILogger<EmployeeGrpcService> _logger;
         private readonly IReadRepositoryManager _readRepository;
@@ -39,7 +35,7 @@ namespace ReaAccountingSys.Server.GrpcServices.HumanResources
             _writeRepository = writeRepository;
             _unitOfWork = unitOfWork;
         }
-        public override async Task<EmployeeListItemResponse> GetAll
+        public override async Task<ReaAccountingSys.Server.gRPC.HumanResources.EmployeeListItemResponse> GetAll
         (
             GetEmployeesRequest request,
             ServerCallContext context
@@ -131,40 +127,44 @@ namespace ReaAccountingSys.Server.GrpcServices.HumanResources
             return response;
         }
 
-        public override async Task GetManagers
-        (
-            Empty request,
-            IServerStreamWriter<GrpcEmployeeManager> responseStream,
-            ServerCallContext context
-        )
+        public override async Task<EmployeeManagerResponse> GetManagers(Empty request, ServerCallContext context)
         {
             GetEmployeeManagersParameters managersParams = new GetEmployeeManagersParameters() { };
 
             OperationResult<List<ReadModelEmployeeManager>> result =
                 await _readRepository.EmployeeAggregate.GetEmployeeManagers(managersParams);
 
+            EmployeeManagerResponse response = new();
+            List<GrpcEmployeeManager> managers = new();
+
             if (result.Success)
             {
-                result.Result.ForEach(async item => await responseStream.WriteAsync(item.ToResponse()));
+                result.Result.ForEach(item => managers.Add(item.ToResponse()));
             }
+
+            response.EmployeeManagers.AddRange(managers);
+
+            return response;
         }
 
-        public override async Task GetTypes
-        (
-            Empty request,
-            IServerStreamWriter<GrpcEmployeeType> responseStream,
-            ServerCallContext context
-        )
+        public override async Task<EmployeeTypeResponse> GetTypes(Empty request, ServerCallContext context)
         {
             GetEmployeeTypesParameters typesParams = new GetEmployeeTypesParameters() { };
 
             OperationResult<List<ReadModelEmployeeTypes>> result =
                 await _readRepository.EmployeeAggregate.GetEmployeeTypes(typesParams);
 
+            EmployeeTypeResponse response = new();
+            List<GrpcEmployeeType> employeeTypes = new();
+
             if (result.Success)
             {
-                result.Result.ForEach(async item => await responseStream.WriteAsync(item.ToResponse()));
+                result.Result.ForEach(item => employeeTypes.Add(item.ToResponse()));
             }
+
+            response.EmployeeTypes.AddRange(employeeTypes);
+
+            return response;
         }
 
         public override Task<EmployeeReadModelResponse> GetById

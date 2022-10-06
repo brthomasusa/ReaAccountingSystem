@@ -1,0 +1,23 @@
+@inject NavigationManager NavManager
+
+<Bar Breakpoint="Breakpoint.Desktop" Background="Background.Dark" ThemeContrast="ThemeContrast.Dark">
+    <BarToggler />
+    <BarMenu>
+        <BarStart>
+            <BarItem>
+                <BarLink To="Finance/Pages/Financiers/FinanciersListPage">Financiers</BarLink>
+            </BarItem>
+            <BarItem>
+                <BarLink To="Finance/Pages/LoanAgreements/LoanAgreementsPage">Loan Agreements</BarLink>
+            </BarItem>
+            <BarItem>
+                <BarLink To="Finance/Pages/StockSubscriptions/StockSubscriptionsPage">Stock Subscriptions</BarLink>
+            </BarItem>
+        </BarStart>
+        <BarEnd>
+            <BarItem class="mr-4">
+                <Button Margin="Margin.Is3.FromEnd" Color="Color.Secondary" Size="Size.Small">Log in</Button>
+            </BarItem>
+        </BarEnd>
+    </BarMenu>
+</Bar>

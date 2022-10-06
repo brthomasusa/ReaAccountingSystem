@@ -1,7 +1,7 @@
-using ReaAccountingSys.Shared.EmployeeService.gRPC.v1;
+using ReaAccountingSys.Server.gRPC.HumanResources;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
 
-namespace ReaAccountingSys.Shared.gRpcMappers.HumanResources
+namespace ReaAccountingSys.Server.GrpcServices.HumanResources
 {
     public static class ParameterMappings
     {

@@ -1,20 +1,19 @@
 syntax = "proto3";
 
-option csharp_namespace = "ReaAccountingSys.Shared.EmployeeService.gRPC.v1";
+option csharp_namespace = "ReaAccountingSys.Server.gRPC.HumanResources";
 
-package EmployeeService.v1;
+package ReaAccountingSys.GrpcServices;
 
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
-// import "Protos/HumanResources/v1/employee.shared.proto";
 
 service EmployeeService{
     rpc GetAll (GetEmployeesRequest) returns (EmployeeListItemResponse) {}
     rpc GetAllByStatus (GetEmployeesStatusRequest) returns (EmployeeListItemResponse) {}
     rpc SearchByName (GetEmployeesByLastNameRequest) returns (EmployeeListItemResponse) {}
     rpc SearchByNameAndStatus (GetEmployeesByNameAndStatusRequest) returns (EmployeeListItemResponse) {}
-    rpc GetManagers (google.protobuf.Empty) returns (stream EmployeeManager) {}
-    rpc GetTypes (google.protobuf.Empty) returns (stream EmployeeType) {}
+    rpc GetManagers (google.protobuf.Empty) returns (EmployeeManagerResponse) {}
+    rpc GetTypes (google.protobuf.Empty) returns (EmployeeTypeResponse) {}
     rpc GetById (GetEmployeeRequest) returns (EmployeeReadModelResponse) {}
     rpc Create (EmployeeWriteModelRequest) returns (EmployeeReadModelResponse) {}
     rpc Delete (GetEmployeeRequest) returns (google.protobuf.Empty) {}
@@ -115,10 +114,17 @@ message EmployeeReadModelResponse {
     google.protobuf.Timestamp LastModifiedDate = 25;    
 }
 
+message EmployeeManagerResponse {
+    repeated EmployeeManager EmployeeManagers = 1;
+}
 message EmployeeManager {
     string ManagerId = 1;
     string ManagerFullName = 2;
     string Group = 3;
+}
+
+message EmployeeTypeResponse {
+    repeated EmployeeType EmployeeTypes = 1;
 }
 
 message EmployeeType {

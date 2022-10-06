@@ -1,10 +1,9 @@
 using GoogleDateTime = Google.Protobuf.WellKnownTypes.Timestamp;
-
-using ReaAccountingSys.Shared.EmployeeService.gRPC.v1;
+using ReaAccountingSys.Server.gRPC.HumanResources;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
-namespace ReaAccountingSys.Shared.gRpcMappers.HumanResources
+namespace ReaAccountingSys.Server.GrpcServices.HumanResources
 {
     public static class ModelMappings
     {
@@ -47,7 +46,7 @@ namespace ReaAccountingSys.Shared.gRpcMappers.HumanResources
             }
         }
 
-        public static ReaAccountingSys.Shared.EmployeeService.gRPC.v1.EmployeeListItem ToResponse
+        public static ReaAccountingSys.Server.gRPC.HumanResources.EmployeeListItem ToResponse
         (
             this ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeListItem model
         )
@@ -105,7 +104,7 @@ namespace ReaAccountingSys.Shared.gRpcMappers.HumanResources
             }
         }
 
-        public static ReaAccountingSys.Shared.EmployeeService.gRPC.v1.EmployeeManager ToResponse
+        public static ReaAccountingSys.Server.gRPC.HumanResources.EmployeeManager ToResponse
         (
             this ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeManager manager
         )
@@ -125,7 +124,7 @@ namespace ReaAccountingSys.Shared.gRpcMappers.HumanResources
             }
         }
 
-        public static ReaAccountingSys.Shared.EmployeeService.gRPC.v1.EmployeeType ToResponse
+        public static ReaAccountingSys.Server.gRPC.HumanResources.EmployeeType ToResponse
         (
             this ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeTypes model
         )

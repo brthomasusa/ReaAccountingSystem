@@ -17,10 +17,16 @@
     <PackageReference Include="NLog" Version="5.*" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.2.3" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.2.3" /> 
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.2.3" />
+
     <PackageReference Include="Grpc.AspNetCore" Version="2.49.0" />
     <PackageReference Include="Grpc.AspNetCore.Web" Version="2.49.0" />
-    <PackageReference Include="Grpc.AspNetCore.Server.Reflection" Version="2.49.0" />            
+    <PackageReference Include="Grpc.AspNetCore.Server.Reflection" Version="2.49.0" />                
+  </ItemGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+	  <Protobuf Include="../Shared/Protos/HumanResources/v1/employee.proto" Link="Protos/HumanResources/v1/employee.proto" GrpcServices="Server" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +35,5 @@
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
-
 
 </Project>

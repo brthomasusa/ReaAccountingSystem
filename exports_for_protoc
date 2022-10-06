@@ -1,2 +1,2 @@
-From: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Shared/Protos/HumanResources/v1
-Run:  protoc --csharp_out=../../../obj/Debug/net6.0/Protos/HumanResources/v1/ employee.proto
+From: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Server
+Run:  protoc --proto_path=../Shared/Protos/HumanResources/v1/ --csharp_out=obj/Debug/net6.0/Protos/HumanResources/v1/ employee.proto
