@@ -13,6 +13,7 @@ using FluentValidation;
 using Fluxor;
 
 using ReaAccountingSys.Client;
+using ReaAccountingSys.Client.Services.Fluxor.HumanResources;
 
 var currentAssembly = typeof(Program).Assembly;
 
@@ -35,7 +36,7 @@ builder.Services.AddFluxor(options =>
     options.UseReduxDevTools();
 #endif        
 });
-
+builder.Services.AddScoped<StateFacade>();
 builder.Services.AddValidatorsFromAssembly(currentAssembly);
 
 builder.Services.AddSingleton(services =>

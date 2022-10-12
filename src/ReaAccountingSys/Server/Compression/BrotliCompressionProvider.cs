@@ -1,13 +1,14 @@
+#pragma warning disable CA1416
 namespace ReaAccountingSys.Server.Compression
 {
     public class BrotliCompressionProvider : ICompressionProvider
     {
         private readonly CompressionLevel? _compressionLevel;
 
-        public BrotliCompressionProvider(CompressionLevel compressionLevel) 
+        public BrotliCompressionProvider(CompressionLevel compressionLevel)
             => _compressionLevel = compressionLevel;
 
-        public BrotliCompressionProvider() {}
+        public BrotliCompressionProvider() { }
 
         public string EncodingName => "br"; // Must match grpc-accept-encoding 
 
@@ -25,6 +26,6 @@ namespace ReaAccountingSys.Server.Compression
         public Stream CreateDecompressionStream(Stream stream)
         {
             return new BrotliStream(stream, CompressionMode.Decompress);
-        }                
+        }
     }
 }

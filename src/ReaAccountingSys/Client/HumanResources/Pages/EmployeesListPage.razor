@@ -1,0 +1,108 @@
+@inherits FluxorComponent
+
+@page "/HumanResouces/Pages/EmployeesListPage"
+@using ReaAccountingSys.Client.Components.Common
+@using ReaAccountingSys.Client.HumanResources.Components
+@using ReaAccountingSys.Shared.ReadModels
+@using Blazorise.Snackbar
+
+<PageTitle>Employees</PageTitle>
+
+<Heading TextColor="TextColor.Dark" Size="HeadingSize.Is5" Margin="Margin.Is3.FromStart.Is4.FromTop">
+    Employees
+</Heading>
+
+<ErrorBoundary>
+    <Row>
+        <Column>
+            <Card Margin="Margin.Is4.OnY">
+                <CardHeader>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-1 align-self-center justify-content-start">
+                                <CreateResourceLink Uri=@_employeeState!.Value.CreatePagePath />
+                            </div>
+                            <div class="col-5 align-self-center justify-content-start">
+                                <SingleFieldGridSearch PlaceHolderText=@_placeHolderTextForSearch
+                                    OnSearchTermChangedEventHandler=@SearchChanged />
+                            </div>
+                            <div class="col-6 align-self-center justify-content-end">
+                                <EmployeeStatusFilter FilterSetEventHandler=@FilterChanged />
+                            </div>
+                        </div>
+                    </div>
+                </CardHeader>
+                <CardBody>
+                    @if (_employeeState!.Value.EmployeeList is null)
+                    {
+                        <div class="d-flex justify-content-center">
+                            <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    }
+                    else if (_employeeState!.Value.HasCurrentErrors)
+                    {
+                        <div class="d-flex flex-column align-items-center">
+                            <span>Whoops! Looks like an issue occurred while loading employees :(</span>
+                        </div>
+                    }
+                    else if (_employeeState!.Value.EmployeeList is not null)
+                    {
+                        <div class="row">
+                            <BasicGrid Items=_employeeState!.Value.EmployeeList.Items>
+                                <TableHeader>
+                                    <th>Name</th>
+                                    <th>Telephone</th>
+                                    <th>Status</th>
+                                    <th>Manager?</th>
+                                    <th>Manager's Name</th>
+                                    <th>Actions</th>
+                                </TableHeader>
+                                <RowTemplate Context="employee">
+                                    <td>@employee.EmployeeFullName</td>
+                                    <td>@employee.Telephone</td>
+                                    <td>@(employee.IsActive ? "Active" : "Inactive")</td>
+                                    <td>@(employee.IsSupervisor ? "Yes" : "No")</td>
+                                    <td>@employee.ManagerFullName</td>
+                                    <td>
+                                        <Dropdown Direction="Direction.Up">
+                                            <DropdownToggle Outline Size="Size.ExtraSmall" Color="Color.Primary"
+                                            ToggleIconVisible="false">
+                                                <span class="btn-label"><i class="fas fa-ellipsis-v"
+                                                    aria-hidden="true"></i></span>
+                                            </DropdownToggle>
+                                            <DropdownMenu class="border border-dark rounded-3 shadow-lg">
+                                                <DropdownItem Clicked="@( () => ShowDetailDialog(@employee.EmployeeId) )">
+                                                    Details
+                                                </DropdownItem>
+                                                <DropdownItem
+                                                Clicked="@( () => OnActionItemClicked("Edit", @employee.EmployeeId) )">
+                                                    Edit
+                                                </DropdownItem>
+                                                <DropdownItem Disabled=@( employee.TimeCards > 0 )
+                                                Clicked="@( () => GetEmployee(@employee.EmployeeId) )">
+                                                    Delete
+                                                </DropdownItem>
+                                            </DropdownMenu>
+                                        </Dropdown>
+                                    </td>
+                                </RowTemplate>
+                            </BasicGrid>                            
+                        </div>
+                        <div class="row">
+                            <BasicGridPager MetaData=@_employeeState!.Value.EmployeeList!.MetaData PagerChangedEventHandler=@_pagerChangedEventHandler />
+                        </div>
+                    }
+                </CardBody>
+                <CardFooter>                   
+                    <Snackbar @ref="_snackbar" DefaultInterval=2000>
+                        <SnackbarBody>
+                            @_snackBarMessage
+                        </SnackbarBody>
+                    </Snackbar>
+                </CardFooter>
+            </Card>
+        </Column>
+    </Row>
+</ErrorBoundary>

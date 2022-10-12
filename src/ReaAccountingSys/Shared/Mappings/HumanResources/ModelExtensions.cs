@@ -5,7 +5,7 @@ using ReaAccountingSys.Shared.ReadModels.HumanResources;
 // using ReaAccountingSys.Shared.WriteModels.Financing;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
-namespace ReaAccountingSys.Shared.WriteModels
+namespace ReaAccountingSys.Shared.Mappings.HumanResouces
 {
     public static class ModelExtensions
     {

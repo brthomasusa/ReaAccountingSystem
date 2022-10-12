@@ -1,8 +1,11 @@
+using ReaAccountingSys.Application.Commands.HumanResources;
+using ReaAccountingSys.Application.Handlers.HumanResources;
 using ReaAccountingSys.Server.gRPC.HumanResources;
 using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
 using ReaAccountingSys.SharedKernel.Utilities;
 using ReaAccountingSys.Shared.ReadModels;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
+using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
 using EmployeeService = ReaAccountingSys.Server.gRPC.HumanResources.EmployeeService;
 using ReadModelEmployeeListItem = ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeListItem;
@@ -35,7 +38,7 @@ namespace ReaAccountingSys.Server.GrpcServices.HumanResources
             _writeRepository = writeRepository;
             _unitOfWork = unitOfWork;
         }
-        public override async Task<ReaAccountingSys.Server.gRPC.HumanResources.EmployeeListItemResponse> GetAll
+        public override async Task<EmployeeListItemResponse> GetAll
         (
             GetEmployeesRequest request,
             ServerCallContext context
@@ -167,22 +170,57 @@ namespace ReaAccountingSys.Server.GrpcServices.HumanResources
             return response;
         }
 
-        public override Task<EmployeeReadModelResponse> GetById
+        public override async Task<EmployeeReadModelResponse> GetById
         (
             GetEmployeeRequest request,
             ServerCallContext context
         )
         {
-            throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+            EmployeeReadModelResponse response = new();
+
+            GetEmployeeParameter queryParams =
+            new GetEmployeeParameter
+            {
+                EmployeeID = new Guid(request.EmployeeId)
+            };
+
+            OperationResult<EmployeeReadModel> result =
+                await _readRepository.EmployeeAggregate.GetReadModelById(queryParams);
+
+            if (result.Success)
+            {
+                response = result.Result.ToResponse();
+            }
+
+            return response;
         }
 
-        public override Task<EmployeeReadModelResponse> Create
+        public override async Task<EmployeeReadModelResponse> Create
         (
             EmployeeWriteModelRequest request,
             ServerCallContext context
         )
         {
-            throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+            EmployeeReadModelResponse response = new();
+
+            EmployeeWriteModel writeModel = request.ToWriteModel();
+            CreateEmployeeCommand command = new CreateEmployeeCommand { WriteModel = writeModel };
+            CreateEmployeeCommandHandler handler = new(_readRepository, _writeRepository, _unitOfWork);
+
+            OperationResult<bool> result = await handler.Handle(command);
+
+            if (result.Success)
+            {
+                GetEmployeeParameter queryParams = new() { EmployeeID = writeModel.EmployeeId };
+                OperationResult<EmployeeReadModel> queryResult = await _readRepository.EmployeeAggregate.GetReadModelById(queryParams);
+
+                if (queryResult.Success)
+                {
+                    response = queryResult.Result.ToResponse();
+                }
+            }
+
+            return response;
         }
 
         public override Task<Empty> Delete
