@@ -24,10 +24,10 @@
                             </div>
                             <div class="col-5 align-self-center justify-content-start">
                                 <SingleFieldGridSearch PlaceHolderText=@_placeHolderTextForSearch
-                                    OnSearchTermChangedEventHandler=@SearchChanged />
+                                    OnSearchTermChangedEventHandler=@OnSearchChanged />
                             </div>
                             <div class="col-6 align-self-center justify-content-end">
-                                <EmployeeStatusFilter FilterSetEventHandler=@FilterChanged />
+                                <EmployeeStatusFilter FilterSetEventHandler=@OnFilterChanged />
                             </div>
                         </div>
                     </div>

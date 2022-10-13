@@ -4,52 +4,96 @@ using Grpc.Net.Client;
 
 using ReaAccountingSys.Client.Utilities;
 using ReaAccountingSys.Client.Utilities.Mappers;
-using ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Actions;
+using ReaAccountingSys.Client.Store.UseCases.HumanResources.SearchEmployeesByName.Actions;
 using ReaAccountingSys.Server.gRPC.HumanResources;
 using ReaAccountingSys.Shared.ReadModels;
-
 using ReadModelEmployeeListItem = ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeListItem;
 
-namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Effects
+namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.SearchEmployeesByName.Effects
 {
-    public class GetAllEmployeesEffect : Effect<GetEmployeesAction>
+    public class SearchEmployeesByNameEffect : Effect<SearchEmployeesByNameAction>
     {
         private GrpcChannel? _channel;
         private IMessageService? _messageService;
 
-        public GetAllEmployeesEffect(GrpcChannel channel, IMessageService messageSvc)
+        public SearchEmployeesByNameEffect(GrpcChannel channel, IMessageService messageSvc)
             => (_channel, _messageService) = (channel, messageSvc);
 
-        public override async Task HandleAsync(GetEmployeesAction action, IDispatcher dispatcher)
+        public override async Task HandleAsync(SearchEmployeesByNameAction action, IDispatcher dispatcher)
         {
-            switch (action.Filter)
+            if (action.Filter == "all")
             {
-                case "all":
-                    await GetEmployeesUnfiltered(action, dispatcher);
-                    break;
-                case "active":
-                case "inactive":
-                    await GetEmployeesfiltered(action, dispatcher);
-                    break;
-                default:
-                    await _messageService!.Error($"Unknown employee filter: {action.Filter}", "System Error");
-                    break;
+                await SearchEmployeesByLastName(action, dispatcher);
+            }
+            else
+            {
+                await SearchEmployeesByLastNameAndStatus(action, dispatcher);
             }
         }
 
-        private async Task GetEmployeesUnfiltered
+        private async Task SearchEmployeesByLastName
         (
-            GetEmployeesAction action,
+            SearchEmployeesByNameAction action,
             IDispatcher dispatcher
         )
         {
             try
             {
-                GetEmployeesRequest request =
-                    new() { PageSize = action.PageSize, PageToken = action.PageNumber.ToString() };
+                GetEmployeesByLastNameRequest request = new()
+                {
+                    LastName = action.SearchTerm,
+                    PageSize = action.PageSize,
+                    PageToken = action.PageNumber.ToString()
+                };
 
                 var client = new EmployeeService.EmployeeServiceClient(_channel);
-                var grpcResponse = await client.GetAllAsync(request);
+                var grpcResponse = await client.SearchByNameAsync(request);
+
+                MetaData metaData = new()
+                {
+                    TotalCount = grpcResponse.MetaData["TotalCount"],
+                    PageSize = grpcResponse.MetaData["PageSize"],
+                    CurrentPage = grpcResponse.MetaData["CurrentPage"],
+                    TotalPages = grpcResponse.MetaData["TotalPages"]
+                };
+
+                List<ReadModelEmployeeListItem> employees = new();
+
+                grpcResponse.EmployeeListItems.ToList().ForEach(item =>
+                {
+                    employees.Add(EmployeeAggregateMappers.MapToEmployeeListItem(item));
+                });
+
+                PagingResponse<ReadModelEmployeeListItem> pagedResponse =
+                    new() { Items = employees, MetaData = metaData };
+
+                dispatcher.Dispatch(new SearchEmployeesByNameSuccessAction(pagedResponse, action.SearchTerm, action.Filter, action.PageSize));
+            }
+            catch (Exception e)
+            {
+                await _messageService!.Error($"{e.Message}", "System Error");
+                dispatcher.Dispatch(new SearchEmployeesByNameFailureAction(e.Message));
+            }
+        }
+
+        private async Task SearchEmployeesByLastNameAndStatus
+        (
+            SearchEmployeesByNameAction action,
+            IDispatcher dispatcher
+        )
+        {
+            try
+            {
+                GetEmployeesByNameAndStatusRequest request = new()
+                {
+                    LastName = action.SearchTerm,
+                    EmployeementStatus = (action.Filter == "active" ? true : false),
+                    PageSize = action.PageSize,
+                    PageToken = action.PageNumber.ToString()
+                };
+
+                var client = new EmployeeService.EmployeeServiceClient(_channel);
+                var grpcResponse = await client.SearchByNameAndStatusAsync(request);
 
                 MetaData metaData = new()
                 {
@@ -69,59 +113,12 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Eff
                 PagingResponse<ReadModelEmployeeListItem> pagedResponse =
                     new() { Items = employees, MetaData = metaData };
 
-                dispatcher.Dispatch(new GetAllEmployeesSuccessAction(pagedResponse, string.Empty, action.Filter, action.PageSize));
+                dispatcher.Dispatch(new SearchEmployeesByNameSuccessAction(pagedResponse, action.SearchTerm, action.Filter, action.PageSize));
             }
             catch (Exception e)
             {
                 await _messageService!.Error($"{e.Message}", "System Error");
-                dispatcher.Dispatch(new GetAllEmployeesFailureAction(e.Message));
-            }
-        }
-
-        private async Task GetEmployeesfiltered
-        (
-            GetEmployeesAction action,
-            IDispatcher dispatcher
-        )
-        {
-            try
-            {
-                GetEmployeesStatusRequest request = new()
-                {
-                    EmployeementStatus = (action.Filter == "active" ? true : false),
-                    PageSize = action.PageSize,
-                    PageToken = action.PageNumber.ToString()
-                };
-
-                var client = new EmployeeService.EmployeeServiceClient(_channel);
-                var grpcResponse = await client.GetAllByStatusAsync(request);
-
-                MetaData metaData = new()
-                {
-                    TotalCount = grpcResponse.MetaData["TotalCount"],
-                    PageSize = grpcResponse.MetaData["PageSize"],
-                    CurrentPage = grpcResponse.MetaData["CurrentPage"],
-                    TotalPages = grpcResponse.MetaData["TotalPages"]
-                };
-
-                List<ReadModelEmployeeListItem> employees = new();
-
-                grpcResponse.EmployeeListItems.ToList().ForEach(item =>
-                {
-                    employees.Add(EmployeeAggregateMappers.MapToEmployeeListItem(item));
-                });
-
-                Console.WriteLine($"GetEmployeesfiltered: {employees.ToJson()}");
-
-                PagingResponse<ReadModelEmployeeListItem> pagedResponse =
-                    new() { Items = employees, MetaData = metaData };
-
-                dispatcher.Dispatch(new GetAllEmployeesSuccessAction(pagedResponse, string.Empty, action.Filter, action.PageSize));
-            }
-            catch (Exception e)
-            {
-                await _messageService!.Error($"{e.Message}", "System Error");
-                dispatcher.Dispatch(new GetAllEmployeesFailureAction(e.Message));
+                dispatcher.Dispatch(new SearchEmployeesByNameFailureAction(e.Message));
             }
         }
     }

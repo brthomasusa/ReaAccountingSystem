@@ -17,7 +17,8 @@ namespace ReaAccountingSys.Client.Store.State.HumanResources
             string createPageHref,
             string employeeListFilter,
             EmployeeWriteModel? createModel,
-            EmployeeWriteModel? editModel
+            EmployeeWriteModel? editModel,
+            string searchTerm
         ) : base(isLoading, currentErrorMessage)
         {
             EmployeeList = currentEmployeeList;
@@ -28,6 +29,7 @@ namespace ReaAccountingSys.Client.Store.State.HumanResources
             EmployeeListFilter = employeeListFilter;
             EmployeeCreateModel = createModel;
             EmployeeEditModel = editModel;
+            SearchTerm = searchTerm;
         }
 
         public PagingResponse<EmployeeListItem>? EmployeeList { get; init; }
@@ -38,5 +40,6 @@ namespace ReaAccountingSys.Client.Store.State.HumanResources
         public int PageSize { get; init; }
         public string CreatePagePath { get; init; }
         public string EmployeeListFilter { get; init; }
+        public string SearchTerm { get; init; }
     }
 }

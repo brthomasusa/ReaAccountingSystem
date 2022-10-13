@@ -1,9 +1,6 @@
-#pragma warning disable CS8601
-#pragma warning disable CS8602
+#pragma warning disable CS8601, CS8602
 
-using Fluxor;
 using Microsoft.AspNetCore.Components;
-using ReaAccountingSys.Client.Utilities;
 using ReaAccountingSys.Shared.ReadModels;
 
 namespace ReaAccountingSys.Client.Components.Common
@@ -60,7 +57,7 @@ namespace ReaAccountingSys.Client.Components.Common
             }
             else
             {
-                Console.WriteLine("DynamicPager.Previous: currentPage property is null!");
+                Console.WriteLine("BasicGridPager.Previous: currentPage property is null!");
             }
 
         }
@@ -79,7 +76,7 @@ namespace ReaAccountingSys.Client.Components.Common
             }
             else
             {
-                Console.WriteLine("DynamicPager.Next: currentPage property is null!");
+                Console.WriteLine("BasicGridPager.Next: currentPage property is null!");
             }
         }
 
@@ -94,7 +91,7 @@ namespace ReaAccountingSys.Client.Components.Common
             }
             else
             {
-                Console.WriteLine($"DynamicPager.SetActive(string page) called with null parameter!");
+                Console.WriteLine($"BasicGridPager.SetActive(string page) called with null parameter!");
             }
         }
 

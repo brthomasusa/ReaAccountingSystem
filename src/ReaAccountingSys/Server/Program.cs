@@ -63,14 +63,8 @@ try
 
     var app = builder.Build();
 
-    app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
-    app.MapGrpcReflectionService();
-    app.MapGrpcService<EmployeeGrpcService>();
-    // app.MapGrpcService<EmployeeGrpcServiceBrowser>();
-
     // app.ConfigureExceptionHandler(logger);
 
-    // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
     {
         app.UseWebAssemblyDebugging();
@@ -79,8 +73,6 @@ try
     }
     else
     {
-        // The default HSTS value is 30 days. You may want to change this 
-        // for production scenarios, see https://aka.ms/aspnetcore-hsts.
         app.UseHsts();
     }
 
@@ -93,9 +85,12 @@ try
         ForwardedHeaders = ForwardedHeaders.All
     });
 
-    app.UseCors("CorsPolicy");
     app.UseRouting();
+    app.UseCors("CorsPolicy");
 
+    app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
+    app.MapGrpcReflectionService();
+    app.MapGrpcService<EmployeeGrpcService>().RequireCors("AllowAll");
     app.MapRazorPages();
     app.MapControllers();
     app.MapFallbackToFile("index.html");

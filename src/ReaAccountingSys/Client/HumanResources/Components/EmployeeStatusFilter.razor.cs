@@ -16,8 +16,8 @@ namespace ReaAccountingSys.Client.HumanResources.Components
             _selectedFilter = _employeeState!.Value.EmployeeListFilter switch
             {
                 "all" => "All ",
-                "rcvd" => "Funds rcvd",
-                "notrcvd" => "Funds not rcvd",
+                "active" => "Active",
+                "inactive" => "Inactive",
                 _ => "Unknown filter"
             };
 
@@ -29,8 +29,8 @@ namespace ReaAccountingSys.Client.HumanResources.Components
             _selectedFilter = filterName switch
             {
                 "all" => "All ",
-                "rcvd" => "Funds rcvd",
-                "notrcvd" => "Funds not rcvd",
+                "active" => "Active",
+                "inactive" => "Inactive",
                 _ => "Unknown filter"
             };
 

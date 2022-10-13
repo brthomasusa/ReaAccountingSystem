@@ -20,7 +20,8 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources
                     @"/HumanResouces/Pages/EmployeeCreatePage",
                     "all",
                     null,
-                    null
+                    null,
+                    string.Empty
                 );
     }
 }

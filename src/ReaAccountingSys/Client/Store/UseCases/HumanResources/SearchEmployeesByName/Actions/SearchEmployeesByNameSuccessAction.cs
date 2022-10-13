@@ -1,11 +1,11 @@
 using ReaAccountingSys.Client.Utilities;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
 
-namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Actions
+namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.SearchEmployeesByName.Actions
 {
-    public class GetAllEmployeesSuccessAction
+    public class SearchEmployeesByNameSuccessAction
     {
-        public GetAllEmployeesSuccessAction
+        public SearchEmployeesByNameSuccessAction
         (
             PagingResponse<EmployeeListItem> employees,
             string searchTerm,
@@ -19,9 +19,9 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Act
             PageSize = pageSize;
         }
 
-        public PagingResponse<EmployeeListItem>? CurrentEmployeeList { get; }
+        public PagingResponse<EmployeeListItem> CurrentEmployeeList { get; }
         public string SearchTerm { get; }
-        public string? EmployeeListFilter { get; }
+        public string EmployeeListFilter { get; }
         public int PageSize { get; }
     }
 }

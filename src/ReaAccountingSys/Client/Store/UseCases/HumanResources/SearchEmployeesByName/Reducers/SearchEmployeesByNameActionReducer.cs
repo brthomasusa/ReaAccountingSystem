@@ -1,16 +1,16 @@
 using Fluxor;
 using ReaAccountingSys.Client.Store.State.HumanResources;
-using ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Actions;
+using ReaAccountingSys.Client.Store.UseCases.HumanResources.SearchEmployeesByName.Actions;
 
-namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Reducers
+namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.SearchEmployeesByName.Reducers
 {
-    public static class GetAllEmployeesActionReducer
+    public static class SearchEmployeesByNameActionReducer
     {
         [ReducerMethod]
-        public static EmployeesState ReduceGetEmployeesAction
+        public static EmployeesState ReduceSearchEmployeesByNameAction
         (
             EmployeesState state,
-            GetEmployeesAction _
+            SearchEmployeesByNameAction _
         ) =>
              new EmployeesState
                 (
@@ -28,10 +28,10 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Red
                 );
 
         [ReducerMethod]
-        public static EmployeesState ReduceGetEmployeesSuccessAction
+        public static EmployeesState ReduceSearchEmployeesByNameSuccessAction
         (
             EmployeesState state,
-            GetAllEmployeesSuccessAction action
+            SearchEmployeesByNameSuccessAction action
         ) =>
              new EmployeesState
                 (
@@ -49,13 +49,12 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Red
                 );
 
         [ReducerMethod]
-        public static EmployeesState ReduceGetEmployeesFailureAction
+        public static EmployeesState ReduceSearchEmployeesByNameFailureAction
         (
             EmployeesState state,
-            GetAllEmployeesFailureAction action
-        )
-        {
-            return new EmployeesState
+            SearchEmployeesByNameFailureAction action
+        ) =>
+             new EmployeesState
                 (
                     false,
                     action.ErrorMessage,
@@ -69,6 +68,5 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Red
                     state.EmployeeEditModel,
                     state.SearchTerm
                 );
-        }
     }
 }

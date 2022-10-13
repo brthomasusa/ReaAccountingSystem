@@ -48,8 +48,6 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
                     );
             }
 
-            if (_employeeState!.Value.EmployeeList is null)
-                Console.WriteLine("_employeeState!.Value.EmployeeList is null!!!");
             await base.OnInitializedAsync();
         }
 
@@ -57,59 +55,88 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
         {
             _showDeleteDialog = false;
 
+            if (string.IsNullOrEmpty(_employeeState!.Value.SearchTerm))
+            {
+                await GetFilteredEmployeeList(pageNumber, pageSize);
+            }
+            else
+            {
+                await SearchEmployeesByName
+                    (
+                        _employeeState!.Value.SearchTerm,
+                        _employeeState!.Value.EmployeeListFilter,
+                        pageNumber,
+                        pageSize
+                    );
+            }
+        }
+
+        private async Task GetFilteredEmployeeList(int pageNumber, int pageSize)
+        {
             _facade!.GetEmployees
                 (
                     _employeeState!.Value.EmployeeListFilter,
-                    _employeeState.Value.PageNumber,
-                    _employeeState.Value.PageSize
+                    pageNumber,
+                    pageSize
                 );
 
             await Task.CompletedTask;
         }
 
-        private async Task GetEmployeesByName(string lastName, int pageNumber, int pageSize)
+        private async Task SearchEmployeesByName(string searchTerm, string filterName, int pageNumber, int pageSize)
         {
             _showDeleteDialog = false;
 
-            GetEmployeesByLastNameRequest request = new()
-            {
-                LastName = lastName,
-                PageSize = pageSize,
-                PageToken = pageNumber.ToString()
-            };
+            _facade!.SearchEmployeesByLastName
+                (
+                    searchTerm,
+                    filterName,
+                    pageNumber,
+                    pageSize
+                );
 
-            var client = new EmployeeService.EmployeeServiceClient(Channel);
-            var grpcResponse = await client.SearchByNameAsync(request);
-            var metaData = grpcResponse.MetaData;
+            await Task.CompletedTask;
+        }
 
-            _employeeList!.Clear();
-            grpcResponse.EmployeeListItems.ToList().ForEach(item =>
-            {
-                _employeeList!.Add(EmployeeAggregateMappers.MapToEmployeeListItem(item));
-            });
-
-            _metaData = new()
-            {
-                TotalCount = metaData["TotalCount"],
-                PageSize = metaData["PageSize"],
-                CurrentPage = metaData["CurrentPage"],
-                TotalPages = metaData["TotalPages"]
-            };
-
-
-            await InvokeAsync(StateHasChanged);
+        private async Task OnSearchChanged(string searchTerm)
+        {
+            await SearchEmployeesByName
+                (
+                    searchTerm,
+                    _employeeState!.Value.EmployeeListFilter,
+                    _employeeState!.Value.PageNumber,
+                    _employeeState!.Value.PageSize
+                );
         }
 
         private async Task GetFilteredEmployeeList(string filterName)
         {
-            // _facade!.LoadStockSubscriptions
-            // (
-            //     filterName,
-            //     1,
-            //     _employeeState!.Value.PageSize
-            // );
+            _facade!.GetEmployees
+            (
+                filterName,
+                1,
+                _employeeState!.Value.PageSize
+            );
 
             await Task.CompletedTask;
+        }
+
+        private async Task OnFilterChanged(string filterName)
+        {
+            if (string.IsNullOrEmpty(_employeeState!.Value.SearchTerm))
+            {
+                await GetFilteredEmployeeList(filterName);
+            }
+            else
+            {
+                await SearchEmployeesByName
+                    (
+                        _employeeState!.Value.SearchTerm,
+                        filterName,
+                        _employeeState!.Value.PageNumber,
+                        _employeeState!.Value.PageSize
+                    );
+            }
         }
 
         private async Task GetEmployee(Guid emploeeId)
@@ -135,8 +162,6 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
             );
         }
 
-        private async Task SearchChanged(string searchTerm) => await GetEmployeesByName(searchTerm, 1, 5);
-
         private void ShowDetailDialog(Guid employeeId) => _selectedEmployeeId = employeeId;
 
         private async Task OnDeleteDialogClosed(string action)
@@ -150,9 +175,5 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
 
             _showDeleteDialog = false;
         }
-
-        private async Task FilterChanged(string filterName)
-            => await GetFilteredEmployeeList(filterName);
-
     }
 }
