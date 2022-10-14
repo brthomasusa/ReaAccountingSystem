@@ -25,15 +25,12 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
         private string _placeHolderTextForSearch = "Search by employee's last name";
         private string? _snackBarMessage;
         private Snackbar? _snackbar;
-        private List<ReadModelEmployeeListItem>? _employeeList;
         private EmployeeReadModelResponse? _selectedEmployee;
-        private MetaData? _metaData;
         private Func<int, int, Task> _pagerChangedEventHandler => GetEmployees;
         [Inject] private StateFacade? _facade { get; set; }
         [Inject] private IState<EmployeesState>? _employeeState { get; set; }
 
         [Inject] public GrpcChannel? Channel { get; set; }
-        [Inject] public IMessageService? MessageService { get; set; }
         [Inject] public NavigationManager? NavManager { get; set; }
 
         protected async override Task OnInitializedAsync()
