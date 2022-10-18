@@ -63,9 +63,9 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Eff
 
                 grpcResponse.EmployeeListItems.ToList().ForEach(item =>
                 {
-                    employees.Add(EmployeeAggregateMappers.MapToEmployeeListItem(item));
+                    employees.Add(item.MapToEmployeeListItem());
                 });
-                Console.WriteLine(metaData.ToJson());
+
                 PagingResponse<ReadModelEmployeeListItem> pagedResponse =
                     new() { Items = employees, MetaData = metaData };
 
@@ -108,10 +108,8 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Eff
 
                 grpcResponse.EmployeeListItems.ToList().ForEach(item =>
                 {
-                    employees.Add(EmployeeAggregateMappers.MapToEmployeeListItem(item));
+                    employees.Add(item.MapToEmployeeListItem());
                 });
-
-                Console.WriteLine($"GetEmployeesfiltered: {employees.ToJson()}");
 
                 PagingResponse<ReadModelEmployeeListItem> pagedResponse =
                     new() { Items = employees, MetaData = metaData };

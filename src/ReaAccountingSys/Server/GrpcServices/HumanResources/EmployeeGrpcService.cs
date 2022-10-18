@@ -38,6 +38,35 @@ namespace ReaAccountingSys.Server.GrpcServices.HumanResources
             _writeRepository = writeRepository;
             _unitOfWork = unitOfWork;
         }
+
+        public override async Task<EmployeeReadModelResponse> GetById
+        (
+            GetEmployeeRequest request,
+            ServerCallContext context
+        )
+        {
+            _logger.LogDebug($"This is Server-side: {request.EmployeeId}");
+
+            EmployeeReadModelResponse response = new();
+            GetEmployeeParameter queryParams = request.ToParam();
+
+            // GetEmployeeParameter queryParams =
+            // new GetEmployeeParameter
+            // {
+            //     EmployeeID = new Guid(request.EmployeeId)
+            // };
+
+            OperationResult<EmployeeReadModel> result =
+                await _readRepository.EmployeeAggregate.GetReadModelById(queryParams);
+
+            if (result.Success)
+            {
+                response = result.Result.ToResponse();
+            }
+
+            return response;
+        }
+
         public override async Task<EmployeeListItemResponse> GetAll
         (
             GetEmployeesRequest request,
@@ -166,31 +195,6 @@ namespace ReaAccountingSys.Server.GrpcServices.HumanResources
             }
 
             response.EmployeeTypes.AddRange(employeeTypes);
-
-            return response;
-        }
-
-        public override async Task<EmployeeReadModelResponse> GetById
-        (
-            GetEmployeeRequest request,
-            ServerCallContext context
-        )
-        {
-            EmployeeReadModelResponse response = new();
-
-            GetEmployeeParameter queryParams =
-            new GetEmployeeParameter
-            {
-                EmployeeID = new Guid(request.EmployeeId)
-            };
-
-            OperationResult<EmployeeReadModel> result =
-                await _readRepository.EmployeeAggregate.GetReadModelById(queryParams);
-
-            if (result.Success)
-            {
-                response = result.Result.ToResponse();
-            }
 
             return response;
         }

@@ -1,4 +1,5 @@
 using GoogleDateTime = Google.Protobuf.WellKnownTypes.Timestamp;
+using EmptyType = Google.Protobuf.WellKnownTypes.Empty;
 using ReaAccountingSys.Server.gRPC.HumanResources;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
@@ -26,18 +27,18 @@ namespace ReaAccountingSys.Server.GrpcServices.HumanResources
                     EmailAddress = model.EmailAddress,
                     Telephone = model.Telephone,
                     AddressLine1 = model.AddressLine1,
-                    AddressLine2 = model.AddressLine2!,
+                    AddressLine2 = (model.AddressLine2 != null ? model.AddressLine2 : ""),
                     City = model.City,
                     StateCode = model.StateCode,
                     Zipcode = model.Zipcode,
                     MaritalStatus = model.MaritalStatus,
                     Exemptions = model.Exemptions,
                     PayRate = Decimal.ToDouble(model.PayRate),
-                    StartDate = GoogleDateTime.FromDateTime(model.StartDate),
+                    StartDate = GoogleDateTime.FromDateTime(model.StartDate.ToUniversalTime()),
                     IsActive = model.IsActive,
                     IsSupervisor = model.IsSupervisor,
-                    CreatedDate = GoogleDateTime.FromDateTime(model.CreatedDate),
-                    LastModifiedDate = GoogleDateTime.FromDateTime(model.LastModifiedDate)
+                    CreatedDate = GoogleDateTime.FromDateTime(model.CreatedDate.ToUniversalTime()),
+                    LastModifiedDate = GoogleDateTime.FromDateTime(model.LastModifiedDate.ToUniversalTime())
                 };
             }
             else

@@ -3,7 +3,6 @@
 @page "/HumanResouces/Pages/EmployeesListPage"
 @using ReaAccountingSys.Client.Components.Common
 @using ReaAccountingSys.Client.HumanResources.Components
-@using ReaAccountingSys.Shared.ReadModels
 @using Blazorise.Snackbar
 
 <PageTitle>Employees</PageTitle>
@@ -81,7 +80,7 @@
                                                     Edit
                                                 </DropdownItem>
                                                 <DropdownItem Disabled=@( employee.TimeCards > 0 )
-                                                Clicked="@( () => GetEmployee(@employee.EmployeeId) )">
+                                                Clicked="@( () => ShowDeleteDialog(@employee.EmployeeId.ToString()) )">
                                                     Delete
                                                 </DropdownItem>
                                             </DropdownMenu>
@@ -106,3 +105,5 @@
         </Column>
     </Row>
 </ErrorBoundary>
+
+<EmployeeDetailDialog EmployeeId=@_selectedEmployeeId />
