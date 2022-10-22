@@ -36,7 +36,7 @@ builder.Services.AddFluxor(options =>
     options.UseReduxDevTools();
 #endif        
 });
-builder.Services.AddScoped<StateFacade>();
+builder.Services.AddScoped<EmployeeAggregateStateFacade>();
 builder.Services.AddValidatorsFromAssembly(currentAssembly);
 
 builder.Services.AddSingleton(services =>

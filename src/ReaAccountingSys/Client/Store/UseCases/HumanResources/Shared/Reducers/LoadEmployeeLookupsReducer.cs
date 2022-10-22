@@ -1,22 +1,22 @@
 using Fluxor;
 using ReaAccountingSys.Client.Store.State.HumanResources;
-using ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployeeDetails.Actions;
+using ReaAccountingSys.Client.Store.UseCases.HumanResources.Shared.Actions;
 
-namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployeeDetails.Reducers
+namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.Shared.Reducers
 {
-    public static class GetEmployeeDetailsActionReducer
+    public static class LoadEmployeeLookupsReducer
     {
         [ReducerMethod]
-        public static EmployeesState ReduceSearchEmployeesByNameAction
+        public static EmployeesState ReduceLoadEmployeeLookupsAction
         (
             EmployeesState state,
-            GetEmployeeDetailsAction _
+            LoadEmployeeLookupsAction _
         ) =>
              new EmployeesState
                 (
                     true,
                     null,
-                    state.EmployeeList,
+                    null,
                     state.EmployeeDetailModel,
                     state.PageNumber,
                     state.PageSize,
@@ -30,17 +30,17 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployeeDetai
                 );
 
         [ReducerMethod]
-        public static EmployeesState ReduceSearchEmployeesByNameSuccessAction
+        public static EmployeesState ReduceLoadEmployeeLookupsSuccessAction
         (
             EmployeesState state,
-            GetEmployeeDetailsSuccessAction action
+            LoadEmployeeLookupsSuccessAction action
         ) =>
              new EmployeesState
                 (
                     false,
                     null,
                     state.EmployeeList,
-                    action.EmployeeDetailModel,
+                    state.EmployeeDetailModel,
                     state.PageNumber,
                     state.PageSize,
                     state.CreatePagePath,
@@ -48,21 +48,22 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployeeDetai
                     state.EmployeeCreateModel,
                     state.EmployeeEditModel,
                     state.SearchTerm,
-                    state.EmployeeManagers,
-                    state.EmployeeTypes
+                    action.EmployeeManagers,
+                    action.EmployeeTypes
                 );
 
         [ReducerMethod]
-        public static EmployeesState ReduceSearchEmployeesByNameFailureAction
+        public static EmployeesState ReduceGetEmployeesFailureAction
         (
             EmployeesState state,
-            GetEmployeeDetailsFailureAction action
-        ) =>
-             new EmployeesState
+            LoadEmployeeLookupsFailureAction action
+        )
+        {
+            return new EmployeesState
                 (
                     false,
                     action.ErrorMessage,
-                    state.EmployeeList,
+                    null,
                     state.EmployeeDetailModel,
                     state.PageNumber,
                     state.PageSize,
@@ -74,5 +75,6 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployeeDetai
                     state.EmployeeManagers,
                     state.EmployeeTypes
                 );
+        }
     }
 }

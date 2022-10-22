@@ -1,11 +1,9 @@
 using Microsoft.AspNetCore.Components;
 using Blazorise.Snackbar;
 using Fluxor;
-using Grpc.Net.Client;
 
 using ReaAccountingSys.Client.Services.Fluxor.HumanResources;
 using ReaAccountingSys.Client.Store.State.HumanResources;
-using ReaAccountingSys.Server.gRPC.HumanResources;
 
 namespace ReaAccountingSys.Client.HumanResources.Pages
 {
@@ -15,12 +13,10 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
         private string _placeHolderTextForSearch = "Search by employee's last name";
         private string? _snackBarMessage;
         private Snackbar? _snackbar;
-        private EmployeeReadModelResponse? _selectedEmployee;
         private Func<int, int, Task> _pagerChangedEventHandler => GetEmployees;
-        [Inject] private StateFacade? _facade { get; set; }
+        [Inject] private EmployeeAggregateStateFacade? _facade { get; set; }
         [Inject] private IState<EmployeesState>? _employeeState { get; set; }
 
-        [Inject] public GrpcChannel? Channel { get; set; }
         [Inject] public NavigationManager? NavManager { get; set; }
 
         protected async override Task OnInitializedAsync()
@@ -148,7 +144,7 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
         {
             if (action == "deleted")
             {
-                _snackBarMessage = $"Employee information for {_selectedEmployee!.EmployeeFullName} was successfully deleted.";
+                _snackBarMessage = $"Employee information was successfully deleted.";
                 await GetEmployees(1, 5);
                 await _snackbar!.Show();
             }

@@ -1,6 +1,5 @@
 using Fluxor;
 using ReaAccountingSys.Client.Store.State.HumanResources;
-using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
 namespace ReaAccountingSys.Client.Store.UseCases.HumanResources
 {
@@ -21,7 +20,9 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources
                     "all",
                     null,
                     null,
-                    string.Empty
+                    string.Empty,
+                    null,
+                    null
                 );
     }
 }

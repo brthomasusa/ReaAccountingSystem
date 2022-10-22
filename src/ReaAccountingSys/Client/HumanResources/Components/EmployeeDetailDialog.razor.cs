@@ -14,7 +14,7 @@ namespace ReaAccountingSys.Client.HumanResources.Components
         private Modal? _detailModalRef;
         private string selectedTab = "generalInfo";
         [Inject] private IState<EmployeesState>? _employeeState { get; set; }
-        [Inject] private StateFacade? _facade { get; set; }
+        [Inject] private EmployeeAggregateStateFacade? _facade { get; set; }
 
         [Parameter] public Guid EmployeeId { get; set; }
 

@@ -24,7 +24,9 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Red
                     state.EmployeeListFilter,
                     state.EmployeeCreateModel,
                     state.EmployeeEditModel,
-                    state.SearchTerm
+                    state.SearchTerm,
+                    state.EmployeeManagers,
+                    state.EmployeeTypes
                 );
 
         [ReducerMethod]
@@ -45,7 +47,9 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Red
                     action.EmployeeListFilter!,
                     state.EmployeeCreateModel,
                     state.EmployeeEditModel,
-                    action.SearchTerm
+                    action.SearchTerm,
+                    state.EmployeeManagers,
+                    state.EmployeeTypes
                 );
 
         [ReducerMethod]
@@ -67,7 +71,9 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Red
                     state.EmployeeListFilter,
                     state.EmployeeCreateModel,
                     state.EmployeeEditModel,
-                    state.SearchTerm
+                    state.SearchTerm,
+                    state.EmployeeManagers,
+                    state.EmployeeTypes
                 );
         }
     }
