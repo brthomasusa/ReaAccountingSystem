@@ -5,6 +5,7 @@ using GrpcEmployeeListItem = ReaAccountingSys.Server.gRPC.HumanResources.Employe
 using GrpcEmployeeReadModel = ReaAccountingSys.Server.gRPC.HumanResources.EmployeeReadModelResponse;
 
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
+using ReaAccountingSys.Shared.WriteModels.HumanResources;
 using ReaAccountingSys.Server.gRPC.HumanResources;
 
 namespace ReaAccountingSys.Client.Utilities.Mappers
@@ -68,6 +69,40 @@ namespace ReaAccountingSys.Client.Utilities.Mappers
             else
             {
                 throw new ArgumentNullException("Can not convert a null model to a response.");
+            }
+        }
+
+        internal static EmployeeWriteModelRequest MapToEmployeeWriteModelRequest(this EmployeeWriteModel model)
+        {
+            if (model is not null)
+            {
+                return new()
+                {
+                    EmployeeId = model.EmployeeId.ToString(),
+                    EmployeeType = model.EmployeeType,
+                    SupervisorId = model.SupervisorId.ToString(),
+                    LastName = model.LastName,
+                    FirstName = model.FirstName,
+                    MiddleInitial = model.MiddleInitial,
+                    SSN = model.SSN,
+                    EmailAddress = model.EmailAddress,
+                    Telephone = model.Telephone,
+                    AddressLine1 = model.AddressLine1,
+                    AddressLine2 = model.AddressLine2!,
+                    City = model.City,
+                    StateCode = model.StateCode,
+                    Zipcode = model.Zipcode,
+                    MaritalStatus = model.MaritalStatus,
+                    Exemptions = model.Exemptions,
+                    PayRate = Decimal.ToDouble(model.PayRate),
+                    StartDate = GoogleDateTime.FromDateTime(model.StartDate),
+                    IsActive = model.IsActive,
+                    IsSupervisor = model.IsSupervisor
+                };
+            }
+            else
+            {
+                throw new ArgumentNullException("Can not convert a null EmployeeWriteModel to a EmployeeWriteModelmodel.");
             }
         }
 

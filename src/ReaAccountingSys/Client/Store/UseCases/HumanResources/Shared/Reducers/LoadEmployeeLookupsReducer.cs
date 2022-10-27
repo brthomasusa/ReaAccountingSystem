@@ -1,4 +1,5 @@
 using Fluxor;
+using ReaAccountingSys.Client.Utilities;
 using ReaAccountingSys.Client.Store.State.HumanResources;
 using ReaAccountingSys.Client.Store.UseCases.HumanResources.Shared.Actions;
 
@@ -7,12 +8,12 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.Shared.Reducers
     public static class LoadEmployeeLookupsReducer
     {
         [ReducerMethod]
-        public static EmployeesState ReduceLoadEmployeeLookupsAction
+        public static GetEmployeesState ReduceLoadEmployeeLookupsAction
         (
-            EmployeesState state,
+            GetEmployeesState state,
             LoadEmployeeLookupsAction _
         ) =>
-             new EmployeesState
+             new GetEmployeesState
                 (
                     true,
                     null,
@@ -30,12 +31,12 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.Shared.Reducers
                 );
 
         [ReducerMethod]
-        public static EmployeesState ReduceLoadEmployeeLookupsSuccessAction
+        public static GetEmployeesState ReduceLoadEmployeeLookupsSuccessAction
         (
-            EmployeesState state,
+            GetEmployeesState state,
             LoadEmployeeLookupsSuccessAction action
         ) =>
-             new EmployeesState
+             new GetEmployeesState
                 (
                     false,
                     null,
@@ -53,13 +54,13 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.Shared.Reducers
                 );
 
         [ReducerMethod]
-        public static EmployeesState ReduceGetEmployeesFailureAction
+        public static GetEmployeesState ReduceGetEmployeesFailureAction
         (
-            EmployeesState state,
+            GetEmployeesState state,
             LoadEmployeeLookupsFailureAction action
         )
         {
-            return new EmployeesState
+            return new GetEmployeesState
                 (
                     false,
                     action.ErrorMessage,

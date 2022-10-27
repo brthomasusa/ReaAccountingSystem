@@ -26,7 +26,5 @@ namespace ReaAccountingSys.Client.Services.Fluxor.HumanResources
         public void LoadEmployeeLookups()
             => _dispatcher!.Dispatch(new LoadEmployeeLookupsAction());
 
-        public void InitializeEmployeeWriteModel(EmployeeWriteModel model)
-            => _dispatcher!.Dispatch(new InitializeEmployeeWriteModelAction(model));
     }
 }

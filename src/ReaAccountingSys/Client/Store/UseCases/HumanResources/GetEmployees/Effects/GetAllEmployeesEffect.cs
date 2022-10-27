@@ -69,7 +69,7 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Eff
                 PagingResponse<ReadModelEmployeeListItem> pagedResponse =
                     new() { Items = employees, MetaData = metaData };
 
-                dispatcher.Dispatch(new GetAllEmployeesSuccessAction(pagedResponse, string.Empty, action.Filter, action.PageSize));
+                dispatcher.Dispatch(new GetAllEmployeesSuccessAction(pagedResponse, string.Empty, action.Filter, action.PageSize, action.PageNumber));
             }
             catch (Exception e)
             {
@@ -114,7 +114,7 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Eff
                 PagingResponse<ReadModelEmployeeListItem> pagedResponse =
                     new() { Items = employees, MetaData = metaData };
 
-                dispatcher.Dispatch(new GetAllEmployeesSuccessAction(pagedResponse, string.Empty, action.Filter, action.PageSize));
+                dispatcher.Dispatch(new GetAllEmployeesSuccessAction(pagedResponse, string.Empty, action.Filter, action.PageSize, action.PageNumber));
             }
             catch (Exception e)
             {

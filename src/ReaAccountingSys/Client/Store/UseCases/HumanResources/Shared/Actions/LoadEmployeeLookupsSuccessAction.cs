@@ -10,7 +10,7 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.Shared.Actions
             List<EmployeeManager>? managers,
             List<EmployeeTypes>? employeeTypes
         ) =>
-            (managers, employeeTypes) = (EmployeeManagers, EmployeeTypes);
+            (EmployeeManagers, EmployeeTypes) = (managers, employeeTypes);
 
         public List<EmployeeManager>? EmployeeManagers { get; init; }
         public List<EmployeeTypes>? EmployeeTypes { get; init; }

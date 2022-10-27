@@ -5,9 +5,9 @@ using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
 namespace ReaAccountingSys.Client.Store.State.HumanResources
 {
-    public class EmployeesState : RootState
+    public class GetEmployeesState : RootState
     {
-        public EmployeesState
+        public GetEmployeesState
         (
             bool isLoading,
             string? currentErrorMessage,

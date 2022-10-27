@@ -3,12 +3,12 @@ using ReaAccountingSys.Client.Store.State.HumanResources;
 
 namespace ReaAccountingSys.Client.Store.UseCases.HumanResources
 {
-    public class EmployeeNode : Feature<EmployeesState>
+    public class GetEmployeeNode : Feature<GetEmployeesState>
     {
-        public override string GetName() => "EmployeeAggregateNode";
+        public override string GetName() => "GetEmployeeNode";
 
-        protected override EmployeesState GetInitialState() =>
-            new EmployeesState
+        protected override GetEmployeesState GetInitialState() =>
+            new GetEmployeesState
                 (
                     false,
                     null,

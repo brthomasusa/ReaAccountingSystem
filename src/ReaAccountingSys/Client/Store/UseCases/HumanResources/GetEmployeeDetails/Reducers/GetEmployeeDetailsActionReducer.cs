@@ -7,12 +7,12 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployeeDetai
     public static class GetEmployeeDetailsActionReducer
     {
         [ReducerMethod]
-        public static EmployeesState ReduceSearchEmployeesByNameAction
+        public static GetEmployeesState ReduceSearchEmployeesByNameAction
         (
-            EmployeesState state,
+            GetEmployeesState state,
             GetEmployeeDetailsAction _
         ) =>
-             new EmployeesState
+             new GetEmployeesState
                 (
                     true,
                     null,
@@ -30,12 +30,12 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployeeDetai
                 );
 
         [ReducerMethod]
-        public static EmployeesState ReduceSearchEmployeesByNameSuccessAction
+        public static GetEmployeesState ReduceSearchEmployeesByNameSuccessAction
         (
-            EmployeesState state,
+            GetEmployeesState state,
             GetEmployeeDetailsSuccessAction action
         ) =>
-             new EmployeesState
+             new GetEmployeesState
                 (
                     false,
                     null,
@@ -53,12 +53,12 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployeeDetai
                 );
 
         [ReducerMethod]
-        public static EmployeesState ReduceSearchEmployeesByNameFailureAction
+        public static GetEmployeesState ReduceSearchEmployeesByNameFailureAction
         (
-            EmployeesState state,
+            GetEmployeesState state,
             GetEmployeeDetailsFailureAction action
         ) =>
-             new EmployeesState
+             new GetEmployeesState
                 (
                     false,
                     action.ErrorMessage,

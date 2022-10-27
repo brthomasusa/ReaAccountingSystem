@@ -7,12 +7,12 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.SearchEmployeesB
     public static class SearchEmployeesByNameActionReducer
     {
         [ReducerMethod]
-        public static EmployeesState ReduceSearchEmployeesByNameAction
+        public static GetEmployeesState ReduceSearchEmployeesByNameAction
         (
-            EmployeesState state,
+            GetEmployeesState state,
             SearchEmployeesByNameAction _
         ) =>
-             new EmployeesState
+             new GetEmployeesState
                 (
                     true,
                     null,
@@ -30,18 +30,18 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.SearchEmployeesB
                 );
 
         [ReducerMethod]
-        public static EmployeesState ReduceSearchEmployeesByNameSuccessAction
+        public static GetEmployeesState ReduceSearchEmployeesByNameSuccessAction
         (
-            EmployeesState state,
+            GetEmployeesState state,
             SearchEmployeesByNameSuccessAction action
         ) =>
-             new EmployeesState
+             new GetEmployeesState
                 (
                     false,
                     null,
                     action.CurrentEmployeeList,
                     state.EmployeeDetailModel,
-                    state.PageNumber,
+                    action.PageNumber,
                     action.PageSize,
                     state.CreatePagePath,
                     action.EmployeeListFilter!,
@@ -53,12 +53,12 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.SearchEmployeesB
                 );
 
         [ReducerMethod]
-        public static EmployeesState ReduceSearchEmployeesByNameFailureAction
+        public static GetEmployeesState ReduceSearchEmployeesByNameFailureAction
         (
-            EmployeesState state,
+            GetEmployeesState state,
             SearchEmployeesByNameFailureAction action
         ) =>
-             new EmployeesState
+             new GetEmployeesState
                 (
                     false,
                     action.ErrorMessage,

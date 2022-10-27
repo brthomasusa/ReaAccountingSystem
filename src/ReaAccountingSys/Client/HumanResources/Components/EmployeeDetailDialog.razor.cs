@@ -3,17 +3,15 @@ using Blazorise;
 using Fluxor;
 
 using ReaAccountingSys.Client.Store.State.HumanResources;
-using ReaAccountingSys.Client.Utilities;
-using ReaAccountingSys.Shared.ReadModels.HumanResources;
 using ReaAccountingSys.Client.Services.Fluxor.HumanResources;
-using ReaAccountingSys.Server.gRPC.HumanResources;
+
 namespace ReaAccountingSys.Client.HumanResources.Components
 {
     public partial class EmployeeDetailDialog
     {
         private Modal? _detailModalRef;
         private string selectedTab = "generalInfo";
-        [Inject] private IState<EmployeesState>? _employeeState { get; set; }
+        [Inject] private IState<GetEmployeesState>? _employeeState { get; set; }
         [Inject] private EmployeeAggregateStateFacade? _facade { get; set; }
 
         [Parameter] public Guid EmployeeId { get; set; }
@@ -35,7 +33,7 @@ namespace ReaAccountingSys.Client.HumanResources.Components
                 await InvokeAsync(StateHasChanged);
             }
 
-            await base.OnInitializedAsync();
+            await base.OnParametersSetAsync();
         }
 
         private Task OnSelectedTabChanged(string name)

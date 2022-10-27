@@ -19,7 +19,9 @@
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-1 align-self-center justify-content-start">
-                                <CreateResourceLink Uri=@_employeeState!.Value.CreatePagePath />
+                                <CreateResourceLink 
+                                    Uri=@_employeeState!.Value.CreatePagePath 
+                                    PreNavigationProcessingHandler=@LoadEmployeeLookups />
                             </div>
                             <div class="col-5 align-self-center justify-content-start">
                                 <SingleFieldGridSearch PlaceHolderText=@_placeHolderTextForSearch

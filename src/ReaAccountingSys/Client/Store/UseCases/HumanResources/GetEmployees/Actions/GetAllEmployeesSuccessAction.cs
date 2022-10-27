@@ -10,18 +10,21 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Act
             PagingResponse<EmployeeListItem> employees,
             string searchTerm,
             string filterName,
-            int pageSize
+            int pageSize,
+            int pageNumber
         )
         {
             CurrentEmployeeList = employees;
             SearchTerm = searchTerm;
             EmployeeListFilter = filterName;
             PageSize = pageSize;
+            PageNumber = pageNumber;
         }
 
         public PagingResponse<EmployeeListItem>? CurrentEmployeeList { get; }
         public string SearchTerm { get; }
         public string? EmployeeListFilter { get; }
         public int PageSize { get; }
+        public int PageNumber { get; }
     }
 }

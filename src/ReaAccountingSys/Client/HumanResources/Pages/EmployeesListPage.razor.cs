@@ -15,21 +15,16 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
         private Snackbar? _snackbar;
         private Func<int, int, Task> _pagerChangedEventHandler => GetEmployees;
         [Inject] private EmployeeAggregateStateFacade? _facade { get; set; }
-        [Inject] private IState<EmployeesState>? _employeeState { get; set; }
+        [Inject] private IState<GetEmployeesState>? _employeeState { get; set; }
 
         [Inject] public NavigationManager? NavManager { get; set; }
 
         protected async override Task OnInitializedAsync()
         {
-            Console.WriteLine("OnInitializedAsync");
-            if (_employeeState!.Value.EmployeeList is null)
+            if (_employeeState!.Value.EmployeeManagers is null ||
+                _employeeState!.Value.EmployeeTypes is null)
             {
-                _facade!.GetEmployees
-                    (
-                        _employeeState!.Value.EmployeeListFilter,
-                        _employeeState.Value.PageNumber,
-                        _employeeState.Value.PageSize
-                    );
+                _facade!.LoadEmployeeLookups();
             }
 
             await InvokeAsync(StateHasChanged);
@@ -148,6 +143,21 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
                 await GetEmployees(1, 5);
                 await _snackbar!.Show();
             }
+        }
+
+        private async Task LoadEmployeeLookups()
+        {
+            if (_employeeState!.Value.EmployeeList is null)
+            {
+                _facade!.GetEmployees
+                    (
+                        _employeeState!.Value.EmployeeListFilter,
+                        _employeeState.Value.PageNumber,
+                        _employeeState.Value.PageSize
+                    );
+            }
+
+            await Task.CompletedTask;
         }
     }
 }

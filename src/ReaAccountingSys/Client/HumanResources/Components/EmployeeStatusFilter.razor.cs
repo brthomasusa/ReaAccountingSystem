@@ -9,7 +9,7 @@ namespace ReaAccountingSys.Client.HumanResources.Components
         private string? _selectedFilter;
 
         [Parameter] public EventCallback<string> FilterSetEventHandler { get; set; }
-        [Inject] private IState<EmployeesState>? _employeeState { get; set; }
+        [Inject] private IState<GetEmployeesState>? _employeeState { get; set; }
 
         protected async override Task OnInitializedAsync()
         {

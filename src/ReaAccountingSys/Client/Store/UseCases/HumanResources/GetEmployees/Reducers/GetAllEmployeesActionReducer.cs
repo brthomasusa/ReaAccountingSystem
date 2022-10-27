@@ -7,12 +7,12 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Red
     public static class GetAllEmployeesActionReducer
     {
         [ReducerMethod]
-        public static EmployeesState ReduceGetEmployeesAction
+        public static GetEmployeesState ReduceGetEmployeesAction
         (
-            EmployeesState state,
+            GetEmployeesState state,
             GetEmployeesAction _
         ) =>
-             new EmployeesState
+             new GetEmployeesState
                 (
                     true,
                     null,
@@ -30,18 +30,18 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Red
                 );
 
         [ReducerMethod]
-        public static EmployeesState ReduceGetEmployeesSuccessAction
+        public static GetEmployeesState ReduceGetEmployeesSuccessAction
         (
-            EmployeesState state,
+            GetEmployeesState state,
             GetAllEmployeesSuccessAction action
         ) =>
-             new EmployeesState
+             new GetEmployeesState
                 (
                     false,
                     null,
                     action.CurrentEmployeeList,
                     state.EmployeeDetailModel,
-                    state.PageNumber,
+                    action.PageNumber,
                     action.PageSize,
                     state.CreatePagePath,
                     action.EmployeeListFilter!,
@@ -53,13 +53,13 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Red
                 );
 
         [ReducerMethod]
-        public static EmployeesState ReduceGetEmployeesFailureAction
+        public static GetEmployeesState ReduceGetEmployeesFailureAction
         (
-            EmployeesState state,
+            GetEmployeesState state,
             GetAllEmployeesFailureAction action
         )
         {
-            return new EmployeesState
+            return new GetEmployeesState
                 (
                     false,
                     action.ErrorMessage,
