@@ -16,15 +16,18 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
         private Func<int, int, Task> _pagerChangedEventHandler => GetEmployees;
         [Inject] private EmployeeAggregateStateFacade? _facade { get; set; }
         [Inject] private IState<GetEmployeesState>? _employeeState { get; set; }
-
-        [Inject] public NavigationManager? NavManager { get; set; }
+        [Inject] private NavigationManager? _navManager { get; set; }
 
         protected async override Task OnInitializedAsync()
         {
-            if (_employeeState!.Value.EmployeeManagers is null ||
-                _employeeState!.Value.EmployeeTypes is null)
+            if (_employeeState!.Value.EmployeeList is null)
             {
-                _facade!.LoadEmployeeLookups();
+                _facade!.GetEmployees
+                    (
+                        _employeeState!.Value.EmployeeListFilter,
+                        _employeeState.Value.PageNumber,
+                        _employeeState.Value.PageSize
+                    );
             }
 
             await InvokeAsync(StateHasChanged);
@@ -117,7 +120,7 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
 
         private void OnActionItemClicked(string action, Guid employeeId)
         {
-            NavManager!.NavigateTo
+            _navManager!.NavigateTo
             (
                 action switch
                 {
@@ -147,17 +150,13 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
 
         private async Task LoadEmployeeLookups()
         {
-            if (_employeeState!.Value.EmployeeList is null)
+            if (_employeeState!.Value.EmployeeManagers is null ||
+                _employeeState!.Value.EmployeeTypes is null)
             {
-                _facade!.GetEmployees
-                    (
-                        _employeeState!.Value.EmployeeListFilter,
-                        _employeeState.Value.PageNumber,
-                        _employeeState.Value.PageSize
-                    );
+                await _facade!.LoadEmployeeLookups();
             }
 
-            await Task.CompletedTask;
+            _navManager!.NavigateTo(_employeeState!.Value.CreatePagePath);
         }
     }
 }

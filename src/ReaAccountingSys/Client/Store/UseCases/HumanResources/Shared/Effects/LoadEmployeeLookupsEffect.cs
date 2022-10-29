@@ -21,8 +21,9 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.Shared.Effects
         {
             try
             {
-                List<Manager> managers = await GetEmployeesManagers();
-                List<EmpType> employeeTypes = await GetEmployeesTypes();
+                List<Manager> managers = await GetEmployeesManagersAsync();
+
+                List<EmpType> employeeTypes = await GetEmployeesTypesAsync();
 
                 dispatcher.Dispatch(new LoadEmployeeLookupsSuccessAction(managers, employeeTypes));
             }
@@ -33,7 +34,7 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.Shared.Effects
             }
         }
 
-        private async Task<List<Manager>> GetEmployeesManagers()
+        private async Task<List<Manager>> GetEmployeesManagersAsync()
         {
             var client = new EmployeeService.EmployeeServiceClient(_channel);
             EmployeeManagerResponse grpcResponse = await client.GetManagersAsync(new Empty());
@@ -52,7 +53,7 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.Shared.Effects
             return managers;
         }
 
-        private async Task<List<EmpType>> GetEmployeesTypes()
+        private async Task<List<EmpType>> GetEmployeesTypesAsync()
         {
             var client = new EmployeeService.EmployeeServiceClient(_channel);
             EmployeeTypeResponse grpcResponse = await client.GetTypesAsync(new Empty());

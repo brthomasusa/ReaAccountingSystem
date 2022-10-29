@@ -10,7 +10,7 @@ namespace ReaAccountingSys.Client.Store.State.HumanResources
             bool submitting,
             string? currentErrorMessage,
             bool submitted,
-            EmployeeWriteModel model
+            EmployeeWriteModel? model
         ) : base(submitting, currentErrorMessage)
         {
             Submitting = submitting;
@@ -20,6 +20,6 @@ namespace ReaAccountingSys.Client.Store.State.HumanResources
 
         public bool Submitting { get; init; }
         public bool Submitted { get; init; }
-        public EmployeeWriteModel Model { get; init; }
+        public EmployeeWriteModel? Model { get; init; }
     }
 }

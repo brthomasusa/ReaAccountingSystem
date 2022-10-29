@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Components;
 using Blazorise;
 using Blazorise.Snackbar;
 using Fluxor;
+using FluentValidation;
 
+using ReaAccountingSys.Client.HumanResources.Validators;
 using ReaAccountingSys.Client.Services.Fluxor.HumanResources;
 using ReaAccountingSys.Client.Store.State.HumanResources;
 using ReaAccountingSys.Client.Utilities;
@@ -15,6 +17,7 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
         private const string _returnUri = "HumanResouces/Pages/EmployeesListPage";
         private const string _formTitle = "Create Employee Info";
         private bool _isLoading;
+        private Validations? _validations;
         private Snackbar? _snackbar;
         private string? _snackBarMessage;
         private EmployeeWriteModel? _employeeModel;
@@ -24,16 +27,29 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
 
         protected async override Task OnInitializedAsync()
         {
-            if (_createEmployeeState is not null)
+            if (_createEmployeeState!.Value.Model is null)
             {
+                EmployeeWriteModel model = new()
+                {
+                    EmployeeId = Guid.NewGuid(),
+                    IsActive = true
+                };
+
+                _facade!.InitializeEmployeeCreateModel(model);
                 _employeeModel = _createEmployeeState.Value.Model;
             }
+
             await base.OnInitializedAsync();
         }
 
-        private async Task<OperationResult<bool>> OnSave()
+        private async Task OnSave()
         {
-            return await Task.FromResult<OperationResult<bool>>(OperationResult<bool>.CreateSuccessResult(true));
+            if (!await _validations!.ValidateAll())
+                return;
+
+            _isLoading = true;
+
+            _isLoading = false;
         }
     }
 }

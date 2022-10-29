@@ -27,7 +27,8 @@ builder.Services
      options.Immediate = true;
  })
   .AddBootstrap5Providers()
-  .AddFontAwesomeIcons();
+  .AddFontAwesomeIcons()
+  .AddFluentValidationHandler();
 
 builder.Services.AddFluxor(options =>
 {
@@ -36,8 +37,9 @@ builder.Services.AddFluxor(options =>
     options.UseReduxDevTools();
 #endif        
 });
-builder.Services.AddScoped<EmployeeAggregateStateFacade>();
+
 builder.Services.AddValidatorsFromAssembly(currentAssembly);
+builder.Services.AddScoped<EmployeeAggregateStateFacade>();
 
 builder.Services.AddSingleton(services =>
 {

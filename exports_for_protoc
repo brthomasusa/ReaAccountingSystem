@@ -1,2 +1,4 @@
 From: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Server
 Run:  protoc --proto_path=../Shared/Protos/HumanResources/v1/ --csharp_out=obj/Debug/net6.0/Protos/HumanResources/v1/ employee.proto
+
+grpcui --insecure localhost:7127

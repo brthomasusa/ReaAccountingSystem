@@ -7,6 +7,20 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.CreateNewEmploye
     public static class CreateNewEmployeeReducer
     {
         [ReducerMethod]
+        public static CreateEmployeeState ReduceEmployeeCreateModelInitAction
+        (
+            CreateEmployeeState state,
+            InitializeEmployeeWriteModelAction action
+        ) =>
+             new CreateEmployeeState
+                (
+                    state.Submitting,
+                    state.CurrentErrorMessage,
+                    state.Submitted,
+                    action.CreateModel
+                );
+
+        [ReducerMethod]
         public static CreateEmployeeState ReduceEmployeeSubmitAction
         (
             CreateEmployeeState state,
@@ -31,7 +45,7 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.CreateNewEmploye
                     false,
                     state.CurrentErrorMessage,
                     true,
-                    new()
+                    null
                 );
 
         [ReducerMethod]

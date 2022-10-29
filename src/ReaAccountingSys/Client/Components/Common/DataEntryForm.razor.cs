@@ -1,7 +1,6 @@
 #pragma warning disable CS8602
 
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Forms;
 using Blazorise;
 using Blazorise.Snackbar;
 using ReaAccountingSys.Client.Utilities;
@@ -13,7 +12,6 @@ namespace ReaAccountingSys.Client.Components.Common
         private bool _isLoading;
         private Snackbar? _snackbar;
         private Validations? _validations;
-        private EditContext? _editContext;
 
         [Parameter] public string? ReturnUri { get; set; }
         [Parameter] public string? FormTitle { get; set; }
@@ -22,19 +20,6 @@ namespace ReaAccountingSys.Client.Components.Common
         [Parameter] public TWriteModel? WriteModel { get; set; }
         [Parameter] public Func<Task<OperationResult<bool>>>? SaveClickedEventHandler { get; set; }
         [Inject] public IMessageService? MessageService { get; set; }
-
-        protected override void OnInitialized()
-        {
-            if (_validations is null)
-            {
-                Console.WriteLine("DataEntryForm: _validations is null");
-            }
-            else
-            {
-                Console.WriteLine("DataEntryForm: _validations is not null");
-                _editContext = _validations.EditContext;
-            }
-        }
 
         public async Task OnSave()
         {

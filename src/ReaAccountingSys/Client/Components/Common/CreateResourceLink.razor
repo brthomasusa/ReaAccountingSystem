@@ -1,5 +1,4 @@
 @inherits FluxorComponent
-@inject NavigationManager NavManager
 
 <div class="col-md-2">
     <button @onclick=OnButtonClick class="btn btn-labeled btn-lg btn-outline-primary rounded-pill" role="button">
@@ -8,12 +7,10 @@
 </div>
 
 @code {
-    [Parameter] public string? Uri { get; set; }
-    [Parameter] public EventCallback PreNavigationProcessingHandler { get; set; }
+    [Parameter] public EventCallback DoPreNavigationProcessing { get; set; }
 
     private async Task OnButtonClick()
     {
-        await PreNavigationProcessingHandler.InvokeAsync();
-        NavManager.NavigateTo(Uri!);
+        await DoPreNavigationProcessing.InvokeAsync();        
     }
 }

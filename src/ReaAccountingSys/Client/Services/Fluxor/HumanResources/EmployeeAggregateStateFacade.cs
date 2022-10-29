@@ -1,10 +1,10 @@
 using Fluxor;
-using ReaAccountingSys.Shared.WriteModels.HumanResources;
 using ReaAccountingSys.Client.Store.UseCases.HumanResources.CreateNewEmployee.Actions;
 using ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployees.Actions;
 using ReaAccountingSys.Client.Store.UseCases.HumanResources.GetEmployeeDetails.Actions;
 using ReaAccountingSys.Client.Store.UseCases.HumanResources.SearchEmployeesByName.Actions;
 using ReaAccountingSys.Client.Store.UseCases.HumanResources.Shared.Actions;
+using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
 namespace ReaAccountingSys.Client.Services.Fluxor.HumanResources
 {
@@ -23,8 +23,15 @@ namespace ReaAccountingSys.Client.Services.Fluxor.HumanResources
         public void GetEmployeeDetails(string employeeId)
             => _dispatcher!.Dispatch(new GetEmployeeDetailsAction(employeeId));
 
-        public void LoadEmployeeLookups()
-            => _dispatcher!.Dispatch(new LoadEmployeeLookupsAction());
+        public void InitializeEmployeeCreateModel(EmployeeWriteModel model)
+            => _dispatcher!.Dispatch(new InitializeEmployeeWriteModelAction(model));
+
+        public Task LoadEmployeeLookups()
+        {
+            _dispatcher!.Dispatch(new LoadEmployeeLookupsAction());
+            return Task.CompletedTask;
+        }
+
 
     }
 }

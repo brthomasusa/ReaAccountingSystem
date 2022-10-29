@@ -18,13 +18,11 @@
                 <CardBody>
                     @if (WriteModel is not null)
                     {
-                        <EditForm Model=@WriteModel OnValidSubmit="OnSave">
-                            @* <FluentValidationValidator /> *@
+                        <Validations @ref="_validations" Mode="ValidationMode.Auto" ValidateOnLoad=false Model=@WriteModel>
                             <Container style="background-color:#F0F0F0;">
                                 @DataEntryFieldsTemplate
-                            </Container>
-                        </EditForm>
-
+                            </Container>                            
+                        </Validations>                        
                         <Field Margin="Margin.Is4.FromTop">
                             <Button Color="Color.Success" Clicked="OnSave" Loading="@_isLoading">Save changes</Button>
                             <Button Color="Color.Secondary" Type="ButtonType.Link" To=@ReturnUri>Cancel editing</Button>
@@ -43,7 +41,6 @@
                             </div>
                         </div>
                     }
-
                 </CardBody>
                 <CardFooter>
                 </CardFooter>

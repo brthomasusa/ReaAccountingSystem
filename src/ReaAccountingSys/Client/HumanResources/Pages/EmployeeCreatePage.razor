@@ -35,249 +35,291 @@
                     }
                     else if(_employeeModel is not null)
                     {
-                        <EditForm Model=@_employeeModel OnValidSubmit="OnSave">
-                            @* <FluentValidationValidator /> *@
+                        <Validations @ref="_validations" Mode="ValidationMode.Auto" ValidateOnLoad=false Model=@_employeeModel>
                             <Container Margin="Margin.Is1.FromStart" style="background-color:#F0F0F0;">
                                 <Row>
                                     <Column ColumnSize="ColumnSize.Is2">
-                                        <Field Horizontal>
-                                            <FieldLabel TextWeight="TextWeight.Bold">First Name</FieldLabel>
-                                            <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.FirstName>
-                                                <Feedback>
-                                                    <ValidationError />
-                                                </Feedback>
-                                            </TextEdit>
-                                        </Field>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">First Name</FieldLabel>
+                                                <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.FirstName>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </TextEdit>
+                                            </Field>
+                                        </Validation>
                                     </Column>
                                     <Column ColumnSize="ColumnSize.Is2">
-                                        <Field Horizontal>
-                                            <FieldLabel TextWeight="TextWeight.Bold">M.I.</FieldLabel>
-                                            <TextEdit @bind-Text=@_employeeModel!.MiddleInitial>
-                                                <Feedback>
-                                                    <ValidationError />
-                                                </Feedback>
-                                            </TextEdit>
-                                        </Field>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">M.I.</FieldLabel>
+                                                <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.MiddleInitial>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </TextEdit>
+                                            </Field>
+                                        </Validation>
                                     </Column>
                                     <Column ColumnSize="ColumnSize.Is3">
-                                        <Field Horizontal>
-                                            <FieldLabel TextWeight="TextWeight.Bold">Last Name</FieldLabel>
-                                            <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.LastName>
-                                                <Feedback>
-                                                    <ValidationError />
-                                                </Feedback>
-                                            </TextEdit>
-                                        </Field>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Last Name</FieldLabel>
+                                                <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.LastName>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </TextEdit>
+                                            </Field>
+                                        </Validation>
                                     </Column>
                                     <Column ColumnSize="ColumnSize.Is5">
-                                        <Field Horizontal>
-                                            <FieldLabel TextWeight="TextWeight.Bold">Email Address</FieldLabel>
-                                            <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.EmailAddress>
-                                                <Feedback>
-                                                    <ValidationError />
-                                                </Feedback>
-                                            </TextEdit>
-                                        </Field>
-                                    </Column>                                                                                                
-                                </Row>
-                                <Row>
-                                    <Column>
-                                        <Field>
-                                            <FieldLabel TextWeight="TextWeight.Bold">Manager</FieldLabel>
-                                            <Select TValue="Guid" @bind-SelectedValue=@_employeeModel!.SupervisorId>
-                                                <ChildContent>
-                                                    <SelectItem Value=@Guid.Empty>-- Select Manager --</SelectItem>
-                                                    @foreach (var mgr in _getEmployeeState!.Value.EmployeeManagers!)
-                                                    {
-                                                        <SelectItem Value=@mgr.ManagerId>@mgr.ManagerFullName</SelectItem>
-                                                    }
-                                                </ChildContent>
-                                                <Feedback>
-                                                    <ValidationError />
-                                                </Feedback>
-                                            </Select>
-                                        </Field>
-                                    </Column>
-                                    <Column>
-                                        <Field>
-                                            <FieldLabel TextWeight="TextWeight.Bold">Job Title</FieldLabel>
-                                            <Select TValue="int" @bind-SelectedValue=@_employeeModel!.EmployeeType>
-                                                <ChildContent>
-                                                    <SelectItem Value="0">-- Select Job Title --</SelectItem>
-                                                    @foreach (var type in _getEmployeeState!.Value.EmployeeTypes!)
-                                                    {
-                                                        <SelectItem Value=@type.EmployeeTypeId>@type.EmployeeTypeName</SelectItem>
-                                                    }
-                                                </ChildContent>
-                                                <Feedback>
-                                                    <ValidationError />
-                                                </Feedback>
-                                            </Select>
-                                        </Field>
-                                    </Column>
-                                    <Column>
-                                        <Field>
-                                            <FieldLabel TextWeight="TextWeight.Bold">Telephone</FieldLabel>
-                                            <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.Telephone>
-                                                <Feedback>
-                                                    <ValidationError />
-                                                </Feedback>
-                                            </TextEdit>
-                                        </Field>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Email Address</FieldLabel>
+                                                <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.EmailAddress>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </TextEdit>
+                                            </Field>
+                                        </Validation>
                                     </Column>
                                 </Row>
                                 <Row>
                                     <Column>
-                                        <Field>
-                                            <FieldLabel TextWeight="TextWeight.Bold">Address Line1</FieldLabel>
-                                            <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.AddressLine1>
-                                                <Feedback>
-                                                    <ValidationError />
-                                                </Feedback>
-                                            </TextEdit>
-                                        </Field>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Manager</FieldLabel>
+                                                <Select TValue="Guid" @bind-SelectedValue=@_employeeModel!.SupervisorId>
+                                                    <ChildContent>
+                                                        <SelectItem Value=@Guid.Empty>-- Select Manager --</SelectItem>
+                                                        @if (_getEmployeeState!.Value.EmployeeManagers is not null)
+                                                        {
+                                                            foreach (var mgr in _getEmployeeState!.Value.EmployeeManagers)
+                                                            {
+                                                                <SelectItem Value=@mgr.ManagerId>@mgr.ManagerFullName</SelectItem>
+                                                            }
+                                                        }
+                                                    </ChildContent>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </Select>
+                                            </Field>
+                                        </Validation>
                                     </Column>
                                     <Column>
-                                        <Field>
-                                            <FieldLabel TextWeight="TextWeight.Bold">Address Line2</FieldLabel>
-                                            <TextEdit @bind-Text=@_employeeModel!.AddressLine2>
-                                                <Feedback>
-                                                    <ValidationError />
-                                                </Feedback>
-                                            </TextEdit>
-                                        </Field>
-                                </Column>
-                            </Row>
-                            <Row>
-                                <Column>
-                                    <Field>
-                                        <FieldLabel TextWeight="TextWeight.Bold">City</FieldLabel>
-                                        <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.City>
-                                            <Feedback>
-                                                <ValidationError />
-                                            </Feedback>
-                                        </TextEdit>
-                                    </Field>
-                                </Column>
-                                <Column>
-                                    <Field>
-                                        <FieldLabel TextWeight="TextWeight.Bold">State</FieldLabel>
-                                        <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.StateCode>
-                                            <Feedback>
-                                                <ValidationError />
-                                            </Feedback>
-                                        </TextEdit>
-                                    </Field>
-                                </Column>
-                                <Column>
-                                    <Field>
-                                        <FieldLabel TextWeight="TextWeight.Bold">Zipcode</FieldLabel>
-                                        <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.Zipcode>
-                                            <Feedback>
-                                                <ValidationError />
-                                            </Feedback>
-                                        </TextEdit>
-                                    </Field>
-                                </Column>
-                            </Row>
-                            <Row>
-                                <Column>
-                                    <Field>
-                                        <FieldLabel TextWeight="TextWeight.Bold">SSN</FieldLabel>
-                                        <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.SSN>
-                                            <Feedback>
-                                                <ValidationError />
-                                            </Feedback>
-                                        </TextEdit>
-                                    </Field>
-                                </Column>
-                                <Column>
-                                    <Field>
-                                        <FieldLabel TextWeight="TextWeight.Bold">Marital Status</FieldLabel>
-                                        <RadioGroup TValue="string" Name="MaritalStatus" Color="Color.Primary"
-                                            @bind-CheckedValue=@_employeeModel!.MaritalStatus>
-                                            <ChildContent>
-                                                <Radio Value="@("S")">Single</Radio>
-                                                <Radio Value="@("M")">Married</Radio>
-                                            </ChildContent>
-                                            <Feedback>
-                                                <ValidationError />
-                                            </Feedback>
-                                        </RadioGroup>
-                                    </Field>
-                                </Column>
-                                <Column>
-                                    <Field>
-                                        <FieldLabel TextWeight="TextWeight.Bold">Exemptions</FieldLabel>
-                                        <NumericPicker TValue="int" Placeholder="Required" Min=0 Max=11 Decimals="0"
-                                            @bind-Value=@_employeeModel!.Exemptions>
-                                            <Feedback>
-                                                <ValidationError />
-                                            </Feedback>
-                                        </NumericPicker>
-                                    </Field>
-                                </Column>
-                                <Column>
-                                    <Field>
-                                        <FieldLabel TextWeight="TextWeight.Bold">Rate of Pay</FieldLabel>
-                                        <NumericPicker TValue="decimal" CurrencySymbol="$" Placeholder="Required" Min=7.50M Max=40.00M
-                                            @bind-Value=@_employeeModel!.PayRate>
-                                            <Feedback>
-                                                <ValidationError />
-                                            </Feedback>
-                                        </NumericPicker>
-                                    </Field>
-                                </Column>
-                            </Row>
-                            <Row>
-                                <Column>
-                                    <Field>
-                                        <FieldLabel TextWeight="TextWeight.Bold">Date of Hire</FieldLabel>
-                                        <DateEdit TValue="DateTime" @bind-Date="@_employeeModel.StartDate">
-                                            <Feedback>
-                                                <ValidationError />
-                                            </Feedback>
-                                        </DateEdit>
-                                    </Field>
-                                </Column>
-                                <Column>
-                                    <Field>
-                                        <FieldLabel TextWeight="TextWeight.Bold">Is this employee a manager?</FieldLabel>
-                                        <RadioGroup TValue="bool" Name="IsManager" Color="Color.Primary"
-                                            @bind-CheckedValue=@_employeeModel!.IsSupervisor>
-                                            <ChildContent>
-                                                <Radio Value="@(true)">Yes</Radio>
-                                                <Radio Value="@(false)">No</Radio>
-                                            </ChildContent>
-                                            <Feedback>
-                                                <ValidationError>You must indicate if manager!</ValidationError>
-                                            </Feedback>
-                                        </RadioGroup>
-                                    </Field>
-                                </Column>
-                                <Column>
-                                    <Field>
-                                        <FieldLabel TextWeight="TextWeight.Bold">Employment Status</FieldLabel>
-                                        <RadioGroup TValue="bool" Name="Status" Color="Color.Primary"
-                                            @bind-CheckedValue=@_employeeModel!.IsActive>
-                                            <ChildContent>
-                                                <Radio Value="@(true)">Active</Radio>
-                                                <Radio Value="@(false)">Inactive</Radio>
-                                            </ChildContent>
-                                            <Feedback>
-                                                <ValidationError>You must select active or inactive!</ValidationError>
-                                            </Feedback>
-                                        </RadioGroup>
-                                    </Field>
-                                </Column>
-                            </Row>                                                                                                                                                    
-                        </Container>
-                    </EditForm>
-
-                    <Field Margin="Margin.Is4.FromTop">
-                        <Button Color="Color.Success" Clicked="OnSave" Loading="@_isLoading">Save changes</Button>
-                        <Button Color="Color.Secondary" Type="ButtonType.Link" To=@_returnUri>Cancel editing</Button>
-                    </Field>                        
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Job Title</FieldLabel>
+                                                <Select TValue="int" @bind-SelectedValue=@_employeeModel!.EmployeeType>
+                                                    <ChildContent>
+                                                        <SelectItem Value="0">-- Select Job Title --</SelectItem>
+                                                        @if (_getEmployeeState!.Value.EmployeeTypes is not null)
+                                                        {
+                                                            foreach (var type in _getEmployeeState!.Value.EmployeeTypes)
+                                                            {
+                                                                <SelectItem Value=@type.EmployeeTypeId>@type.EmployeeTypeName</SelectItem>
+                                                            }
+                                                        }
+                                                    </ChildContent>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </Select>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Telephone</FieldLabel>
+                                                <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.Telephone>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </TextEdit>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                </Row>
+                                <Row>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Address Line1</FieldLabel>
+                                                <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.AddressLine1>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </TextEdit>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Address Line2</FieldLabel>
+                                                <TextEdit @bind-Text=@_employeeModel!.AddressLine2>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </TextEdit>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                </Row>
+                                <Row>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">City</FieldLabel>
+                                                <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.City>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </TextEdit>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">State</FieldLabel>
+                                                <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.StateCode>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </TextEdit>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Zipcode</FieldLabel>
+                                                <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.Zipcode>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </TextEdit>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                </Row>
+                                <Row>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">SSN</FieldLabel>
+                                                <TextEdit Placeholder="Required" @bind-Text=@_employeeModel!.SSN>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </TextEdit>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Marital Status</FieldLabel>
+                                                <RadioGroup TValue="string" Name="MaritalStatus" Color="Color.Primary"
+                                                    @bind-CheckedValue=@_employeeModel!.MaritalStatus>
+                                                    <ChildContent>
+                                                        <Radio Value="@("S")">Single</Radio>
+                                                        <Radio Value="@("M")">Married</Radio>
+                                                    </ChildContent>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </RadioGroup>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Exemptions</FieldLabel>
+                                                <NumericPicker TValue="int" Placeholder="Required" Min=0 Max=11 Decimals="0"
+                                                    @bind-Value=@_employeeModel!.Exemptions>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </NumericPicker>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Rate of Pay</FieldLabel>
+                                                <NumericPicker TValue="decimal" CurrencySymbol="$" Placeholder="Required" Min=7.50M Max=40.00M
+                                                    @bind-Value=@_employeeModel!.PayRate>
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </NumericPicker>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                </Row>
+                                <Row>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Date of Hire</FieldLabel>
+                                                <DateEdit TValue="DateTime" @bind-Date="@_employeeModel.StartDate">
+                                                    <Feedback>
+                                                        <ValidationError />
+                                                    </Feedback>
+                                                </DateEdit>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Is this employee a manager?</FieldLabel>
+                                                <RadioGroup TValue="bool" Name="IsManager" Color="Color.Primary"
+                                                    @bind-CheckedValue=@_employeeModel!.IsSupervisor>
+                                                    <ChildContent>
+                                                        <Radio Value="@(true)">Yes</Radio>
+                                                        <Radio Value="@(false)">No</Radio>
+                                                    </ChildContent>
+                                                    <Feedback>
+                                                        <ValidationError>You must indicate if manager!</ValidationError>
+                                                    </Feedback>
+                                                </RadioGroup>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                    <Column>
+                                        <Validation HandlerType="HandlerTypes.FluentValidation">
+                                            <Field>
+                                                <FieldLabel TextWeight="TextWeight.Bold">Employment Status</FieldLabel>
+                                                <RadioGroup TValue="bool" Name="Status" Color="Color.Primary"
+                                                    @bind-CheckedValue=@_employeeModel!.IsActive>
+                                                    <ChildContent>
+                                                        <Radio Value="@(true)">Active</Radio>
+                                                        <Radio Value="@(false)">Inactive</Radio>
+                                                    </ChildContent>
+                                                    <Feedback>
+                                                        <ValidationError>You must select active or inactive!</ValidationError>
+                                                    </Feedback>
+                                                </RadioGroup>
+                                            </Field>
+                                        </Validation>
+                                    </Column>
+                                </Row>                                                                                                                                                    
+                            </Container>                            
+                        </Validations>
+                        <Field Margin="Margin.Is4.FromTop">                        
+                            <Button Color="Color.Secondary" Type="ButtonType.Link" To=@_returnUri>Cancel editing</Button>
+                            <Button Color="Color.Success" Type="ButtonType.Submit" Clicked="OnSave" Loading="@_isLoading">Save changes</Button>
+                        </Field>                        
                     }
                 </CardBody>
                 <CardFooter>

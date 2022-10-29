@@ -14,7 +14,7 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources
                     false,
                     null,
                     false,
-                    new()
+                    null
                 );
     }
 }
