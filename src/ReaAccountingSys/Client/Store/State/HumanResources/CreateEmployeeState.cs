@@ -1,4 +1,3 @@
-using ReaAccountingSys.Shared.ReadModels.HumanResources;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
 namespace ReaAccountingSys.Client.Store.State.HumanResources

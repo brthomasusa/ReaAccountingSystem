@@ -26,12 +26,19 @@ namespace ReaAccountingSys.Client.Services.Fluxor.HumanResources
         public void InitializeEmployeeCreateModel(EmployeeWriteModel model)
             => _dispatcher!.Dispatch(new InitializeEmployeeWriteModelAction(model));
 
+        public void SetEmployeeCreateModelToNull()
+            => _dispatcher!.Dispatch(new SetEmployeeCreateModelToNullAction());
+
         public Task LoadEmployeeLookups()
         {
             _dispatcher!.Dispatch(new LoadEmployeeLookupsAction());
             return Task.CompletedTask;
         }
 
-
+        public Task CreateNewEmployee(EmployeeWriteModel model)
+        {
+            _dispatcher!.Dispatch(new EmployeeSubmitAction(model));
+            return Task.CompletedTask;
+        }
     }
 }

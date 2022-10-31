@@ -3,6 +3,7 @@ using Blazorise;
 using Grpc.Net.Client;
 using ReaAccountingSys.Client.Store.State.HumanResources;
 using ReaAccountingSys.Client.Store.UseCases.HumanResources.CreateNewEmployee.Actions;
+using ReaAccountingSys.Client.Utilities;
 using ReaAccountingSys.Client.Utilities.Mappers;
 using ReaAccountingSys.Server.gRPC.HumanResources;
 
@@ -33,7 +34,7 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.CreateNewEmploye
         {
             try
             {
-                EmployeeWriteModelRequest request = action.Model.MapToEmployeeWriteModelRequest();
+                EmployeeWriteModelRequest request = action.CreateModel!.MapToEmployeeWriteModelRequest();
                 var client = new EmployeeService.EmployeeServiceClient(_channel);
                 var grpcResponse = await client.CreateAsync(request);
 

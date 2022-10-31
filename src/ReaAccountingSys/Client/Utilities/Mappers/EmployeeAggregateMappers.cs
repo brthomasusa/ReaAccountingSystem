@@ -1,4 +1,5 @@
 using GoogleDateTime = Google.Protobuf.WellKnownTypes.Timestamp;
+using EmptyType = Google.Protobuf.WellKnownTypes.Empty;
 using ReadModelEmployeeListItem = ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeListItem;
 using ReadModelEmployeeReadModel = ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeReadModel;
 using GrpcEmployeeListItem = ReaAccountingSys.Server.gRPC.HumanResources.EmployeeListItem;
@@ -52,7 +53,7 @@ namespace ReaAccountingSys.Client.Utilities.Mappers
                     EmailAddress = model.EmailAddress,
                     Telephone = model.Telephone,
                     AddressLine1 = model.AddressLine1,
-                    AddressLine2 = model.AddressLine2!,
+                    AddressLine2 = model.AddressLine2,
                     City = model.City,
                     StateCode = model.StateCode,
                     Zipcode = model.Zipcode,
@@ -83,19 +84,19 @@ namespace ReaAccountingSys.Client.Utilities.Mappers
                     SupervisorId = model.SupervisorId.ToString(),
                     LastName = model.LastName,
                     FirstName = model.FirstName,
-                    MiddleInitial = model.MiddleInitial,
+                    MiddleInitial = (model.MiddleInitial != null ? model.MiddleInitial : ""),
                     SSN = model.SSN,
                     EmailAddress = model.EmailAddress,
                     Telephone = model.Telephone,
                     AddressLine1 = model.AddressLine1,
-                    AddressLine2 = model.AddressLine2!,
+                    AddressLine2 = (model.AddressLine2 != null ? model.AddressLine2 : ""),
                     City = model.City,
                     StateCode = model.StateCode,
                     Zipcode = model.Zipcode,
                     MaritalStatus = model.MaritalStatus,
                     Exemptions = model.Exemptions,
                     PayRate = Decimal.ToDouble(model.PayRate),
-                    StartDate = GoogleDateTime.FromDateTime(model.StartDate),
+                    StartDate = GoogleDateTime.FromDateTime(model.StartDate.ToUniversalTime()),
                     IsActive = model.IsActive,
                     IsSupervisor = model.IsSupervisor
                 };
