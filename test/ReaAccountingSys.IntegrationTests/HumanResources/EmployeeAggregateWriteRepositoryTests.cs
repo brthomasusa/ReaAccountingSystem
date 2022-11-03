@@ -28,7 +28,7 @@ namespace ReaAccountingSys.IntegrationTests.HumanResources
         {
             EmployeeWriteModel model = EmployeeAggregateTestData.GetEmployeeWriteModelCreate();
             CreateEmployeeCommand command = new CreateEmployeeCommand { WriteModel = model };
-            EmployeeCreateDbInfoHandler dbInfoHandler = new(_writeRepository, _unitOfWork);
+            EmployeeCreateDbInfoHandler dbInfoHandler = new(_writeRepository, _readRepository, _unitOfWork);
 
             OperationResult<bool> result = await dbInfoHandler.Handle(command);
 
@@ -44,7 +44,7 @@ namespace ReaAccountingSys.IntegrationTests.HumanResources
             model.LastName = "Beck";
 
             CreateEmployeeCommand command = new CreateEmployeeCommand { WriteModel = model };
-            EmployeeCreateDbInfoHandler dbInfoHandler = new(_writeRepository, _unitOfWork);
+            EmployeeCreateDbInfoHandler dbInfoHandler = new(_writeRepository, _readRepository, _unitOfWork);
 
             OperationResult<bool> result = await dbInfoHandler.Handle(command);
 

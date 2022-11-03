@@ -28,7 +28,7 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
             {
                 EmployeeDataValidationHandler dataValidator = new();
                 EmployeeBusinessRuleValidationHandler businessRuleValidator = new(_readRepository);
-                EmployeeCreateDbInfoHandler createDbRecordHandler = new(_writeRepository, _unitOfWork);
+                EmployeeCreateDbInfoHandler createDbRecordHandler = new(_writeRepository, _readRepository, _unitOfWork);
 
                 dataValidator.SetNext(businessRuleValidator);
                 businessRuleValidator.SetNext(createDbRecordHandler);

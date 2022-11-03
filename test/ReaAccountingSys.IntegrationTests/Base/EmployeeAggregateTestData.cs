@@ -14,7 +14,7 @@ namespace ReaAccountingSys.IntegrationTests.Base
             {
                 EmployeeId = Guid.NewGuid(),
                 EmployeeType = 1,
-                SupervisorId = new Guid("660bb318-649e-470d-9d2b-693bfb0b2744"),
+                SupervisorId = new Guid("4b900a74-e2d9-4837-b9a4-9e828752716e"),
                 LastName = "Trumpster",
                 FirstName = "Ivanika",
                 MiddleInitial = "I",

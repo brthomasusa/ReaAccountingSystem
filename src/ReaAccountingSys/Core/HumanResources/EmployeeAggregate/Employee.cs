@@ -8,11 +8,12 @@ using ReaAccountingSys.SharedKernel.Utilities;
 
 namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate
 {
+    public delegate Task GroupManagerChangedEventHandler(GroupManagerChangedEvent evnt);
+
     public class Employee : AggregateRoot<Guid>
     {
         private List<TimeCard> _timeCards = new();
 
-        public delegate void GroupManagerChangedEventHandler(GroupManagerChangedEvent evnt);
         public event GroupManagerChangedEventHandler GroupManagerChangedHandler;
 
         protected Employee() { }
@@ -52,10 +53,10 @@ namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate
             IsSupervisor = isSupervisor;
         }
 
-        public void HandleNewSupervisor()
+        public async Task HandleNewSupervisor()
         {
             if (GroupManagerChangedHandler is not null)
-                GroupManagerChangedHandler(new GroupManagerChangedEvent(this));
+                await GroupManagerChangedHandler(new GroupManagerChangedEvent(this));
         }
 
         public EmployeeTypeEnum EmployeeType { get; private set; }
