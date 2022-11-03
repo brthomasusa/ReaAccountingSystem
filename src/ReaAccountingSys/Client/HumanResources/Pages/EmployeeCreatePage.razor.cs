@@ -80,5 +80,71 @@ namespace ReaAccountingSys.Client.HumanResources.Pages
 
             await Task.CompletedTask;
         }
+
+        private async Task OnSelectedJobTitleChanged(int value)
+        {
+            IEnumerable<Guid>? managers = null;
+
+            if (_employeeModel!.IsSupervisor)
+            {
+                managers = from mgr in _getEmployeeState!.Value.EmployeeManagers
+                           where mgr.ManagerFullName == "Ken J Sanchez"
+                           select mgr.ManagerId;
+            }
+            else
+            {
+                managers = from mgr in _getEmployeeState!.Value.EmployeeManagers
+                           where mgr.EmployeeTypeId == value
+                           select mgr.ManagerId;
+            }
+
+            _employeeModel!.SupervisorId = managers.FirstOrDefault();
+            _employeeModel!.EmployeeType = value;
+            await Task.CompletedTask;
+        }
+
+        private async Task OnIsSupervisorChanged(bool isSupervisor)
+        {
+            _employeeModel!.IsSupervisor = isSupervisor;
+
+            IEnumerable<Guid>? managers = null;
+
+            if (isSupervisor)
+            {
+                managers = from mgr in _getEmployeeState!.Value.EmployeeManagers
+                           where mgr.ManagerFullName == "Ken J Sanchez"
+                           select mgr.ManagerId;
+
+                _employeeModel!.SupervisorId = managers!.FirstOrDefault();
+            }
+            else if (_employeeModel!.EmployeeType > 0)
+            {
+                managers = from mgr in _getEmployeeState!.Value.EmployeeManagers
+                           where mgr.EmployeeTypeId == _employeeModel!.EmployeeType
+                           select mgr.ManagerId;
+
+                _employeeModel!.SupervisorId = managers!.FirstOrDefault();
+            }
+
+            await Task.CompletedTask;
+        }
+
+        private void ValidateJobTitle(ValidatorEventArgs e)
+        {
+            var EmployeeTypeId = -1;
+
+            bool isInt = int.TryParse(e.Value.ToString(), out EmployeeTypeId);
+            int lowerBoune = _getEmployeeState!.Value.EmployeeTypes!.Min(t => t.EmployeeTypeId);
+            int upperBoune = _getEmployeeState!.Value.EmployeeTypes!.Max(t => t.EmployeeTypeId);
+
+            bool isValid = (isInt && (EmployeeTypeId >= lowerBoune && EmployeeTypeId <= upperBoune));
+
+            e.Status = isValid ? ValidationStatus.Success : ValidationStatus.Error;
+        }
+
+        private void ValidateIsSupervisor(ValidatorEventArgs e)
+        {
+            e.Status = ValidationStatus.Success;
+        }
     }
 }

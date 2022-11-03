@@ -121,6 +121,8 @@ message EmployeeManager {
     string ManagerId = 1;
     string ManagerFullName = 2;
     string Group = 3;
+    int32 EmployeeTypeId = 4;
+    string JobTitle = 5;    
 }
 
 message EmployeeTypeResponse {

@@ -1,5 +1,6 @@
 #pragma warning disable CS8618
 
+using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.Events;
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.ValueObjects;
 using ReaAccountingSys.SharedKernel;
 using ReaAccountingSys.SharedKernel.CommonValueObjects;
@@ -10,6 +11,9 @@ namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate
     public class Employee : AggregateRoot<Guid>
     {
         private List<TimeCard> _timeCards = new();
+
+        public delegate void GroupManagerChangedEventHandler(GroupManagerChangedEvent evnt);
+        public event GroupManagerChangedEventHandler GroupManagerChangedHandler;
 
         protected Employee() { }
 
@@ -46,6 +50,12 @@ namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate
             EmploymentDate = startDate ?? throw new ArgumentNullException("A hire date is required.");
             IsActive = isActive;
             IsSupervisor = isSupervisor;
+        }
+
+        public void HandleNewSupervisor()
+        {
+            if (GroupManagerChangedHandler is not null)
+                GroupManagerChangedHandler(new GroupManagerChangedEvent(this));
         }
 
         public EmployeeTypeEnum EmployeeType { get; private set; }

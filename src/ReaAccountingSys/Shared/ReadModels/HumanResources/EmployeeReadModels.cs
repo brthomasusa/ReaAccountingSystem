@@ -44,6 +44,8 @@ namespace ReaAccountingSys.Shared.ReadModels.HumanResources
     {
         public Guid ManagerId { get; set; }
         public string? ManagerFullName { get; set; }
+        public int EmployeeTypeId { get; set; }
+        public string? JobTitle { get; set; }
         public string? Group { get; set; }
     }
 

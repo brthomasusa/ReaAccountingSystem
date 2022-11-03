@@ -1,0 +1,1008 @@
+2022-10-31 09:11:31.4143|0|DEBUG|Program|init main 
+2022-10-31 09:11:31.5528|3|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'. 
+2022-10-31 09:11:31.5741|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-31 09:11:31.5803|62|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/home/bthomas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest. 
+2022-10-31 09:11:31.6253|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-31 09:11:31.6253|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-cf0c6397-c129-4f0d-baed-7cbbba02e4b2.xml'. 
+2022-10-31 09:11:31.6253|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa.xml'. 
+2022-10-31 09:11:31.6253|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-62c1834c-86f7-419a-abf4-c7af249ae278.xml'. 
+2022-10-31 09:11:31.6253|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-04b24c34-adeb-46fb-8794-a461c7c2c36d.xml'. 
+2022-10-31 09:11:31.6253|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-e9d0ea64-fe22-4a99-80bf-f8d745526a7d.xml'. 
+2022-10-31 09:11:31.6253|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-952f204c-ebf6-4528-a097-d33ece63c52e.xml'. 
+2022-10-31 09:11:31.6253|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-4695af4c-6350-4172-b2a3-5928763ff7cb.xml'. 
+2022-10-31 09:11:31.6253|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-af4fca88-cc4d-41ac-8af9-7fb8b9d679ab.xml'. 
+2022-10-31 09:11:31.6253|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6.xml'. 
+2022-10-31 09:11:31.6301|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {cf0c6397-c129-4f0d-baed-7cbbba02e4b2}. 
+2022-10-31 09:11:31.6301|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa}. 
+2022-10-31 09:11:31.6301|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {62c1834c-86f7-419a-abf4-c7af249ae278}. 
+2022-10-31 09:11:31.6301|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {04b24c34-adeb-46fb-8794-a461c7c2c36d}. 
+2022-10-31 09:11:31.6301|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e9d0ea64-fe22-4a99-80bf-f8d745526a7d}. 
+2022-10-31 09:11:31.6301|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {952f204c-ebf6-4528-a097-d33ece63c52e}. 
+2022-10-31 09:11:31.6301|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {4695af4c-6350-4172-b2a3-5928763ff7cb}. 
+2022-10-31 09:11:31.6301|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab}. 
+2022-10-31 09:11:31.6301|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6}. 
+2022-10-31 09:11:31.6352|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} with expiration date 2023-01-03 22:58:09Z as default key. 
+2022-10-31 09:11:31.6352|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-31 09:11:31.6376|11|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed symmetric algorithm 'System.Security.Cryptography.Aes'. 
+2022-10-31 09:11:31.6376|10|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'. 
+2022-10-31 09:11:31.6416|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} as the default key. 
+2022-10-31 09:11:31.6416|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} was loaded during application startup. 
+2022-10-31 09:11:31.6887|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 4C10E7CE8CE935963A0D9F602B88FCAA41ADFE10) 
+2022-10-31 09:11:31.7255|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7127 
+2022-10-31 09:11:31.7255|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5246 
+2022-10-31 09:11:31.7255|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ReaAccountingSys.Server 
+2022-10-31 09:11:31.7255|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-10-31 09:11:31.7255|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-31 09:11:31.7255|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-31 09:11:31.7255|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Server/ 
+2022-10-31 09:11:31.7255|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-31 09:11:32.2033|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLR977V1KVK" accepted. 
+2022-10-31 09:11:32.2033|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLR977V1KVK" started. 
+2022-10-31 09:11:32.2358|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLR977V1KVL" accepted. 
+2022-10-31 09:11:32.2358|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLR977V1KVL" started. 
+2022-10-31 09:11:32.2358|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLR977V1KVK" received FIN. 
+2022-10-31 09:11:32.2382|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLR977V1KVL" received FIN. 
+2022-10-31 09:11:32.2382|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLR977V1KVM" accepted. 
+2022-10-31 09:11:32.2408|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLR977V1KVM" started. 
+2022-10-31 09:11:32.2487|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HMLR977V1KVM established using the following protocol: Tls13 
+2022-10-31 09:11:32.2408|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-31 09:11:32.2514|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLR977V1KVL" stopped. 
+2022-10-31 09:11:32.2514|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLR977V1KVL" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-31 09:11:32.2408|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-31 09:11:32.2528|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLR977V1KVK" stopped. 
+2022-10-31 09:11:32.2528|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLR977V1KVK" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-31 09:11:32.2835|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/ - - 
+2022-10-31 09:11:32.2888|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-31 09:11:32.3036|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.3036|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-31 09:11:32.3310|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/' 
+2022-10-31 09:11:32.3329|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/' 
+2022-10-31 09:11:32.3329|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 09:11:32.3329|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 09:11:32.3387|1|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection. 
+2022-10-31 09:11:32.3513|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/index.html'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/index.html' 
+2022-10-31 09:11:32.3513|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 09:11:32.3533|2|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection. 
+2022-10-31 09:11:32.3533|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/ - - - 200 - text/html 73.5042ms 
+2022-10-31 09:11:32.4026|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - 
+2022-10-31 09:11:32.4026|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - 
+2022-10-31 09:11:32.4026|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - 
+2022-10-31 09:11:32.4026|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - 
+2022-10-31 09:11:32.4026|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/app.css - - 
+2022-10-31 09:11:32.4026|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4026|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4026|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4026|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4026|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Fluxor.Blazor.Web/scripts/index.js - - 
+2022-10-31 09:11:32.4026|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4026|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/app.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/app.css' 
+2022-10-31 09:11:32.4026|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/app.css - - - 200 2874 text/css 1.1541ms 
+2022-10-31 09:11:32.4026|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4026|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /_content/Fluxor.Blazor.Web/scripts/index.js does not match an existing file 
+2022-10-31 09:11:32.4026|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Snackbar/blazorise.snackbar.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.snackbar/1.0.6/staticwebassets/blazorise.snackbar.css' 
+2022-10-31 09:11:32.4026|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - - 200 7789 text/css 1.8715ms 
+2022-10-31 09:11:32.4054|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 09:11:32.4091|1003|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value '_content/Fluxor.Blazor.Web/scripts/index.js' for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 09:11:32.4091|1004|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 09:11:32.4091|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-10-31 09:11:32.4091|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - 
+2022-10-31 09:11:32.4091|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4091|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/open-iconic/font/css/open-iconic-bootstrap.min.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css' 
+2022-10-31 09:11:32.4091|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.bootstrap5/1.0.6/staticwebassets/blazorise.bootstrap5.css' 
+2022-10-31 09:11:32.4091|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/blazorise.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/blazorise.css' 
+2022-10-31 09:11:32.4091|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - - 200 59559 text/css 9.6310ms 
+2022-10-31 09:11:32.4091|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 200 9395 text/css 2.6339ms 
+2022-10-31 09:11:32.4091|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - - 200 68769 text/css 9.7323ms 
+2022-10-31 09:11:32.4091|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Fluxor.Blazor.Web/scripts/index.js - - - 404 0 - 9.3519ms 
+2022-10-31 09:11:32.4159|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - 
+2022-10-31 09:11:32.4172|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 1.2834ms 
+2022-10-31 09:11:32.4172|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.webassembly.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.webassembly.js.gz' 
+2022-10-31 09:11:32.4172|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - - 200 19181 application/javascript 15.9047ms 
+2022-10-31 09:11:32.4368|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - 
+2022-10-31 09:11:32.4369|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4369|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.boot.json'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json' 
+2022-10-31 09:11:32.4369|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - - 200 21233 application/json 0.7746ms 
+2022-10-31 09:11:32.4465|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.10.owdd4385u9.js - - 
+2022-10-31 09:11:32.4465|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4465|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/dotnet.6.0.10.owdd4385u9.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/dotnet.6.0.10.owdd4385u9.js.gz' 
+2022-10-31 09:11:32.4465|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.10.owdd4385u9.js - - - 200 64592 application/javascript 0.8116ms 
+2022-10-31 09:11:32.4957|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Shared.dll - - 
+2022-10-31 09:11:32.4957|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4957|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Shared.pdb - - 
+2022-10-31 09:11:32.4957|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Client.dll - - 
+2022-10-31 09:11:32.4957|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Client.pdb - - 
+2022-10-31 09:11:32.4957|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4957|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4957|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:32.4968|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/ReaAccountingSys.Shared.dll.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/ReaAccountingSys.Shared.dll.gz' 
+2022-10-31 09:11:32.4968|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Shared.dll - - - 200 15161 application/octet-stream 1.2774ms 
+2022-10-31 09:11:32.4968|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/ReaAccountingSys.Shared.pdb.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/ReaAccountingSys.Shared.pdb.gz' 
+2022-10-31 09:11:32.4968|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Shared.pdb - - - 200 10425 application/octet-stream 1.1183ms 
+2022-10-31 09:11:32.4968|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/ReaAccountingSys.Client.dll.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/ReaAccountingSys.Client.dll.gz' 
+2022-10-31 09:11:32.4968|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Client.dll - - - 200 88488 application/octet-stream 1.4095ms 
+2022-10-31 09:11:32.4968|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/ReaAccountingSys.Client.pdb.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/ReaAccountingSys.Client.pdb.gz' 
+2022-10-31 09:11:32.4968|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Client.pdb - - - 200 98199 application/octet-stream 1.4967ms 
+2022-10-31 09:11:33.2504|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - 
+2022-10-31 09:11:33.2504|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - - 200 743 application/javascript;+charset=utf-8 0.2101ms 
+2022-10-31 09:11:33.2753|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - 
+2022-10-31 09:11:33.2753|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - - 204 - - 1.3870ms 
+2022-10-31 09:11:33.6933|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/button.js?v=1.0.6.0 - - 
+2022-10-31 09:11:33.6933|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:33.6933|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/button.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/button.js' 
+2022-10-31 09:11:33.6933|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/button.js?v=1.0.6.0 - - - 200 949 application/javascript 0.5301ms 
+2022-10-31 09:11:33.6933|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/breakpoint.js?v=1.0.6.0 - - 
+2022-10-31 09:11:33.6933|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:33.6933|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/breakpoint.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/breakpoint.js' 
+2022-10-31 09:11:33.6933|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/breakpoint.js?v=1.0.6.0 - - - 200 2379 application/javascript 0.2968ms 
+2022-10-31 09:11:33.7094|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/assets/accountant 2.svg - - 
+2022-10-31 09:11:33.7094|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:33.7094|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/assets/accountant 2.svg'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/assets/accountant 2.svg' 
+2022-10-31 09:11:33.7094|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/assets/accountant 2.svg - - - 200 334641 image/svg+xml 1.6307ms 
+2022-10-31 09:11:33.9763|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/utilities.js?v=1.0.6.0 - - 
+2022-10-31 09:11:33.9763|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:33.9763|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/utilities.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/utilities.js' 
+2022-10-31 09:11:33.9768|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/utilities.js?v=1.0.6.0 - - - 200 7664 application/javascript 0.5119ms 
+2022-10-31 09:11:39.5680|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetAll application/grpc-web 10 
+2022-10-31 09:11:39.5680|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 09:11:39.5680|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 09:11:39.5711|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 09:11:39.5711|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetAll' with route pattern '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 09:11:39.5711|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for ReaAccountingSys.GrpcServices.EmployeeService' with route pattern 'ReaAccountingSys.GrpcServices.EmployeeService/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 09:11:39.5711|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 09:11:39.5711|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 09:11:39.5711|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 09:11:39.5711|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2022-10-31 09:11:39.5732|1|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Detected gRPC-Web request from content-type 'application/grpc-web'. 
+2022-10-31 09:11:39.5732|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 09:11:39.5838|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-31 09:11:39.5838|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLR977V1KVM", Request id "0HMLR977V1KVM:0000002B": started reading request body. 
+2022-10-31 09:11:39.5838|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLR977V1KVM", Request id "0HMLR977V1KVM:0000002B": done reading request body. 
+2022-10-31 09:11:39.7005|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/textEdit.js?v=1.0.6.0 - - 
+2022-10-31 09:11:39.7005|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:39.7009|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/textEdit.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/textEdit.js' 
+2022-10-31 09:11:39.7009|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/textEdit.js?v=1.0.6.0 - - - 200 1722 application/javascript 0.4843ms 
+2022-10-31 09:11:39.7057|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-10-31 09:11:39.7168|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/NumericMaskValidator.js?v=1.0.6.0 - - 
+2022-10-31 09:11:39.7168|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/RegExMaskValidator.js?v=1.0.6.0 - - 
+2022-10-31 09:11:39.7168|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/DateTimeMaskValidator.js?v=1.0.6.0 - - 
+2022-10-31 09:11:39.7168|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/NoValidator.js?v=1.0.6.0 - - 
+2022-10-31 09:11:39.7168|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:39.7168|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:39.7168|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:39.7168|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:39.7168|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/validators/NoValidator.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/validators/NoValidator.js' 
+2022-10-31 09:11:39.7168|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/validators/NumericMaskValidator.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/validators/NumericMaskValidator.js' 
+2022-10-31 09:11:39.7168|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/validators/DateTimeMaskValidator.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/validators/DateTimeMaskValidator.js' 
+2022-10-31 09:11:39.7168|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/NoValidator.js?v=1.0.6.0 - - - 200 113 application/javascript 0.3409ms 
+2022-10-31 09:11:39.7168|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/DateTimeMaskValidator.js?v=1.0.6.0 - - - 200 651 application/javascript 0.3537ms 
+2022-10-31 09:11:39.7168|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/NumericMaskValidator.js?v=1.0.6.0 - - - 200 6408 application/javascript 0.4047ms 
+2022-10-31 09:11:39.7168|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/validators/RegExMaskValidator.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/validators/RegExMaskValidator.js' 
+2022-10-31 09:11:39.7168|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/RegExMaskValidator.js?v=1.0.6.0 - - - 200 633 application/javascript 0.4373ms 
+2022-10-31 09:11:40.0441|3|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Sending gRPC-Web response with content-type 'application/grpc-web'. 
+2022-10-31 09:11:40.0441|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-31 09:11:40.0542|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 09:11:40.0583|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetAll application/grpc-web 10 - 200 - application/grpc-web 490.2515ms 
+2022-10-31 09:11:40.1945|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/dropdown.js?v=1.0.6.0 - - 
+2022-10-31 09:11:40.1945|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:40.1945|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/dropdown.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/dropdown.js' 
+2022-10-31 09:11:40.1945|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/dropdown.js?v=1.0.6.0 - - - 200 2741 application/javascript 0.3437ms 
+2022-10-31 09:11:40.2312|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/observer.js?v=1.0.6.0 - - 
+2022-10-31 09:11:40.2312|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/popper.js?v=1.0.6.0 - - 
+2022-10-31 09:11:40.2312|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:40.2312|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:40.2312|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/observer.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/observer.js' 
+2022-10-31 09:11:40.2312|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/observer.js?v=1.0.6.0 - - - 200 2254 application/javascript 0.4400ms 
+2022-10-31 09:11:40.2312|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/popper.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/popper.js' 
+2022-10-31 09:11:40.2312|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/popper.js?v=1.0.6.0 - - - 200 51877 application/javascript 0.5242ms 
+2022-10-31 09:11:42.4805|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers application/grpc-web 5 
+2022-10-31 09:11:42.4805|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 09:11:42.4805|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 09:11:42.4829|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 09:11:42.4829|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' with route pattern '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 09:11:42.4829|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for ReaAccountingSys.GrpcServices.EmployeeService' with route pattern 'ReaAccountingSys.GrpcServices.EmployeeService/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 09:11:42.4829|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 09:11:42.4829|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 09:11:42.4829|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 09:11:42.4829|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2022-10-31 09:11:42.4829|1|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Detected gRPC-Web request from content-type 'application/grpc-web'. 
+2022-10-31 09:11:42.4829|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 09:11:42.4829|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-31 09:11:42.4829|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLR977V1KVM", Request id "0HMLR977V1KVM:0000003D": started reading request body. 
+2022-10-31 09:11:42.4829|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLR977V1KVM", Request id "0HMLR977V1KVM:0000003D": done reading request body. 
+2022-10-31 09:11:42.5109|3|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Sending gRPC-Web response with content-type 'application/grpc-web'. 
+2022-10-31 09:11:42.5109|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-31 09:11:42.5109|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 09:11:42.5109|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers application/grpc-web 5 - 200 - application/grpc-web 31.9604ms 
+2022-10-31 09:11:42.7682|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/numericPicker.js?v=1.0.6.0 - - 
+2022-10-31 09:11:42.7682|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:42.7682|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/numericPicker.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/numericPicker.js' 
+2022-10-31 09:11:42.7682|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/numericPicker.js?v=1.0.6.0 - - - 200 6783 application/javascript 0.4936ms 
+2022-10-31 09:11:42.8303|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes application/grpc-web 5 
+2022-10-31 09:11:42.8303|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 09:11:42.8303|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 09:11:42.8303|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 09:11:42.8303|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' with route pattern '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 09:11:42.8303|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for ReaAccountingSys.GrpcServices.EmployeeService' with route pattern 'ReaAccountingSys.GrpcServices.EmployeeService/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 09:11:42.8303|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 09:11:42.8303|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 09:11:42.8303|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 09:11:42.8303|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2022-10-31 09:11:42.8303|1|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Detected gRPC-Web request from content-type 'application/grpc-web'. 
+2022-10-31 09:11:42.8303|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 09:11:42.8303|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-31 09:11:42.8303|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLR977V1KVM", Request id "0HMLR977V1KVM:00000041": started reading request body. 
+2022-10-31 09:11:42.8303|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLR977V1KVM", Request id "0HMLR977V1KVM:00000041": done reading request body. 
+2022-10-31 09:11:42.8353|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/vendors/autoNumeric.js?v=1.0.6.0 - - 
+2022-10-31 09:11:42.8353|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 09:11:42.8353|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/vendors/autoNumeric.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/vendors/autoNumeric.js' 
+2022-10-31 09:11:42.8353|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/vendors/autoNumeric.js?v=1.0.6.0 - - - 200 219906 application/javascript 1.0490ms 
+2022-10-31 09:11:42.8409|3|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Sending gRPC-Web response with content-type 'application/grpc-web'. 
+2022-10-31 09:11:42.8409|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-31 09:11:42.8409|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 09:11:42.8409|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes application/grpc-web 5 - 200 - application/grpc-web 11.7183ms 
+2022-10-31 09:13:54.6996|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMLR977V1KVM" is closing. 
+2022-10-31 09:13:54.7026|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMLR977V1KVM" is closed. The last processed stream ID was 67. 
+2022-10-31 09:13:54.7026|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLR977V1KVM" received FIN. 
+2022-10-31 09:13:54.7026|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLR977V1KVM" sending FIN because: "The client closed the connection." 
+2022-10-31 09:13:54.7026|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLR977V1KVM" stopped. 
+2022-10-31 19:27:07.1812|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2022-10-31 19:27:07.1812|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2022-10-31 19:27:07.1880|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2022-10-31 19:46:45.5584|0|DEBUG|Program|init main 
+2022-10-31 19:46:45.7966|3|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'. 
+2022-10-31 19:46:45.8335|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-31 19:46:45.8407|62|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/home/bthomas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest. 
+2022-10-31 19:46:45.8935|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-31 19:46:45.8935|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-cf0c6397-c129-4f0d-baed-7cbbba02e4b2.xml'. 
+2022-10-31 19:46:45.8971|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa.xml'. 
+2022-10-31 19:46:45.8971|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-62c1834c-86f7-419a-abf4-c7af249ae278.xml'. 
+2022-10-31 19:46:45.8971|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-04b24c34-adeb-46fb-8794-a461c7c2c36d.xml'. 
+2022-10-31 19:46:45.8971|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-e9d0ea64-fe22-4a99-80bf-f8d745526a7d.xml'. 
+2022-10-31 19:46:45.8971|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-952f204c-ebf6-4528-a097-d33ece63c52e.xml'. 
+2022-10-31 19:46:45.8971|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-4695af4c-6350-4172-b2a3-5928763ff7cb.xml'. 
+2022-10-31 19:46:45.8971|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-af4fca88-cc4d-41ac-8af9-7fb8b9d679ab.xml'. 
+2022-10-31 19:46:45.8971|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6.xml'. 
+2022-10-31 19:46:45.9027|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {cf0c6397-c129-4f0d-baed-7cbbba02e4b2}. 
+2022-10-31 19:46:45.9049|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa}. 
+2022-10-31 19:46:45.9049|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {62c1834c-86f7-419a-abf4-c7af249ae278}. 
+2022-10-31 19:46:45.9049|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {04b24c34-adeb-46fb-8794-a461c7c2c36d}. 
+2022-10-31 19:46:45.9049|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e9d0ea64-fe22-4a99-80bf-f8d745526a7d}. 
+2022-10-31 19:46:45.9049|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {952f204c-ebf6-4528-a097-d33ece63c52e}. 
+2022-10-31 19:46:45.9049|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {4695af4c-6350-4172-b2a3-5928763ff7cb}. 
+2022-10-31 19:46:45.9049|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab}. 
+2022-10-31 19:46:45.9049|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6}. 
+2022-10-31 19:46:45.9111|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} with expiration date 2023-01-03 22:58:09Z as default key. 
+2022-10-31 19:46:45.9131|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-31 19:46:45.9131|11|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed symmetric algorithm 'System.Security.Cryptography.Aes'. 
+2022-10-31 19:46:45.9131|10|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'. 
+2022-10-31 19:46:45.9186|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} as the default key. 
+2022-10-31 19:46:45.9186|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} was loaded during application startup. 
+2022-10-31 19:46:45.9832|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 4C10E7CE8CE935963A0D9F602B88FCAA41ADFE10) 
+2022-10-31 19:46:46.0254|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7127 
+2022-10-31 19:46:46.0254|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5246 
+2022-10-31 19:46:46.0254|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ReaAccountingSys.Server 
+2022-10-31 19:46:46.0254|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-10-31 19:46:46.0254|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-31 19:46:46.0254|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-31 19:46:46.0254|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Server/ 
+2022-10-31 19:46:46.0254|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-31 19:46:46.3245|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRKA6RK54U" accepted. 
+2022-10-31 19:46:46.3245|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRKA6RK54U" started. 
+2022-10-31 19:46:46.3500|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRKA6RK54U" received FIN. 
+2022-10-31 19:46:46.3524|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRKA6RK54V" accepted. 
+2022-10-31 19:46:46.3524|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRKA6RK54V" started. 
+2022-10-31 19:46:46.3623|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HMLRKA6RK54V established using the following protocol: Tls13 
+2022-10-31 19:46:46.3623|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-31 19:46:46.3733|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRKA6RK54U" stopped. 
+2022-10-31 19:46:46.3733|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRKA6RK54U" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-31 19:46:46.3926|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/ - - 
+2022-10-31 19:46:46.4000|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-31 19:46:46.4158|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:46.4161|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-31 19:46:46.4354|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/' 
+2022-10-31 19:46:46.4367|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/' 
+2022-10-31 19:46:46.4367|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 19:46:46.4367|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 19:46:46.4402|1|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection. 
+2022-10-31 19:46:46.4497|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/index.html'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/index.html' 
+2022-10-31 19:46:46.4497|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 19:46:46.4497|2|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection. 
+2022-10-31 19:46:46.4531|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/ - - - 200 - text/html 61.2817ms 
+2022-10-31 19:46:46.4848|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - 
+2022-10-31 19:46:46.4848|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - 
+2022-10-31 19:46:46.4849|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Fluxor.Blazor.Web/scripts/index.js - - 
+2022-10-31 19:46:46.4848|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - 
+2022-10-31 19:46:46.4848|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:46.4848|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:46.4848|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - 
+2022-10-31 19:46:46.4848|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:46.4848|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:46.4848|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:46.4848|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/app.css - - 
+2022-10-31 19:46:46.4848|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /_content/Fluxor.Blazor.Web/scripts/index.js does not match an existing file 
+2022-10-31 19:46:46.4848|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:46.4848|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - 
+2022-10-31 19:46:46.4848|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/app.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/app.css' 
+2022-10-31 19:46:46.4848|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/app.css - - - 200 2874 text/css 1.4379ms 
+2022-10-31 19:46:46.4848|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 19:46:46.4848|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Snackbar/blazorise.snackbar.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.snackbar/1.0.6/staticwebassets/blazorise.snackbar.css' 
+2022-10-31 19:46:46.4848|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - - 200 7789 text/css 2.9957ms 
+2022-10-31 19:46:46.4888|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 2.7748ms 
+2022-10-31 19:46:46.4888|1003|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value '_content/Fluxor.Blazor.Web/scripts/index.js' for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 19:46:46.4888|1004|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 19:46:46.4888|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-10-31 19:46:46.4888|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/blazorise.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/blazorise.css' 
+2022-10-31 19:46:46.4888|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - - 200 68769 text/css 5.3227ms 
+2022-10-31 19:46:46.4888|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Fluxor.Blazor.Web/scripts/index.js - - - 404 0 - 5.3921ms 
+2022-10-31 19:46:46.5024|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.webassembly.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.webassembly.js.gz' 
+2022-10-31 19:46:46.5024|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - - 200 19181 application/javascript 17.9135ms 
+2022-10-31 19:46:46.5212|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.bootstrap5/1.0.6/staticwebassets/blazorise.bootstrap5.css' 
+2022-10-31 19:46:46.5212|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - - 200 59559 text/css 36.3566ms 
+2022-10-31 19:46:46.5341|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - 
+2022-10-31 19:46:46.5341|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:46.5341|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/open-iconic/font/css/open-iconic-bootstrap.min.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css' 
+2022-10-31 19:46:46.5341|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 200 9395 text/css 1.2017ms 
+2022-10-31 19:46:46.5437|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - 
+2022-10-31 19:46:46.5437|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:46.5443|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.boot.json'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json' 
+2022-10-31 19:46:46.5443|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - - 200 21233 application/json 0.7294ms 
+2022-10-31 19:46:46.5610|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.10.owdd4385u9.js - - 
+2022-10-31 19:46:46.5610|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:46.5610|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/dotnet.6.0.10.owdd4385u9.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/dotnet.6.0.10.owdd4385u9.js.gz' 
+2022-10-31 19:46:46.5610|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.10.owdd4385u9.js - - - 200 64592 application/javascript 1.3331ms 
+2022-10-31 19:46:47.3517|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - 
+2022-10-31 19:46:47.3517|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - - 200 743 application/javascript;+charset=utf-8 0.2132ms 
+2022-10-31 19:46:47.3815|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - 
+2022-10-31 19:46:47.3815|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - - 204 - - 1.5307ms 
+2022-10-31 19:46:47.8084|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/button.js?v=1.0.6.0 - - 
+2022-10-31 19:46:47.8084|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:47.8084|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/button.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/button.js' 
+2022-10-31 19:46:47.8084|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/button.js?v=1.0.6.0 - - - 200 949 application/javascript 0.7717ms 
+2022-10-31 19:46:47.8084|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/breakpoint.js?v=1.0.6.0 - - 
+2022-10-31 19:46:47.8084|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:47.8122|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/breakpoint.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/breakpoint.js' 
+2022-10-31 19:46:47.8122|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/breakpoint.js?v=1.0.6.0 - - - 200 2379 application/javascript 0.5233ms 
+2022-10-31 19:46:47.8249|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/assets/accountant 2.svg - - 
+2022-10-31 19:46:47.8249|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:47.8249|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/assets/accountant 2.svg'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/assets/accountant 2.svg' 
+2022-10-31 19:46:47.8281|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/assets/accountant 2.svg - - - 200 334641 image/svg+xml 3.1396ms 
+2022-10-31 19:46:48.1034|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/utilities.js?v=1.0.6.0 - - 
+2022-10-31 19:46:48.1034|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:48.1041|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/utilities.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/utilities.js' 
+2022-10-31 19:46:48.1041|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/utilities.js?v=1.0.6.0 - - - 200 7664 application/javascript 0.7415ms 
+2022-10-31 19:46:48.3889|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/HumanResouces/Pages/EmployeeCreatePage - - 
+2022-10-31 19:46:48.3889|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:48.3889|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /HumanResouces/Pages/EmployeeCreatePage does not match a supported file type 
+2022-10-31 19:46:48.3889|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/HumanResouces/Pages/EmployeeCreatePage' 
+2022-10-31 19:46:48.3889|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/HumanResouces/Pages/EmployeeCreatePage' 
+2022-10-31 19:46:48.3889|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 19:46:48.3889|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 19:46:48.3889|1|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection. 
+2022-10-31 19:46:48.3889|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/index.html'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/index.html' 
+2022-10-31 19:46:48.3889|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 19:46:48.3889|2|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection. 
+2022-10-31 19:46:48.3889|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/HumanResouces/Pages/EmployeeCreatePage - - - 200 - text/html 2.0659ms 
+2022-10-31 19:46:48.4023|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/app.css - - 
+2022-10-31 19:46:48.4023|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - 
+2022-10-31 19:46:48.4023|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - 
+2022-10-31 19:46:48.4023|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - 
+2022-10-31 19:46:48.4023|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - 
+2022-10-31 19:46:48.4023|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - 
+2022-10-31 19:46:48.4023|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Fluxor.Blazor.Web/scripts/index.js - - 
+2022-10-31 19:46:48.4023|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:48.4023|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:48.4023|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:48.4023|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:48.4023|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:48.4023|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:48.4023|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.1010ms 
+2022-10-31 19:46:48.4023|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /_content/Fluxor.Blazor.Web/scripts/index.js does not match an existing file 
+2022-10-31 19:46:48.4023|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 19:46:48.4023|1003|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value '_content/Fluxor.Blazor.Web/scripts/index.js' for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 19:46:48.4023|1004|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 19:46:48.4023|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-10-31 19:46:48.4023|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Fluxor.Blazor.Web/scripts/index.js - - - 404 0 - 0.3127ms 
+2022-10-31 19:46:48.4023|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Snackbar/blazorise.snackbar.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.snackbar/1.0.6/staticwebassets/blazorise.snackbar.css' 
+2022-10-31 19:46:48.4023|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/app.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/app.css' 
+2022-10-31 19:46:48.4023|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - - 200 7789 text/css 0.5691ms 
+2022-10-31 19:46:48.4023|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.bootstrap5/1.0.6/staticwebassets/blazorise.bootstrap5.css' 
+2022-10-31 19:46:48.4023|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.webassembly.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.webassembly.js.gz' 
+2022-10-31 19:46:48.4023|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - - 200 59559 text/css 0.6669ms 
+2022-10-31 19:46:48.4023|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - - 200 19181 application/javascript 0.6576ms 
+2022-10-31 19:46:48.4023|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/app.css - - - 200 2874 text/css 0.7180ms 
+2022-10-31 19:46:48.4023|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/blazorise.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/blazorise.css' 
+2022-10-31 19:46:48.4023|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - - 200 68769 text/css 0.7887ms 
+2022-10-31 19:46:48.4510|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - 
+2022-10-31 19:46:48.4510|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:48.4510|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/open-iconic/font/css/open-iconic-bootstrap.min.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css' 
+2022-10-31 19:46:48.4510|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 200 9395 text/css 0.3237ms 
+2022-10-31 19:46:48.4551|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - 
+2022-10-31 19:46:48.4551|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:48.4551|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.boot.json'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json' 
+2022-10-31 19:46:48.4551|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - - 200 21233 application/json 0.4073ms 
+2022-10-31 19:46:48.4952|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.10.owdd4385u9.js - - 
+2022-10-31 19:46:48.4952|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:48.4952|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/dotnet.6.0.10.owdd4385u9.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/dotnet.6.0.10.owdd4385u9.js.gz' 
+2022-10-31 19:46:48.4952|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.10.owdd4385u9.js - - - 200 64592 application/javascript 0.5878ms 
+2022-10-31 19:46:49.3232|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - 
+2022-10-31 19:46:49.3232|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - - 200 743 application/javascript;+charset=utf-8 0.1726ms 
+2022-10-31 19:46:49.3388|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - 
+2022-10-31 19:46:49.3388|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - - 204 - - 0.1107ms 
+2022-10-31 19:46:49.7950|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/button.js?v=1.0.6.0 - - 
+2022-10-31 19:46:49.7950|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:49.7950|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/button.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/button.js' 
+2022-10-31 19:46:49.7950|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/button.js?v=1.0.6.0 - - - 200 949 application/javascript 0.3612ms 
+2022-10-31 19:46:49.7970|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/breakpoint.js?v=1.0.6.0 - - 
+2022-10-31 19:46:49.7970|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:49.7970|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/breakpoint.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/breakpoint.js' 
+2022-10-31 19:46:49.7970|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/breakpoint.js?v=1.0.6.0 - - - 200 2379 application/javascript 0.2570ms 
+2022-10-31 19:46:50.0663|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/utilities.js?v=1.0.6.0 - - 
+2022-10-31 19:46:50.0663|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 19:46:50.0663|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/utilities.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/utilities.js' 
+2022-10-31 19:46:50.0663|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/utilities.js?v=1.0.6.0 - - - 200 7664 application/javascript 0.4194ms 
+2022-10-31 19:49:01.9561|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMLRKA6RK54V" is closing. 
+2022-10-31 19:49:01.9561|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMLRKA6RK54V" is closed. The last processed stream ID was 65. 
+2022-10-31 19:49:01.9561|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRKA6RK54V" received FIN. 
+2022-10-31 19:49:01.9561|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRKA6RK54V" sending FIN because: "The client closed the connection." 
+2022-10-31 19:49:01.9605|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRKA6RK54V" stopped. 
+2022-10-31 20:36:47.6247|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2022-10-31 20:36:47.6247|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2022-10-31 20:36:47.6374|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2022-10-31 21:48:41.0689|0|DEBUG|Program|init main 
+2022-10-31 21:48:41.2751|3|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'. 
+2022-10-31 21:48:41.2964|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-31 21:48:41.3025|62|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/home/bthomas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest. 
+2022-10-31 21:48:41.3474|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-31 21:48:41.3474|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-cf0c6397-c129-4f0d-baed-7cbbba02e4b2.xml'. 
+2022-10-31 21:48:41.3505|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa.xml'. 
+2022-10-31 21:48:41.3505|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-62c1834c-86f7-419a-abf4-c7af249ae278.xml'. 
+2022-10-31 21:48:41.3505|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-04b24c34-adeb-46fb-8794-a461c7c2c36d.xml'. 
+2022-10-31 21:48:41.3505|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-e9d0ea64-fe22-4a99-80bf-f8d745526a7d.xml'. 
+2022-10-31 21:48:41.3505|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-952f204c-ebf6-4528-a097-d33ece63c52e.xml'. 
+2022-10-31 21:48:41.3505|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-4695af4c-6350-4172-b2a3-5928763ff7cb.xml'. 
+2022-10-31 21:48:41.3505|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-af4fca88-cc4d-41ac-8af9-7fb8b9d679ab.xml'. 
+2022-10-31 21:48:41.3505|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6.xml'. 
+2022-10-31 21:48:41.3556|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {cf0c6397-c129-4f0d-baed-7cbbba02e4b2}. 
+2022-10-31 21:48:41.3556|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa}. 
+2022-10-31 21:48:41.3556|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {62c1834c-86f7-419a-abf4-c7af249ae278}. 
+2022-10-31 21:48:41.3556|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {04b24c34-adeb-46fb-8794-a461c7c2c36d}. 
+2022-10-31 21:48:41.3556|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e9d0ea64-fe22-4a99-80bf-f8d745526a7d}. 
+2022-10-31 21:48:41.3556|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {952f204c-ebf6-4528-a097-d33ece63c52e}. 
+2022-10-31 21:48:41.3556|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {4695af4c-6350-4172-b2a3-5928763ff7cb}. 
+2022-10-31 21:48:41.3556|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab}. 
+2022-10-31 21:48:41.3556|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6}. 
+2022-10-31 21:48:41.3616|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} with expiration date 2023-01-03 22:58:09Z as default key. 
+2022-10-31 21:48:41.3635|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-31 21:48:41.3635|11|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed symmetric algorithm 'System.Security.Cryptography.Aes'. 
+2022-10-31 21:48:41.3635|10|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'. 
+2022-10-31 21:48:41.3704|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} as the default key. 
+2022-10-31 21:48:41.3704|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} was loaded during application startup. 
+2022-10-31 21:48:41.4198|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 4C10E7CE8CE935963A0D9F602B88FCAA41ADFE10) 
+2022-10-31 21:48:41.4561|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7127 
+2022-10-31 21:48:41.4561|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5246 
+2022-10-31 21:48:41.4561|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ReaAccountingSys.Server 
+2022-10-31 21:48:41.4561|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-10-31 21:48:41.4561|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-31 21:48:41.4561|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-31 21:48:41.4561|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Server/ 
+2022-10-31 21:48:41.4561|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-31 21:48:41.7081|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRMEB0HUNC" accepted. 
+2022-10-31 21:48:41.7081|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRMEB0HUNC" started. 
+2022-10-31 21:48:41.7246|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRMEB0HUNC" received FIN. 
+2022-10-31 21:48:41.7246|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRMEB0HUND" accepted. 
+2022-10-31 21:48:41.7246|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRMEB0HUND" started. 
+2022-10-31 21:48:41.7331|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HMLRMEB0HUND established using the following protocol: Tls13 
+2022-10-31 21:48:41.7292|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-31 21:48:41.7401|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRMEB0HUNC" stopped. 
+2022-10-31 21:48:41.7401|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRMEB0HUNC" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-31 21:48:41.7609|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/ - - 
+2022-10-31 21:48:41.7678|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-31 21:48:41.7829|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:41.7829|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-31 21:48:41.8108|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/' 
+2022-10-31 21:48:41.8108|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/' 
+2022-10-31 21:48:41.8108|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 21:48:41.8140|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 21:48:41.8140|1|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection. 
+2022-10-31 21:48:41.8272|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/index.html'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/index.html' 
+2022-10-31 21:48:41.8272|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 21:48:41.8272|2|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection. 
+2022-10-31 21:48:41.8316|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - 
+2022-10-31 21:48:41.8316|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - 
+2022-10-31 21:48:41.8316|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:41.8316|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:41.8340|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/ - - - 200 - text/html 74.0626ms 
+2022-10-31 21:48:41.8340|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Snackbar/blazorise.snackbar.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.snackbar/1.0.6/staticwebassets/blazorise.snackbar.css' 
+2022-10-31 21:48:41.8340|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - - 200 7789 text/css 3.0785ms 
+2022-10-31 21:48:41.8389|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/blazorise.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/blazorise.css' 
+2022-10-31 21:48:41.8389|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - - 200 68769 text/css 7.4075ms 
+2022-10-31 21:48:41.8389|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - 
+2022-10-31 21:48:41.8389|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - 
+2022-10-31 21:48:41.8389|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/app.css - - 
+2022-10-31 21:48:41.8389|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Fluxor.Blazor.Web/scripts/index.js - - 
+2022-10-31 21:48:41.8389|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - 
+2022-10-31 21:48:41.8389|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:41.8389|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:41.8389|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:41.8389|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:41.8389|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /_content/Fluxor.Blazor.Web/scripts/index.js does not match an existing file 
+2022-10-31 21:48:41.8389|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/app.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/app.css' 
+2022-10-31 21:48:41.8417|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/app.css - - - 200 2874 text/css 1.1117ms 
+2022-10-31 21:48:41.8417|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.9752ms 
+2022-10-31 21:48:41.8417|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 21:48:41.8417|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.bootstrap5/1.0.6/staticwebassets/blazorise.bootstrap5.css' 
+2022-10-31 21:48:41.8417|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - - 200 59559 text/css 1.8619ms 
+2022-10-31 21:48:41.8417|1003|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value '_content/Fluxor.Blazor.Web/scripts/index.js' for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 21:48:41.8417|1004|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 21:48:41.8417|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-10-31 21:48:41.8417|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Fluxor.Blazor.Web/scripts/index.js - - - 404 0 - 3.9034ms 
+2022-10-31 21:48:41.8520|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - 
+2022-10-31 21:48:41.8520|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:41.8520|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/open-iconic/font/css/open-iconic-bootstrap.min.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css' 
+2022-10-31 21:48:41.8520|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 200 9395 text/css 0.7928ms 
+2022-10-31 21:48:41.8583|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.webassembly.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.webassembly.js.gz' 
+2022-10-31 21:48:41.8583|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - - 200 19181 application/javascript 18.3589ms 
+2022-10-31 21:48:41.8647|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - 
+2022-10-31 21:48:41.8647|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:41.8647|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.boot.json'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json' 
+2022-10-31 21:48:41.8647|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - - 200 21233 application/json 0.5851ms 
+2022-10-31 21:48:41.8781|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.10.owdd4385u9.js - - 
+2022-10-31 21:48:41.8781|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:41.8781|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/dotnet.6.0.10.owdd4385u9.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/dotnet.6.0.10.owdd4385u9.js.gz' 
+2022-10-31 21:48:41.8781|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.10.owdd4385u9.js - - - 200 64592 application/javascript 1.3641ms 
+2022-10-31 21:48:42.6709|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - 
+2022-10-31 21:48:42.6709|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - - 200 743 application/javascript;+charset=utf-8 0.2406ms 
+2022-10-31 21:48:42.6935|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - 
+2022-10-31 21:48:42.6949|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - - 204 - - 1.4136ms 
+2022-10-31 21:48:43.0900|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/button.js?v=1.0.6.0 - - 
+2022-10-31 21:48:43.0900|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:43.0900|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/button.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/button.js' 
+2022-10-31 21:48:43.0900|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/button.js?v=1.0.6.0 - - - 200 949 application/javascript 0.7106ms 
+2022-10-31 21:48:43.0900|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/breakpoint.js?v=1.0.6.0 - - 
+2022-10-31 21:48:43.0900|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:43.0900|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/breakpoint.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/breakpoint.js' 
+2022-10-31 21:48:43.0900|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/breakpoint.js?v=1.0.6.0 - - - 200 2379 application/javascript 0.4874ms 
+2022-10-31 21:48:43.1058|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/assets/accountant 2.svg - - 
+2022-10-31 21:48:43.1058|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:43.1058|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/assets/accountant 2.svg'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/assets/accountant 2.svg' 
+2022-10-31 21:48:43.1058|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/assets/accountant 2.svg - - - 200 334641 image/svg+xml 3.2790ms 
+2022-10-31 21:48:43.3571|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/utilities.js?v=1.0.6.0 - - 
+2022-10-31 21:48:43.3571|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:43.3578|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/utilities.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/utilities.js' 
+2022-10-31 21:48:43.3578|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/utilities.js?v=1.0.6.0 - - - 200 7664 application/javascript 0.7584ms 
+2022-10-31 21:48:47.6460|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetAll application/grpc-web 10 
+2022-10-31 21:48:47.6460|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 21:48:47.6460|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 21:48:47.6460|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 21:48:47.6460|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetAll' with route pattern '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 21:48:47.6460|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for ReaAccountingSys.GrpcServices.EmployeeService' with route pattern 'ReaAccountingSys.GrpcServices.EmployeeService/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 21:48:47.6460|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 21:48:47.6460|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 21:48:47.6460|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 21:48:47.6502|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2022-10-31 21:48:47.6502|1|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Detected gRPC-Web request from content-type 'application/grpc-web'. 
+2022-10-31 21:48:47.6502|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 21:48:47.6632|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-31 21:48:47.6632|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLRMEB0HUND", Request id "0HMLRMEB0HUND:00000023": started reading request body. 
+2022-10-31 21:48:47.6632|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLRMEB0HUND", Request id "0HMLRMEB0HUND:00000023": done reading request body. 
+2022-10-31 21:48:47.7749|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/textEdit.js?v=1.0.6.0 - - 
+2022-10-31 21:48:47.7749|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:47.7749|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/textEdit.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/textEdit.js' 
+2022-10-31 21:48:47.7749|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/textEdit.js?v=1.0.6.0 - - - 200 1722 application/javascript 0.6569ms 
+2022-10-31 21:48:47.7904|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/DateTimeMaskValidator.js?v=1.0.6.0 - - 
+2022-10-31 21:48:47.7904|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/NumericMaskValidator.js?v=1.0.6.0 - - 
+2022-10-31 21:48:47.7904|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/NoValidator.js?v=1.0.6.0 - - 
+2022-10-31 21:48:47.7904|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/RegExMaskValidator.js?v=1.0.6.0 - - 
+2022-10-31 21:48:47.7904|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:47.7904|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:47.7904|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:47.7904|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:47.7904|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/validators/NoValidator.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/validators/NoValidator.js' 
+2022-10-31 21:48:47.7904|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/validators/NumericMaskValidator.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/validators/NumericMaskValidator.js' 
+2022-10-31 21:48:47.7904|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/NumericMaskValidator.js?v=1.0.6.0 - - - 200 6408 application/javascript 0.9379ms 
+2022-10-31 21:48:47.7904|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/NoValidator.js?v=1.0.6.0 - - - 200 113 application/javascript 0.8589ms 
+2022-10-31 21:48:47.7904|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/validators/DateTimeMaskValidator.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/validators/DateTimeMaskValidator.js' 
+2022-10-31 21:48:47.7904|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/validators/RegExMaskValidator.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/validators/RegExMaskValidator.js' 
+2022-10-31 21:48:47.7904|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/DateTimeMaskValidator.js?v=1.0.6.0 - - - 200 651 application/javascript 1.0382ms 
+2022-10-31 21:48:47.7904|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/RegExMaskValidator.js?v=1.0.6.0 - - - 200 633 application/javascript 0.9796ms 
+2022-10-31 21:48:47.7904|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-10-31 21:48:48.1363|3|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Sending gRPC-Web response with content-type 'application/grpc-web'. 
+2022-10-31 21:48:48.1363|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-31 21:48:48.1467|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 21:48:48.1506|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetAll application/grpc-web 10 - 200 - application/grpc-web 504.5582ms 
+2022-10-31 21:48:48.3047|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/dropdown.js?v=1.0.6.0 - - 
+2022-10-31 21:48:48.3047|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:48.3047|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/dropdown.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/dropdown.js' 
+2022-10-31 21:48:48.3047|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/dropdown.js?v=1.0.6.0 - - - 200 2741 application/javascript 0.6160ms 
+2022-10-31 21:48:48.3376|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/observer.js?v=1.0.6.0 - - 
+2022-10-31 21:48:48.3376|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/popper.js?v=1.0.6.0 - - 
+2022-10-31 21:48:48.3376|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:48.3376|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 21:48:48.3383|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/observer.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/observer.js' 
+2022-10-31 21:48:48.3383|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/observer.js?v=1.0.6.0 - - - 200 2254 application/javascript 0.7964ms 
+2022-10-31 21:48:48.3383|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/popper.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/popper.js' 
+2022-10-31 21:48:48.3383|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/popper.js?v=1.0.6.0 - - - 200 51877 application/javascript 1.2398ms 
+2022-10-31 21:50:59.4171|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMLRMEB0HUND" is closing. 
+2022-10-31 21:50:59.4171|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMLRMEB0HUND" is closed. The last processed stream ID was 51. 
+2022-10-31 21:50:59.4171|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRMEB0HUND" received FIN. 
+2022-10-31 21:50:59.4171|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRMEB0HUND" sending FIN because: "The client closed the connection." 
+2022-10-31 21:50:59.4218|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRMEB0HUND" stopped. 
+2022-10-31 22:40:06.5088|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRMEB0HUNE" accepted. 
+2022-10-31 22:40:06.5088|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRMEB0HUNE" started. 
+2022-10-31 22:40:06.5132|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRMEB0HUNE" received FIN. 
+2022-10-31 22:40:06.5132|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRMEB0HUNF" accepted. 
+2022-10-31 22:40:06.5132|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRMEB0HUNF" started. 
+2022-10-31 22:40:06.5132|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-31 22:40:06.5138|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRMEB0HUNE" stopped. 
+2022-10-31 22:40:06.5138|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRMEB0HUNE" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-31 22:40:06.5138|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HMLRMEB0HUNF established using the following protocol: Tls13 
+2022-10-31 22:40:06.5138|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers application/grpc-web 5 
+2022-10-31 22:40:06.5138|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 22:40:06.5138|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 22:40:06.5188|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:40:06.5188|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' with route pattern '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:40:06.5188|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for ReaAccountingSys.GrpcServices.EmployeeService' with route pattern 'ReaAccountingSys.GrpcServices.EmployeeService/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:40:06.5188|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:40:06.5188|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:40:06.5188|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:40:06.5188|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2022-10-31 22:40:06.5188|1|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Detected gRPC-Web request from content-type 'application/grpc-web'. 
+2022-10-31 22:40:06.5188|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:40:06.5188|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-31 22:40:06.5188|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLRMEB0HUNF", Request id "0HMLRMEB0HUNF:00000001": started reading request body. 
+2022-10-31 22:40:06.5188|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLRMEB0HUNF", Request id "0HMLRMEB0HUNF:00000001": done reading request body. 
+2022-10-31 22:40:06.5859|3|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Sending gRPC-Web response with content-type 'application/grpc-web'. 
+2022-10-31 22:40:06.5859|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-31 22:40:06.5859|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:40:06.5859|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers application/grpc-web 5 - 200 - application/grpc-web 70.9906ms 
+2022-10-31 22:40:06.7687|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/numericPicker.js?v=1.0.6.0 - - 
+2022-10-31 22:40:06.7687|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:40:06.7687|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/numericPicker.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/numericPicker.js' 
+2022-10-31 22:40:06.7687|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/numericPicker.js?v=1.0.6.0 - - - 200 6783 application/javascript 0.5766ms 
+2022-10-31 22:40:06.8187|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes application/grpc-web 5 
+2022-10-31 22:40:06.8187|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 22:40:06.8187|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 22:40:06.8187|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:40:06.8187|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' with route pattern '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:40:06.8187|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for ReaAccountingSys.GrpcServices.EmployeeService' with route pattern 'ReaAccountingSys.GrpcServices.EmployeeService/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:40:06.8187|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:40:06.8187|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:40:06.8187|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:40:06.8187|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2022-10-31 22:40:06.8187|1|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Detected gRPC-Web request from content-type 'application/grpc-web'. 
+2022-10-31 22:40:06.8187|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:40:06.8187|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-31 22:40:06.8187|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLRMEB0HUNF", Request id "0HMLRMEB0HUNF:00000005": started reading request body. 
+2022-10-31 22:40:06.8187|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLRMEB0HUNF", Request id "0HMLRMEB0HUNF:00000005": done reading request body. 
+2022-10-31 22:40:06.8187|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/vendors/autoNumeric.js?v=1.0.6.0 - - 
+2022-10-31 22:40:06.8187|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:40:06.8231|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/vendors/autoNumeric.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/vendors/autoNumeric.js' 
+2022-10-31 22:40:06.8231|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/vendors/autoNumeric.js?v=1.0.6.0 - - - 200 219906 application/javascript 2.2812ms 
+2022-10-31 22:40:06.8292|3|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Sending gRPC-Web response with content-type 'application/grpc-web'. 
+2022-10-31 22:40:06.8292|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-31 22:40:06.8299|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:40:06.8299|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes application/grpc-web 5 - 200 - application/grpc-web 11.2215ms 
+2022-10-31 22:40:09.7978|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - 
+2022-10-31 22:40:09.7978|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - 
+2022-10-31 22:40:09.7978|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:40:09.7978|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:40:09.7978|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - 
+2022-10-31 22:40:09.7978|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:40:09.7978|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Snackbar/blazorise.snackbar.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.snackbar/1.0.6/staticwebassets/blazorise.snackbar.css' 
+2022-10-31 22:40:09.7978|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - - 200 7789 text/css 0.5163ms 
+2022-10-31 22:40:09.7978|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.bootstrap5/1.0.6/staticwebassets/blazorise.bootstrap5.css' 
+2022-10-31 22:40:09.7978|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - - 200 59559 text/css 0.5190ms 
+2022-10-31 22:40:09.7978|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/app.css - - 
+2022-10-31 22:40:09.7978|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:40:09.7978|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/blazorise.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/blazorise.css' 
+2022-10-31 22:40:09.7978|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - - 200 68769 text/css 1.2065ms 
+2022-10-31 22:40:09.7978|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/app.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/app.css' 
+2022-10-31 22:40:09.7978|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/app.css - - - 200 2874 text/css 0.3432ms 
+2022-10-31 22:41:54.4204|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2022-10-31 22:41:54.4204|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2022-10-31 22:41:54.4261|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMLRMEB0HUNF" is closing. 
+2022-10-31 22:41:54.4261|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMLRMEB0HUNF" is closed. The last processed stream ID was 15. 
+2022-10-31 22:41:54.4261|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRMEB0HUNF" received FIN. 
+2022-10-31 22:41:54.4261|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRMEB0HUNF" sending FIN because: "The client closed the connection." 
+2022-10-31 22:41:54.4261|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRMEB0HUNF" stopped. 
+2022-10-31 22:41:54.4298|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2022-10-31 22:45:02.2476|0|DEBUG|Program|init main 
+2022-10-31 22:45:02.3823|3|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'. 
+2022-10-31 22:45:02.4032|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-31 22:45:02.4091|62|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/home/bthomas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest. 
+2022-10-31 22:45:02.4561|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-31 22:45:02.4580|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-cf0c6397-c129-4f0d-baed-7cbbba02e4b2.xml'. 
+2022-10-31 22:45:02.4580|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa.xml'. 
+2022-10-31 22:45:02.4580|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-62c1834c-86f7-419a-abf4-c7af249ae278.xml'. 
+2022-10-31 22:45:02.4580|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-04b24c34-adeb-46fb-8794-a461c7c2c36d.xml'. 
+2022-10-31 22:45:02.4580|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-e9d0ea64-fe22-4a99-80bf-f8d745526a7d.xml'. 
+2022-10-31 22:45:02.4580|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-952f204c-ebf6-4528-a097-d33ece63c52e.xml'. 
+2022-10-31 22:45:02.4580|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-4695af4c-6350-4172-b2a3-5928763ff7cb.xml'. 
+2022-10-31 22:45:02.4580|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-af4fca88-cc4d-41ac-8af9-7fb8b9d679ab.xml'. 
+2022-10-31 22:45:02.4580|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6.xml'. 
+2022-10-31 22:45:02.4580|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {cf0c6397-c129-4f0d-baed-7cbbba02e4b2}. 
+2022-10-31 22:45:02.4627|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa}. 
+2022-10-31 22:45:02.4627|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {62c1834c-86f7-419a-abf4-c7af249ae278}. 
+2022-10-31 22:45:02.4627|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {04b24c34-adeb-46fb-8794-a461c7c2c36d}. 
+2022-10-31 22:45:02.4627|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e9d0ea64-fe22-4a99-80bf-f8d745526a7d}. 
+2022-10-31 22:45:02.4627|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {952f204c-ebf6-4528-a097-d33ece63c52e}. 
+2022-10-31 22:45:02.4627|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {4695af4c-6350-4172-b2a3-5928763ff7cb}. 
+2022-10-31 22:45:02.4627|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab}. 
+2022-10-31 22:45:02.4627|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6}. 
+2022-10-31 22:45:02.4666|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} with expiration date 2023-01-03 22:58:09Z as default key. 
+2022-10-31 22:45:02.4666|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-31 22:45:02.4666|11|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed symmetric algorithm 'System.Security.Cryptography.Aes'. 
+2022-10-31 22:45:02.4666|10|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'. 
+2022-10-31 22:45:02.4730|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} as the default key. 
+2022-10-31 22:45:02.4730|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} was loaded during application startup. 
+2022-10-31 22:45:02.5195|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 4C10E7CE8CE935963A0D9F602B88FCAA41ADFE10) 
+2022-10-31 22:45:02.5561|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7127 
+2022-10-31 22:45:02.5561|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5246 
+2022-10-31 22:45:02.5561|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ReaAccountingSys.Server 
+2022-10-31 22:45:02.5561|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-10-31 22:45:02.5561|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-31 22:45:02.5561|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-31 22:45:02.5561|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Server/ 
+2022-10-31 22:45:02.5561|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-31 22:45:02.7853|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRNDQL140K" accepted. 
+2022-10-31 22:45:02.7857|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRNDQL140K" started. 
+2022-10-31 22:45:02.8027|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRNDQL140K" received FIN. 
+2022-10-31 22:45:02.8078|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-10-31 22:45:02.8176|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRNDQL140K" stopped. 
+2022-10-31 22:45:02.8179|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRNDQL140K" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-10-31 22:45:02.8398|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRNDQL140L" accepted. 
+2022-10-31 22:45:02.8398|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRNDQL140L" started. 
+2022-10-31 22:45:02.8503|3|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HMLRNDQL140L established using the following protocol: Tls13 
+2022-10-31 22:45:02.8824|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/ - - 
+2022-10-31 22:45:02.8884|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-31 22:45:02.9008|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:02.9008|4|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-31 22:45:02.9176|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/' 
+2022-10-31 22:45:02.9188|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/' 
+2022-10-31 22:45:02.9188|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 22:45:02.9188|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 22:45:02.9221|1|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection. 
+2022-10-31 22:45:02.9315|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/index.html'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/index.html' 
+2022-10-31 22:45:02.9315|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fallback {*path:nonfile}' 
+2022-10-31 22:45:02.9315|2|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection. 
+2022-10-31 22:45:02.9346|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/ - - - 200 - text/html 53.7649ms 
+2022-10-31 22:45:02.9778|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - 
+2022-10-31 22:45:02.9778|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - 
+2022-10-31 22:45:02.9778|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - 
+2022-10-31 22:45:02.9778|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - 
+2022-10-31 22:45:02.9778|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/app.css - - 
+2022-10-31 22:45:02.9778|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:02.9778|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:02.9778|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:02.9778|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:02.9778|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Fluxor.Blazor.Web/scripts/index.js - - 
+2022-10-31 22:45:02.9778|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:02.9778|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:02.9778|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - 
+2022-10-31 22:45:02.9778|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /_content/Fluxor.Blazor.Web/scripts/index.js does not match an existing file 
+2022-10-31 22:45:02.9778|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/app.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/app.css' 
+2022-10-31 22:45:02.9778|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/app.css - - - 200 2874 text/css 0.8374ms 
+2022-10-31 22:45:02.9778|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 22:45:02.9778|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Snackbar/blazorise.snackbar.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.snackbar/1.0.6/staticwebassets/blazorise.snackbar.css' 
+2022-10-31 22:45:02.9778|1003|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value '_content/Fluxor.Blazor.Web/scripts/index.js' for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 22:45:02.9778|1004|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/_content/Fluxor.Blazor.Web/scripts/index.js' 
+2022-10-31 22:45:02.9778|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-10-31 22:45:02.9828|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - 
+2022-10-31 22:45:02.9828|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:02.9828|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - - 200 7789 text/css 6.4548ms 
+2022-10-31 22:45:02.9828|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.bootstrap5/1.0.6/staticwebassets/blazorise.bootstrap5.css' 
+2022-10-31 22:45:02.9828|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - - 200 59559 text/css 6.7401ms 
+2022-10-31 22:45:02.9828|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 6.1260ms 
+2022-10-31 22:45:02.9828|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Fluxor.Blazor.Web/scripts/index.js - - - 404 0 - 6.5933ms 
+2022-10-31 22:45:02.9828|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/blazorise.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/blazorise.css' 
+2022-10-31 22:45:02.9828|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/open-iconic/font/css/open-iconic-bootstrap.min.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css' 
+2022-10-31 22:45:02.9828|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - - 200 68769 text/css 7.1350ms 
+2022-10-31 22:45:02.9828|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/open-iconic/font/css/open-iconic-bootstrap.min.css - - - 200 9395 text/css 2.0671ms 
+2022-10-31 22:45:02.9934|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.webassembly.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.webassembly.js.gz' 
+2022-10-31 22:45:02.9934|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.webassembly.js - - - 200 19181 application/javascript 15.8859ms 
+2022-10-31 22:45:03.0008|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - 
+2022-10-31 22:45:03.0008|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:03.0008|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/blazor.boot.json'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json' 
+2022-10-31 22:45:03.0008|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor.boot.json - - - 200 21231 application/json 0.5133ms 
+2022-10-31 22:45:03.0074|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.10.owdd4385u9.js - - 
+2022-10-31 22:45:03.0074|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:03.0074|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/dotnet.6.0.10.owdd4385u9.js.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/dotnet.6.0.10.owdd4385u9.js.gz' 
+2022-10-31 22:45:03.0074|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/dotnet.6.0.10.owdd4385u9.js - - - 200 64592 application/javascript 0.7786ms 
+2022-10-31 22:45:03.0292|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Client.dll - - 
+2022-10-31 22:45:03.0292|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Client.pdb - - 
+2022-10-31 22:45:03.0292|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:03.0292|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:03.0302|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/ReaAccountingSys.Client.dll.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/ReaAccountingSys.Client.dll.gz' 
+2022-10-31 22:45:03.0302|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Client.dll - - - 200 88485 application/octet-stream 1.0795ms 
+2022-10-31 22:45:03.0302|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_framework/ReaAccountingSys.Client.pdb.gz'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/bin/Debug/net6.0/wwwroot/_framework/ReaAccountingSys.Client.pdb.gz' 
+2022-10-31 22:45:03.0302|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/ReaAccountingSys.Client.pdb - - - 200 98202 application/octet-stream 1.8252ms 
+2022-10-31 22:45:03.7542|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - 
+2022-10-31 22:45:03.7542|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload.js - - - 200 743 application/javascript;+charset=utf-8 0.2606ms 
+2022-10-31 22:45:03.7766|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - 
+2022-10-31 22:45:03.7777|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_framework/blazor-hotreload - - - 204 - - 1.0828ms 
+2022-10-31 22:45:04.1791|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/button.js?v=1.0.6.0 - - 
+2022-10-31 22:45:04.1791|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:04.1791|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/button.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/button.js' 
+2022-10-31 22:45:04.1791|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/button.js?v=1.0.6.0 - - - 200 949 application/javascript 0.4538ms 
+2022-10-31 22:45:04.1822|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/breakpoint.js?v=1.0.6.0 - - 
+2022-10-31 22:45:04.1822|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:04.1822|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/breakpoint.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/breakpoint.js' 
+2022-10-31 22:45:04.1822|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/breakpoint.js?v=1.0.6.0 - - - 200 2379 application/javascript 0.3091ms 
+2022-10-31 22:45:04.1955|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/assets/accountant 2.svg - - 
+2022-10-31 22:45:04.1955|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:04.1980|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/assets/accountant 2.svg'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/assets/accountant 2.svg' 
+2022-10-31 22:45:04.1980|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/assets/accountant 2.svg - - - 200 334641 image/svg+xml 2.5712ms 
+2022-10-31 22:45:04.4387|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/utilities.js?v=1.0.6.0 - - 
+2022-10-31 22:45:04.4387|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:04.4387|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/utilities.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/utilities.js' 
+2022-10-31 22:45:04.4387|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/utilities.js?v=1.0.6.0 - - - 200 7664 application/javascript 0.4505ms 
+2022-10-31 22:45:19.4759|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetAll application/grpc-web 10 
+2022-10-31 22:45:19.4759|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 22:45:19.4759|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 22:45:19.4790|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 22:45:19.4790|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetAll' with route pattern '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 22:45:19.4790|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for ReaAccountingSys.GrpcServices.EmployeeService' with route pattern 'ReaAccountingSys.GrpcServices.EmployeeService/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 22:45:19.4790|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 22:45:19.4790|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 22:45:19.4790|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 22:45:19.4790|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2022-10-31 22:45:19.4790|1|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Detected gRPC-Web request from content-type 'application/grpc-web'. 
+2022-10-31 22:45:19.4834|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 22:45:19.4936|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-31 22:45:19.4939|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLRNDQL140L", Request id "0HMLRNDQL140L:00000027": started reading request body. 
+2022-10-31 22:45:19.4939|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLRNDQL140L", Request id "0HMLRNDQL140L:00000027": done reading request body. 
+2022-10-31 22:45:19.5859|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-10-31 22:45:19.5995|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/textEdit.js?v=1.0.6.0 - - 
+2022-10-31 22:45:19.5995|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:19.5995|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/textEdit.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/textEdit.js' 
+2022-10-31 22:45:19.5995|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/textEdit.js?v=1.0.6.0 - - - 200 1722 application/javascript 0.4177ms 
+2022-10-31 22:45:19.6129|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/NumericMaskValidator.js?v=1.0.6.0 - - 
+2022-10-31 22:45:19.6129|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:19.6129|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/validators/NumericMaskValidator.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/validators/NumericMaskValidator.js' 
+2022-10-31 22:45:19.6129|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/NumericMaskValidator.js?v=1.0.6.0 - - - 200 6408 application/javascript 0.6124ms 
+2022-10-31 22:45:19.6129|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/DateTimeMaskValidator.js?v=1.0.6.0 - - 
+2022-10-31 22:45:19.6129|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:19.6139|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/validators/DateTimeMaskValidator.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/validators/DateTimeMaskValidator.js' 
+2022-10-31 22:45:19.6139|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/DateTimeMaskValidator.js?v=1.0.6.0 - - - 200 651 application/javascript 0.4529ms 
+2022-10-31 22:45:19.6139|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/RegExMaskValidator.js?v=1.0.6.0 - - 
+2022-10-31 22:45:19.6139|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/NoValidator.js?v=1.0.6.0 - - 
+2022-10-31 22:45:19.6139|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:19.6139|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:19.6139|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/validators/RegExMaskValidator.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/validators/RegExMaskValidator.js' 
+2022-10-31 22:45:19.6139|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/validators/NoValidator.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/validators/NoValidator.js' 
+2022-10-31 22:45:19.6139|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/NoValidator.js?v=1.0.6.0 - - - 200 113 application/javascript 0.5380ms 
+2022-10-31 22:45:19.6139|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/validators/RegExMaskValidator.js?v=1.0.6.0 - - - 200 633 application/javascript 0.4707ms 
+2022-10-31 22:45:19.8917|3|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Sending gRPC-Web response with content-type 'application/grpc-web'. 
+2022-10-31 22:45:19.8917|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-31 22:45:19.9022|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetAll' 
+2022-10-31 22:45:19.9061|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetAll application/grpc-web 10 - 200 - application/grpc-web 430.2738ms 
+2022-10-31 22:45:20.0381|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/dropdown.js?v=1.0.6.0 - - 
+2022-10-31 22:45:20.0381|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:20.0381|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/dropdown.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/dropdown.js' 
+2022-10-31 22:45:20.0381|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/dropdown.js?v=1.0.6.0 - - - 200 2741 application/javascript 0.4255ms 
+2022-10-31 22:45:20.0712|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/observer.js?v=1.0.6.0 - - 
+2022-10-31 22:45:20.0712|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/popper.js?v=1.0.6.0 - - 
+2022-10-31 22:45:20.0712|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:20.0712|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:20.0712|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/observer.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/observer.js' 
+2022-10-31 22:45:20.0712|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/observer.js?v=1.0.6.0 - - - 200 2254 application/javascript 0.4555ms 
+2022-10-31 22:45:20.0712|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/popper.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/popper.js' 
+2022-10-31 22:45:20.0712|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/popper.js?v=1.0.6.0 - - - 200 51877 application/javascript 0.6376ms 
+2022-10-31 22:45:21.3438|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers application/grpc-web 5 
+2022-10-31 22:45:21.3438|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 22:45:21.3438|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 22:45:21.3462|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:45:21.3462|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' with route pattern '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:45:21.3462|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for ReaAccountingSys.GrpcServices.EmployeeService' with route pattern 'ReaAccountingSys.GrpcServices.EmployeeService/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:45:21.3462|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:45:21.3462|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:45:21.3462|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:45:21.3462|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2022-10-31 22:45:21.3462|1|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Detected gRPC-Web request from content-type 'application/grpc-web'. 
+2022-10-31 22:45:21.3462|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:45:21.3462|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-31 22:45:21.3462|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLRNDQL140L", Request id "0HMLRNDQL140L:00000039": started reading request body. 
+2022-10-31 22:45:21.3462|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLRNDQL140L", Request id "0HMLRNDQL140L:00000039": done reading request body. 
+2022-10-31 22:45:21.3607|3|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Sending gRPC-Web response with content-type 'application/grpc-web'. 
+2022-10-31 22:45:21.3607|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-31 22:45:21.3620|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetManagers' 
+2022-10-31 22:45:21.3620|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetManagers application/grpc-web 5 - 200 - application/grpc-web 18.3626ms 
+2022-10-31 22:45:21.6087|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/numericPicker.js?v=1.0.6.0 - - 
+2022-10-31 22:45:21.6087|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:21.6087|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/numericPicker.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/numericPicker.js' 
+2022-10-31 22:45:21.6087|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/numericPicker.js?v=1.0.6.0 - - - 200 6783 application/javascript 0.4817ms 
+2022-10-31 22:45:21.6649|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes application/grpc-web 5 
+2022-10-31 22:45:21.6649|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 22:45:21.6649|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-10-31 22:45:21.6649|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|4 candidate(s) found for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:45:21.6649|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' with route pattern '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:45:21.6649|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented method for ReaAccountingSys.GrpcServices.EmployeeService' with route pattern 'ReaAccountingSys.GrpcServices.EmployeeService/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:45:21.6649|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'gRPC - Unimplemented service' with route pattern '{unimplementedService}/{unimplementedMethod}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:45:21.6649|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:45:21.6649|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:45:21.6649|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2022-10-31 22:45:21.6649|1|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Detected gRPC-Web request from content-type 'application/grpc-web'. 
+2022-10-31 22:45:21.6649|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:45:21.6649|10|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Reading message. 
+2022-10-31 22:45:21.6649|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLRNDQL140L", Request id "0HMLRNDQL140L:0000003D": started reading request body. 
+2022-10-31 22:45:21.6649|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMLRNDQL140L", Request id "0HMLRNDQL140L:0000003D": done reading request body. 
+2022-10-31 22:45:21.6665|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/vendors/autoNumeric.js?v=1.0.6.0 - - 
+2022-10-31 22:45:21.6665|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:21.6665|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/vendors/autoNumeric.js'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/vendors/autoNumeric.js' 
+2022-10-31 22:45:21.6665|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/vendors/autoNumeric.js?v=1.0.6.0 - - - 200 219906 application/javascript 0.8493ms 
+2022-10-31 22:45:21.6749|3|DEBUG|Grpc.AspNetCore.Web.Internal.GrpcWebMiddleware|Sending gRPC-Web response with content-type 'application/grpc-web'. 
+2022-10-31 22:45:21.6749|15|DEBUG|Grpc.AspNetCore.Server.ServerCallHandler|Sending message. 
+2022-10-31 22:45:21.6749|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'gRPC - /ReaAccountingSys.GrpcServices.EmployeeService/GetTypes' 
+2022-10-31 22:45:21.6749|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7127/ReaAccountingSys.GrpcServices.EmployeeService/GetTypes application/grpc-web 5 - 200 - application/grpc-web 11.0923ms 
+2022-10-31 22:45:24.4287|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - 
+2022-10-31 22:45:24.4287|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - 
+2022-10-31 22:45:24.4287|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - 
+2022-10-31 22:45:24.4287|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:24.4287|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7127/css/app.css - - 
+2022-10-31 22:45:24.4287|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:24.4287|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:24.4287|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Snackbar/blazorise.snackbar.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.snackbar/1.0.6/staticwebassets/blazorise.snackbar.css' 
+2022-10-31 22:45:24.4287|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Snackbar/blazorise.snackbar.css - - - 200 7789 text/css 0.4821ms 
+2022-10-31 22:45:24.4287|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise/blazorise.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise/1.0.6/staticwebassets/blazorise.css' 
+2022-10-31 22:45:24.4287|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise/blazorise.css - - - 200 68769 text/css 0.9150ms 
+2022-10-31 22:45:24.4298|3|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-10-31 22:45:24.4298|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/app.css'. Physical path: '/home/bthomas/Projects/NetCore/ReaAccountingSystem/src/ReaAccountingSys/Client/wwwroot/css/app.css' 
+2022-10-31 22:45:24.4298|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/css/app.css - - - 200 2874 text/css 1.4091ms 
+2022-10-31 22:45:24.4298|2|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css'. Physical path: '/home/bthomas/.nuget/packages/blazorise.bootstrap5/1.0.6/staticwebassets/blazorise.bootstrap5.css' 
+2022-10-31 22:45:24.4298|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7127/_content/Blazorise.Bootstrap5/blazorise.bootstrap5.css - - - 200 59559 text/css 4.3411ms 
+2022-10-31 22:47:35.5178|36|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMLRNDQL140L" is closing. 
+2022-10-31 22:47:35.5178|48|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMLRNDQL140L" is closed. The last processed stream ID was 71. 
+2022-10-31 22:47:35.5178|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRNDQL140L" received FIN. 
+2022-10-31 22:47:35.5178|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMLRNDQL140L" sending FIN because: "The client closed the connection." 
+2022-10-31 22:47:35.5224|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMLRNDQL140L" stopped. 
+2022-10-31 22:48:39.0271|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2022-10-31 22:48:39.0271|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2022-10-31 22:48:39.0385|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 

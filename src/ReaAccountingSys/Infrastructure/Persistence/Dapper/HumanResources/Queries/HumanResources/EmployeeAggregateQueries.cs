@@ -47,6 +47,8 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Dapper.HumanResources.Quer
         @"SELECT 
             ee.EmployeeId AS ManagerId,
             CONCAT(ee.FirstName,' ',COALESCE(ee.MiddleInitial,''),' ',ee.LastName) as ManagerFullName,
+            types.EmployeeTypeId,
+            types.EmployeeTypeName AS JobTitle,
             CASE
                 WHEN types.EmployeeTypeName = 'Salesperson' THEN 'Sales'        
                 WHEN types.EmployeeTypeName = 'Maintenance' THEN 'Maintenance'
@@ -54,7 +56,7 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Dapper.HumanResources.Quer
                 WHEN types.EmployeeTypeName = 'Purchasing Agent' THEN 'Purchasing'
                 WHEN types.EmployeeTypeName = 'Accountant' THEN 'Accounting'
                 WHEN types.EmployeeTypeName = 'Administrator' THEN 'Administrators'
-            END AS [Group]              
+            END AS [Group]               
         FROM HumanResources.Employees ee
         JOIN HumanResources.EmployeeTypes types ON ee.EmployeeTypeId = types.EmployeeTypeId
         WHERE ee.IsSupervisor = 1

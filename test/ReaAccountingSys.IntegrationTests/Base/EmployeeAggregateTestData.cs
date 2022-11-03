@@ -31,7 +31,7 @@ namespace ReaAccountingSys.IntegrationTests.Base
                 PayRate = 25.00M,
                 StartDate = new DateTime(2022, 2, 13),
                 IsActive = true,
-                IsSupervisor = false
+                IsSupervisor = true
             };
 
         public static EmployeeWriteModel GetEmployeeWriteModelEdit() =>

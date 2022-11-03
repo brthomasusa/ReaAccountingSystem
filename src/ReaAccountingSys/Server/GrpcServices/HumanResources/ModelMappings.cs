@@ -116,7 +116,9 @@ namespace ReaAccountingSys.Server.GrpcServices.HumanResources
                 {
                     ManagerId = manager.ManagerId.ToString(),
                     ManagerFullName = manager.ManagerFullName,
-                    Group = manager.Group
+                    Group = manager.Group,
+                    EmployeeTypeId = manager.EmployeeTypeId,
+                    JobTitle = manager.JobTitle
                 };
             }
             else

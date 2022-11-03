@@ -1,4 +1,5 @@
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate;
+using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.Events;
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.ValueObjects;
 using ReaAccountingSys.Application.Commands.HumanResources;
 using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
@@ -42,6 +43,12 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
 
                 if (addResult.Success)
                 {
+                    // If this is a new supervisor, set IsSupervisor flag
+                    // on current supervisor to false. Enforce rule that a
+                    // can only have one supervisor at a time                    
+                    employee.GroupManagerChangedHandler += OnGroupManagerChanged;
+                    employee.HandleNewSupervisor();
+
                     await _unitOfWork.Commit();
 
                     if (Next is not null)
@@ -60,6 +67,11 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
             {
                 return OperationResult<bool>.CreateFailure(GetExceptionMessage(ex));
             }
+        }
+
+        private void OnGroupManagerChanged(GroupManagerChangedEvent evnt)
+        {
+
         }
 
         private string GetExceptionMessage(Exception ex)

@@ -46,7 +46,9 @@ namespace ReaAccountingSys.Client.Store.UseCases.HumanResources.Shared.Effects
                 {
                     ManagerId = new Guid(item.ManagerId),
                     ManagerFullName = item.ManagerFullName,
-                    Group = item.Group
+                    Group = item.Group,
+                    EmployeeTypeId = item.EmployeeTypeId,
+                    JobTitle = item.JobTitle
                 });
             });
 
