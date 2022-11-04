@@ -1,5 +1,6 @@
 #pragma warning disable CS8600, CS8602, CS8604
 
+using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using ReaAccountingSys.SharedKernel.CommonValueObjects;
 using ReaAccountingSys.SharedKernel.Utilities;
@@ -38,6 +39,28 @@ namespace ReaAccountingSys.Infrastructure.Persistence.Repositories.HumanResource
             catch (Exception ex)
             {
                 return OperationResult<Employee>.CreateFailure(GetExceptionMessage(ex));
+            }
+        }
+
+        public async Task<OperationResult<Employee>> GetByConditionAsync
+        (
+           Expression<Func<Employee, bool>> expression,
+           bool trackChanges
+        )
+        {
+            try
+            {
+                Employee employee = trackChanges ? await _dbContext.Employees.Where(expression).SingleOrDefaultAsync() :
+                                                   await _dbContext.Employees.Where(expression).AsNoTracking().SingleOrDefaultAsync();
+
+                if (employee is not null)
+                    return OperationResult<Employee>.CreateSuccessResult(employee);
+                else
+                    return OperationResult<Employee>.CreateFailure($"Failed to retrieve employee matching expression: {expression.ToString()}");
+            }
+            catch (Exception ex)
+            {
+                return OperationResult<Employee>.CreateFailure(ex.Message);
             }
         }
 

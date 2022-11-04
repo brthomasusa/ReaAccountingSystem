@@ -1,6 +1,6 @@
 using ReaAccountingSys.Application.Commands.HumanResources;
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate;
-using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.Events;
+using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.EventArguments;
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.ValueObjects;
 using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
 using ReaAccountingSys.Shared.ReadModels.HumanResources;
@@ -28,7 +28,7 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
         {
             try
             {
-                Employee employee = new Employee
+                Employee employee = Employee.Create
                 (
                     EntityGuidID.Create(command.WriteModel.EmployeeId),
                     (EmployeeTypeEnum)Enum.ToObject(typeof(EmployeeTypeEnum), command.WriteModel.EmployeeType),
@@ -53,8 +53,8 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
                     // If this is a new supervisor, set IsSupervisor flag
                     // on current supervisor to false. Enforce rule that a
                     // can only have one supervisor at a time                    
-                    employee.GroupManagerChangedHandler += OnGroupManagerChangedHandler;
-                    await employee.HandleNewSupervisor();
+                    employee.GroupManagerChangedEvent += GroupManagerChangedEventHandler;
+                    await employee.HandleNewManager();
 
                     await _unitOfWork.Commit();
 
@@ -76,29 +76,22 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
             }
         }
 
-        private async Task OnGroupManagerChangedHandler(GroupManagerChangedEvent evnt)
+        private void GroupMgrChangedEventHandler(GroupManagerChangedEventArgs evnt)
         {
-            GetEmployeeManagersParameters parameters = new();
-            OperationResult<List<EmployeeManager>> result =
-                await _readRepository.EmployeeAggregate.GetEmployeeManagers(parameters);
+
+        }
+
+        private async Task GroupManagerChangedEventHandler(GroupManagerChangedEventArgs evnt)
+        {
+            OperationResult<Employee> result =
+                await _writeRepository.EmployeeAggregate.GetByConditionAsync(emp => emp.IsSupervisor && emp.EmployeeType == EmployeeTypeEnum.Accountant, true);
 
             if (result.Success)
             {
-                var query = from mgr in result.Result
-                            where mgr.EmployeeTypeId == (int)evnt.Employee.EmployeeType
-                            select mgr.ManagerId;
-
-                OperationResult<Employee> writeResult = await _writeRepository.EmployeeAggregate
-                                                                              .GetByIdAsync(query
-                                                                              .FirstOrDefault());
-
-                if (writeResult.Success)
-                {
-                    Employee empl = writeResult.Result;
-                    empl.UpdateSupervisorId(EntityGuidID.Create(evnt.Employee.SupervisorId));
-                    empl.UpdateIsSupervisor(false);
-                    OperationResult<bool> updateResult = _writeRepository.EmployeeAggregate.Update(empl);
-                }
+                Employee empl = result.Result;
+                empl.UpdateSupervisorId(EntityGuidID.Create(evnt.Employee.SupervisorId));
+                empl.UpdateIsSupervisor(false);
+                OperationResult<bool> updateResult = _writeRepository.EmployeeAggregate.Update(empl);
             }
         }
 

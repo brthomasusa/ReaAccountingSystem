@@ -1,7 +1,7 @@
 using ReaAccountingSys.IntegrationTests.Base;
 using ReaAccountingSys.Application.Commands.HumanResources;
 using ReaAccountingSys.Application.Handlers.HumanResources;
-using ReaAccountingSys.Shared.ValidationModels.HumanResources;
+using ReaAccountingSys.Core.HumanResources.EmployeeAggregate;
 using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
@@ -21,6 +21,16 @@ namespace ReaAccountingSys.IntegrationTests.HumanResources
             _readRepository = new ReadRepositoryManager(_dapperCtx);
             _writeRepository = new WriteRepositoryManager(_dbContext);
             _unitOfWork = new AppUnitOfWork(_dbContext);
+        }
+
+        [Fact]
+        public async void GetByCondition_EmployeeWriteRepository_ShouldSucceed()
+        {
+            OperationResult<Employee> result =
+                await _writeRepository.EmployeeAggregate.GetByConditionAsync(emp => emp.IsSupervisor && emp.EmployeeType == EmployeeTypeEnum.Accountant, true);
+
+            Assert.True(result.Success);
+            Assert.Equal(new Guid("660bb318-649e-470d-9d2b-693bfb0b2744"), result.Result.Id);
         }
 
         [Fact]

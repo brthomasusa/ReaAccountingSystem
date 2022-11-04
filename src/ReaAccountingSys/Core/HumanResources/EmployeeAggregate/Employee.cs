@@ -1,6 +1,6 @@
 #pragma warning disable CS8618
 
-using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.Events;
+using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.EventArguments;
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.ValueObjects;
 using ReaAccountingSys.SharedKernel;
 using ReaAccountingSys.SharedKernel.CommonValueObjects;
@@ -8,17 +8,18 @@ using ReaAccountingSys.SharedKernel.Utilities;
 
 namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate
 {
-    public delegate Task GroupManagerChangedEventHandler(GroupManagerChangedEvent evnt);
+    public delegate Task GroupManagerChanged(GroupManagerChangedEventArgs evnt);
 
     public class Employee : AggregateRoot<Guid>
     {
         private List<TimeCard> _timeCards = new();
 
-        public event GroupManagerChangedEventHandler GroupManagerChangedHandler;
+        public event GroupManagerChanged GroupManagerChangedEvent;
+        public event EventHandler<GroupMgrChangedEventArgs> GroupMgrChangedEvent;
 
         protected Employee() { }
 
-        public Employee
+        private Employee
         (
             EntityGuidID employeeId,
             EmployeeTypeEnum employeeType,
@@ -53,11 +54,54 @@ namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate
             IsSupervisor = isSupervisor;
         }
 
-        public async Task HandleNewSupervisor()
+        public static Employee Create
+        (
+            EntityGuidID employeeId,
+            EmployeeTypeEnum employeeType,
+            EntityGuidID supervisorId,
+            PersonName employeeName,
+            SocialSecurityNumber ssn,
+            EmailAddress emailAddress,
+            PhoneNumber telephone,
+            Address address,
+            MaritalStatus maritalStatus,
+            TaxExemption exemption,
+            PayRate payRate,
+            StartDate startDate,
+            bool isActive,
+            bool isSupervisor
+        )
         {
-            if (GroupManagerChangedHandler is not null)
-                await GroupManagerChangedHandler(new GroupManagerChangedEvent(this));
+            return new Employee
+            (
+                employeeId,
+                employeeType,
+                supervisorId,
+                employeeName,
+                ssn,
+                emailAddress,
+                telephone,
+                address,
+                maritalStatus,
+                exemption,
+                payRate,
+                startDate,
+                isActive,
+                isSupervisor
+            );
         }
+
+        public async Task HandleNewManager()
+        {
+            if (GroupManagerChangedEvent is not null)
+                await GroupManagerChangedEvent(new GroupManagerChangedEventArgs(this));
+        }
+
+        public void HandleNewManager(GroupMgrChangedEventArgs e)
+            => OnGroupMgrChangedEvent(e);
+
+        protected virtual void OnGroupMgrChangedEvent(GroupMgrChangedEventArgs e)
+            => GroupMgrChangedEvent?.Invoke(this, e);
 
         public EmployeeTypeEnum EmployeeType { get; private set; }
         public void UpdateEmployeeType(EmployeeTypeEnum employeeType)
