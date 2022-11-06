@@ -55,12 +55,9 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
                         // If this is a new supervisor, set IsSupervisor flag
                         // on current supervisor to false and set their SupervisorId
                         // to the id of this new employee. Enforce rule that a
-                        // can only have one supervisor at a time                    
-                        // employee.GroupManagerChangedEvent += GroupManagerChangedEventHandler;
-                        // await employee.HandleNewManager();
+                        // group can only have one supervisor at a time                   
 
-
-                        employee.TestEventDispatcher(new GroupMgrChangedEventArgs(employee));
+                        employee.ChangeGroupManager(new GroupManagerChangedEventArgs(employee));
                     }
 
                     await _unitOfWork.Commit();
@@ -80,25 +77,6 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
             catch (Exception ex)
             {
                 return OperationResult<bool>.CreateFailure(GetExceptionMessage(ex));
-            }
-        }
-
-        private void GroupMgrChangedEventHandler(GroupManagerChangedEventArgs evnt)
-        {
-
-        }
-
-        private async Task GroupManagerChangedEventHandler(GroupManagerChangedEventArgs evnt)
-        {
-            OperationResult<Employee> result =
-                await _writeRepository.EmployeeAggregate.GetByConditionAsync(emp => emp.IsSupervisor && emp.EmployeeType == EmployeeTypeEnum.Accountant, true);
-
-            if (result.Success)
-            {
-                Employee empl = result.Result;
-                empl.UpdateSupervisorId(EntityGuidID.Create(evnt.Employee.SupervisorId));
-                empl.UpdateIsSupervisor(false);
-                OperationResult<bool> updateResult = _writeRepository.EmployeeAggregate.Update(empl);
             }
         }
 

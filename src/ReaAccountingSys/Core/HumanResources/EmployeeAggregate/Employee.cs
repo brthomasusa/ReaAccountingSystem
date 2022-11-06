@@ -9,14 +9,9 @@ using ReaAccountingSys.SharedKernel.Utilities;
 
 namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate
 {
-    public delegate Task GroupManagerChanged(GroupManagerChangedEventArgs evnt);
-
     public class Employee : AggregateRoot<Guid>
     {
         private List<TimeCard> _timeCards = new();
-
-        public event GroupManagerChanged GroupManagerChangedEvent;
-        public event EventHandler<GroupMgrChangedEventArgs> GroupMgrChangedEvent;
 
         protected Employee() { }
 
@@ -92,22 +87,10 @@ namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate
             );
         }
 
-        public async Task HandleNewManager()
-        {
-            if (GroupManagerChangedEvent is not null)
-                await GroupManagerChangedEvent(new GroupManagerChangedEventArgs(this));
-        }
-
-        public void HandleNewManager(GroupMgrChangedEventArgs e)
+        public void ChangeGroupManager(GroupManagerChangedEventArgs e)
             => OnGroupMgrChangedEvent(e);
 
-        protected virtual void OnGroupMgrChangedEvent(GroupMgrChangedEventArgs e)
-            => GroupMgrChangedEvent?.Invoke(this, e);
-
-        public void TestEventDispatcher(GroupMgrChangedEventArgs e)
-            => OnTestEventDispatcher(e);
-
-        protected virtual void OnTestEventDispatcher(GroupMgrChangedEventArgs e)
+        protected virtual void OnGroupMgrChangedEvent(GroupManagerChangedEventArgs e)
             => DomainEventDispatcher.Raise<GroupMgrChangedEvent>(new GroupMgrChangedEvent(this, e));
 
         public EmployeeTypeEnum EmployeeType { get; private set; }

@@ -6,7 +6,7 @@ namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate.Events
     public readonly record struct GroupMgrChangedEvent
     (
         object Sender,
-        GroupMgrChangedEventArgs EventArgs
+        GroupManagerChangedEventArgs EventArgs
     ) : IDomainEvent;
 
 }

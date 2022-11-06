@@ -1,8 +1,8 @@
 namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate.EventArguments
 {
-    public class GroupMgrChangedEventArgs : EventArgs
+    public class GroupManagerChangedEventArgs : EventArgs
     {
-        public GroupMgrChangedEventArgs(Employee employee)
+        public GroupManagerChangedEventArgs(Employee employee)
             => Employee = employee;
 
         public Employee Employee { get; init; }
