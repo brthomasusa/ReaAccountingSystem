@@ -526,3 +526,268 @@ VALUES (@p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, 
 2022-11-04 12:47:22.2155|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
 2022-11-04 12:47:22.2155|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
 2022-11-04 12:47:22.2155|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2022-11-04 12:54:13.1745|0|DEBUG|Program|init main 
+2022-11-04 12:54:13.2735|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-11-04 12:54:13.2845|3|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'. 
+2022-11-04 12:54:13.2886|62|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/home/bthomas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest. 
+2022-11-04 12:54:13.3219|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-11-04 12:54:13.3219|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-cf0c6397-c129-4f0d-baed-7cbbba02e4b2.xml'. 
+2022-11-04 12:54:13.3219|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa.xml'. 
+2022-11-04 12:54:13.3219|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-62c1834c-86f7-419a-abf4-c7af249ae278.xml'. 
+2022-11-04 12:54:13.3219|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-04b24c34-adeb-46fb-8794-a461c7c2c36d.xml'. 
+2022-11-04 12:54:13.3219|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-e9d0ea64-fe22-4a99-80bf-f8d745526a7d.xml'. 
+2022-11-04 12:54:13.3219|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-952f204c-ebf6-4528-a097-d33ece63c52e.xml'. 
+2022-11-04 12:54:13.3219|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-4695af4c-6350-4172-b2a3-5928763ff7cb.xml'. 
+2022-11-04 12:54:13.3219|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-af4fca88-cc4d-41ac-8af9-7fb8b9d679ab.xml'. 
+2022-11-04 12:54:13.3219|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file '/home/bthomas/.aspnet/DataProtection-Keys/key-bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6.xml'. 
+2022-11-04 12:54:13.3219|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {cf0c6397-c129-4f0d-baed-7cbbba02e4b2}. 
+2022-11-04 12:54:13.3260|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa}. 
+2022-11-04 12:54:13.3260|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {62c1834c-86f7-419a-abf4-c7af249ae278}. 
+2022-11-04 12:54:13.3260|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {04b24c34-adeb-46fb-8794-a461c7c2c36d}. 
+2022-11-04 12:54:13.3260|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e9d0ea64-fe22-4a99-80bf-f8d745526a7d}. 
+2022-11-04 12:54:13.3260|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {952f204c-ebf6-4528-a097-d33ece63c52e}. 
+2022-11-04 12:54:13.3260|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {4695af4c-6350-4172-b2a3-5928763ff7cb}. 
+2022-11-04 12:54:13.3260|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {af4fca88-cc4d-41ac-8af9-7fb8b9d679ab}. 
+2022-11-04 12:54:13.3260|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {bfe6dcf0-0f89-471c-9ad2-bc56b2504eb6}. 
+2022-11-04 12:54:13.3260|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} with expiration date 2023-01-03 22:58:09Z as default key. 
+2022-11-04 12:54:13.3305|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-11-04 12:54:13.3305|11|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed symmetric algorithm 'System.Security.Cryptography.Aes'. 
+2022-11-04 12:54:13.3305|10|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory|Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'. 
+2022-11-04 12:54:13.3305|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} as the default key. 
+2022-11-04 12:54:13.3305|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {ba3159b0-7ca5-4d50-ba23-19f7d90d9aaa} was loaded during application startup. 
+2022-11-04 12:54:13.3384|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ReaAccountingSys.Server 
+2022-11-04 12:54:13.3384|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-11-04 12:54:13.6326|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost/api/1.0/employees/create application/json 516 
+2022-11-04 12:54:13.6346|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-11-04 12:54:13.6422|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-11-04 12:54:13.6422|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2022-11-04 12:54:13.6422|1|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-11-04 12:54:13.6593|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|2 candidate(s) found for the request path '/api/1.0/employees/create' 
+2022-11-04 12:54:13.6593|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ReaAccountingSys.Server.Controllers.EmployeesController.CreateEmployeeInfo (ReaAccountingSys.Server)' with route pattern 'api/{v:apiVersion}/Employees/create' is valid for the request path '/api/1.0/employees/create' 
+2022-11-04 12:54:13.6593|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/api/1.0/employees/create' 
+2022-11-04 12:54:13.6642|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ReaAccountingSys.Server.Controllers.EmployeesController.CreateEmployeeInfo (ReaAccountingSys.Server)' 
+2022-11-04 12:54:13.6642|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ReaAccountingSys.Server.Controllers.EmployeesController.CreateEmployeeInfo (ReaAccountingSys.Server)' 
+2022-11-04 12:54:13.6795|3|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateEmployeeInfo", controller = "Employees", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEmployeeInfo(ReaAccountingSys.Shared.WriteModels.HumanResources.EmployeeWriteModel) on controller ReaAccountingSys.Server.Controllers.EmployeesController (ReaAccountingSys.Server). 
+2022-11-04 12:54:13.6795|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-11-04 12:54:13.6795|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-11-04 12:54:13.6795|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ReportApiVersionsAttribute (Order: 0) 
+2022-11-04 12:54:13.6795|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-11-04 12:54:13.6795|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter, Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ReportApiVersionsAttribute (Order: 0) 
+2022-11-04 12:54:13.6795|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ReaAccountingSys.Server.Controllers.EmployeesController (ReaAccountingSys.Server) 
+2022-11-04 12:54:13.7341|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-11-04 12:54:13.7478|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ReaAccountingSys.Server.Controllers.EmployeesController (ReaAccountingSys.Server) 
+2022-11-04 12:54:13.7478|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'writeModel' of type 'ReaAccountingSys.Shared.WriteModels.HumanResources.EmployeeWriteModel' ... 
+2022-11-04 12:54:13.7498|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'writeModel' of type 'ReaAccountingSys.Shared.WriteModels.HumanResources.EmployeeWriteModel' using the name '' in request data ... 
+2022-11-04 12:54:13.7498|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2022-11-04 12:54:13.7555|2|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'ReaAccountingSys.Shared.WriteModels.HumanResources.EmployeeWriteModel' 
+2022-11-04 12:54:13.7555|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'writeModel' of type 'ReaAccountingSys.Shared.WriteModels.HumanResources.EmployeeWriteModel'. 
+2022-11-04 12:54:13.7555|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'writeModel' of type 'ReaAccountingSys.Shared.WriteModels.HumanResources.EmployeeWriteModel'. 
+2022-11-04 12:54:13.7555|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'writeModel' of type 'ReaAccountingSys.Shared.WriteModels.HumanResources.EmployeeWriteModel' ... 
+2022-11-04 12:54:13.7611|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'writeModel' of type 'ReaAccountingSys.Shared.WriteModels.HumanResources.EmployeeWriteModel'. 
+2022-11-04 12:54:14.5310|10400|WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2022-11-04 12:54:14.5357|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'Address.EmployeeId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2022-11-04 12:54:14.5357|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'PersonName.EmployeeId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2022-11-04 12:54:14.6697|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled MigrationsAssembly=Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null using lazy loading proxies  
+2022-11-04 12:54:14.7178|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Employee>()
+    .FirstOrDefault(e => object.Equals(
+        objA: EF.Property<object>(e, "Id"), 
+        objB: (object)__get_Item_0))' 
+2022-11-04 12:54:14.7527|10112|DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Employee.EmployeeAddress'. 
+2022-11-04 12:54:14.7527|10112|DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Employee.EmployeeName'. 
+2022-11-04 12:54:14.8542|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Employee>(
+    asyncEnumerable: new SingleQueryingEnumerable<Employee>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.SelectExpression(
+            Client Projections:
+                0 -> Dictionary<IProperty, int> { [Property: Employee.Id (Guid) Required PK FK AfterSave:Throw, 0], [Property: Employee.CreatedDate (DateTime) Required, 1], [Property: Employee.EmailAddress (EmailAddress) Required, 2], [Property: Employee.EmployeePayRate (PayRate) Required, 3], [Property: Employee.EmployeeTelephone (PhoneNumber) Required, 4], [Property: Employee.EmployeeType (EmployeeTypeEnum) Required, 5], [Property: Employee.EmploymentDate (StartDate) Required, 6], [Property: Employee.IsActive (bool) Required, 7], [Property: Employee.IsSupervisor (bool) Required, 8], [Property: Employee.LastModifiedDate (DateTime?), 9], [Property: Employee.MaritalStatus (MaritalStatus) Required, 10], [Property: Employee.SSN (SocialSecurityNumber) Required, 11], [Property: Employee.SupervisorId (Guid) Required, 12], [Property: Employee.TaxExemptions (TaxExemption) Required, 13] }
+                1 -> Dictionary<IProperty, int> { [Property: Address.EmployeeId (no field, Guid) Shadow Required PK FK AfterSave:Throw, 0], [Property: Address.AddressLine1 (string) Required, 14], [Property: Address.AddressLine2 (string), 15], [Property: Address.City (string) Required, 16], [Property: Address.StateCode (string) Required, 17], [Property: Address.Zipcode (string) Required, 18] }
+                2 -> Dictionary<IProperty, int> { [Property: PersonName.EmployeeId (no field, Guid) Shadow Required PK FK AfterSave:Throw, 0], [Property: PersonName.FirstName (string) Required, 19], [Property: PersonName.LastName (string) Required, 20], [Property: PersonName.MiddleInitial (string), 21] }
+            SELECT TOP(1) e.EmployeeId, e.CreatedDate, e.EmailAddress, e.PayRate, e.Telephone, e.EmployeeTypeId, e.StartDate, e.IsActive, e.IsSupervisor, e.LastModifiedDate, e.MaritalStatus, e.SSN, e.SupervisorId, e.Exemptions, e.AddressLine1, e.AddressLine2, e.City, e.StateCode, e.Zipcode, e.FirstName, e.LastName, e.MiddleInitial
+            FROM HumanResources.Employees AS e
+            WHERE e.EmployeeId == @__get_Item_0), 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Employee>, 
+        ReaAccountingSys.Infrastructure.Persistence.DatabaseContext.AppDbContext, 
+        False, 
+        True, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)' 
+2022-11-04 12:54:14.8780|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-11-04 12:54:14.8780|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (1ms). 
+2022-11-04 12:54:14.8837|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:14.8837|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:14.8894|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__get_Item_0='feaa2d9a-71bc-4e20-8ace-0a904d4e69d1' (Nullable = true)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[EmployeeId], [e].[CreatedDate], [e].[EmailAddress], [e].[PayRate], [e].[Telephone], [e].[EmployeeTypeId], [e].[StartDate], [e].[IsActive], [e].[IsSupervisor], [e].[LastModifiedDate], [e].[MaritalStatus], [e].[SSN], [e].[SupervisorId], [e].[Exemptions], [e].[AddressLine1], [e].[AddressLine2], [e].[City], [e].[StateCode], [e].[Zipcode], [e].[FirstName], [e].[LastName], [e].[MiddleInitial]
+FROM [HumanResources].[Employees] AS [e]
+WHERE [e].[EmployeeId] = @__get_Item_0 
+2022-11-04 12:54:14.8986|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (9ms) [Parameters=[@__get_Item_0='feaa2d9a-71bc-4e20-8ace-0a904d4e69d1' (Nullable = true)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[EmployeeId], [e].[CreatedDate], [e].[EmailAddress], [e].[PayRate], [e].[Telephone], [e].[EmployeeTypeId], [e].[StartDate], [e].[IsActive], [e].[IsSupervisor], [e].[LastModifiedDate], [e].[MaritalStatus], [e].[SSN], [e].[SupervisorId], [e].[Exemptions], [e].[AddressLine1], [e].[AddressLine2], [e].[City], [e].[StateCode], [e].[Zipcode], [e].[FirstName], [e].[LastName], [e].[MiddleInitial]
+FROM [HumanResources].[Employees] AS [e]
+WHERE [e].[EmployeeId] = @__get_Item_0 
+2022-11-04 12:54:14.9048|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-11-04 12:54:14.9065|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:14.9065|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:14.9547|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'ExternalAgent' entity with key '{Id: feaa2d9a-71bc-4e20-8ace-0a904d4e69d1}'. 
+2022-11-04 12:54:14.9813|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'Employee' entity with key '{Id: feaa2d9a-71bc-4e20-8ace-0a904d4e69d1}'. 
+2022-11-04 12:54:14.9932|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'Address' entity with key '{EmployeeId: feaa2d9a-71bc-4e20-8ace-0a904d4e69d1}'. 
+2022-11-04 12:54:14.9977|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'PersonName' entity with key '{EmployeeId: feaa2d9a-71bc-4e20-8ace-0a904d4e69d1}'. 
+2022-11-04 12:54:14.9977|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Employee>()
+    .Where(emp => emp.IsSupervisor && (int)emp.EmployeeType == 1)
+    .SingleOrDefault()' 
+2022-11-04 12:54:14.9977|10112|DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Employee.EmployeeAddress'. 
+2022-11-04 12:54:14.9977|10112|DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Employee.EmployeeName'. 
+2022-11-04 12:54:15.0130|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Employee>(
+    asyncEnumerable: new SingleQueryingEnumerable<Employee>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.SelectExpression(
+            Client Projections:
+                0 -> Dictionary<IProperty, int> { [Property: Employee.Id (Guid) Required PK FK AfterSave:Throw, 0], [Property: Employee.CreatedDate (DateTime) Required, 1], [Property: Employee.EmailAddress (EmailAddress) Required, 2], [Property: Employee.EmployeePayRate (PayRate) Required, 3], [Property: Employee.EmployeeTelephone (PhoneNumber) Required, 4], [Property: Employee.EmployeeType (EmployeeTypeEnum) Required, 5], [Property: Employee.EmploymentDate (StartDate) Required, 6], [Property: Employee.IsActive (bool) Required, 7], [Property: Employee.IsSupervisor (bool) Required, 8], [Property: Employee.LastModifiedDate (DateTime?), 9], [Property: Employee.MaritalStatus (MaritalStatus) Required, 10], [Property: Employee.SSN (SocialSecurityNumber) Required, 11], [Property: Employee.SupervisorId (Guid) Required, 12], [Property: Employee.TaxExemptions (TaxExemption) Required, 13] }
+                1 -> Dictionary<IProperty, int> { [Property: Address.EmployeeId (no field, Guid) Shadow Required PK FK AfterSave:Throw, 0], [Property: Address.AddressLine1 (string) Required, 14], [Property: Address.AddressLine2 (string), 15], [Property: Address.City (string) Required, 16], [Property: Address.StateCode (string) Required, 17], [Property: Address.Zipcode (string) Required, 18] }
+                2 -> Dictionary<IProperty, int> { [Property: PersonName.EmployeeId (no field, Guid) Shadow Required PK FK AfterSave:Throw, 0], [Property: PersonName.FirstName (string) Required, 19], [Property: PersonName.LastName (string) Required, 20], [Property: PersonName.MiddleInitial (string), 21] }
+            SELECT TOP(2) e.EmployeeId, e.CreatedDate, e.EmailAddress, e.PayRate, e.Telephone, e.EmployeeTypeId, e.StartDate, e.IsActive, e.IsSupervisor, e.LastModifiedDate, e.MaritalStatus, e.SSN, e.SupervisorId, e.Exemptions, e.AddressLine1, e.AddressLine2, e.City, e.StateCode, e.Zipcode, e.FirstName, e.LastName, e.MiddleInitial
+            FROM HumanResources.Employees AS e
+            WHERE e.IsSupervisor && (e.EmployeeTypeId == 1)), 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Employee>, 
+        ReaAccountingSys.Infrastructure.Persistence.DatabaseContext.AppDbContext, 
+        False, 
+        True, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)' 
+2022-11-04 12:54:15.0139|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-11-04 12:54:15.0139|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-11-04 12:54:15.0139|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:15.0139|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:15.0139|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [e].[EmployeeId], [e].[CreatedDate], [e].[EmailAddress], [e].[PayRate], [e].[Telephone], [e].[EmployeeTypeId], [e].[StartDate], [e].[IsActive], [e].[IsSupervisor], [e].[LastModifiedDate], [e].[MaritalStatus], [e].[SSN], [e].[SupervisorId], [e].[Exemptions], [e].[AddressLine1], [e].[AddressLine2], [e].[City], [e].[StateCode], [e].[Zipcode], [e].[FirstName], [e].[LastName], [e].[MiddleInitial]
+FROM [HumanResources].[Employees] AS [e]
+WHERE ([e].[IsSupervisor] = CAST(1 AS BIT)) AND ([e].[EmployeeTypeId] = 1) 
+2022-11-04 12:54:15.0139|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [e].[EmployeeId], [e].[CreatedDate], [e].[EmailAddress], [e].[PayRate], [e].[Telephone], [e].[EmployeeTypeId], [e].[StartDate], [e].[IsActive], [e].[IsSupervisor], [e].[LastModifiedDate], [e].[MaritalStatus], [e].[SSN], [e].[SupervisorId], [e].[Exemptions], [e].[AddressLine1], [e].[AddressLine2], [e].[City], [e].[StateCode], [e].[Zipcode], [e].[FirstName], [e].[LastName], [e].[MiddleInitial]
+FROM [HumanResources].[Employees] AS [e]
+WHERE ([e].[IsSupervisor] = CAST(1 AS BIT)) AND ([e].[EmployeeTypeId] = 1) 
+2022-11-04 12:54:15.0232|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'Employee' entity with key '{Id: 660bb318-649e-470d-9d2b-693bfb0b2744}'. 
+2022-11-04 12:54:15.0232|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'Address' entity with key '{EmployeeId: 660bb318-649e-470d-9d2b-693bfb0b2744}'. 
+2022-11-04 12:54:15.0263|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'PersonName' entity with key '{EmployeeId: 660bb318-649e-470d-9d2b-693bfb0b2744}'. 
+2022-11-04 12:54:15.0263|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-11-04 12:54:15.0263|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:15.0263|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:15.0354|10802|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The unchanged property 'Employee.IsSupervisor' was detected as changed from 'True' to 'False' and will be marked as modified for entity with key '{Id: 660bb318-649e-470d-9d2b-693bfb0b2744}'. 
+2022-11-04 12:54:15.0382|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The 'Employee' entity with key '{Id: 660bb318-649e-470d-9d2b-693bfb0b2744}' tracked by 'AppDbContext' changed state from 'Unchanged' to 'Modified'. 
+2022-11-04 12:54:15.0382|10802|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The unchanged property 'Employee.LastModifiedDate' was detected as changed from '(null)' to '11/04/2022 17:54:15' and will be marked as modified for entity with key '{Id: 660bb318-649e-470d-9d2b-693bfb0b2744}'. 
+2022-11-04 12:54:15.0427|10406|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|The navigation 'EmployeeProxy.TimeCards' is being lazy-loaded. 
+2022-11-04 12:54:15.0492|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<TimeCard>()
+    .Where(e => object.Equals(
+        objA: EF.Property<object>(e, "EmployeeId"), 
+        objB: (object)__get_Item_0))
+    .AsTracking()' 
+2022-11-04 12:54:15.0535|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<TimeCard>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TimeCard.Id (Guid) Required PK FK AfterSave:Throw, 0], [Property: TimeCard.CreatedDate (DateTime) Required, 1], [Property: TimeCard.EmployeeId (Guid) Required FK Index, 2], [Property: TimeCard.LastModifiedDate (DateTime?), 3], [Property: TimeCard.OvertimeHours (DecimalNotNegative) Required, 4], [Property: TimeCard.PayPeriodEnded (EntityDate) Required, 5], [Property: TimeCard.RegularHours (DecimalNotNegative) Required, 6], [Property: TimeCard.SupervisorId (Guid) Required, 7], [Property: TimeCard.UserId (EntityGuidID) Required, 8] }
+        SELECT t.TimeCardId, t.CreatedDate, t.EmployeeId, t.LastModifiedDate, t.OverTimeHours, t.PayPeriodEnded, t.RegularHours, t.SupervisorId, t.UserId
+        FROM HumanResources.TimeCards AS t
+        WHERE t.EmployeeId == @__get_Item_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TimeCard>, 
+    ReaAccountingSys.Infrastructure.Persistence.DatabaseContext.AppDbContext, 
+    False, 
+    True, 
+    True
+)' 
+2022-11-04 12:54:15.0557|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-11-04 12:54:15.0557|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-11-04 12:54:15.0583|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:15.0583|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:15.0583|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__get_Item_0='660bb318-649e-470d-9d2b-693bfb0b2744' (Nullable = true)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[TimeCardId], [t].[CreatedDate], [t].[EmployeeId], [t].[LastModifiedDate], [t].[OverTimeHours], [t].[PayPeriodEnded], [t].[RegularHours], [t].[SupervisorId], [t].[UserId]
+FROM [HumanResources].[TimeCards] AS [t]
+WHERE [t].[EmployeeId] = @__get_Item_0 
+2022-11-04 12:54:15.0618|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@__get_Item_0='660bb318-649e-470d-9d2b-693bfb0b2744' (Nullable = true)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[TimeCardId], [t].[CreatedDate], [t].[EmployeeId], [t].[LastModifiedDate], [t].[OverTimeHours], [t].[PayPeriodEnded], [t].[RegularHours], [t].[SupervisorId], [t].[UserId]
+FROM [HumanResources].[TimeCards] AS [t]
+WHERE [t].[EmployeeId] = @__get_Item_0 
+2022-11-04 12:54:15.0618|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'TimeCard' entity with key '{Id: 29dc4ad2-5e5a-4f08-bb3d-468abf57a10e}'. 
+2022-11-04 12:54:15.0733|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'TimeCard' entity with key '{Id: a7501599-71ea-4164-818c-c2478fdf7872}'. 
+2022-11-04 12:54:15.0733|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-11-04 12:54:15.0739|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:15.0739|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:15.0787|10004|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'AppDbContext'. 
+2022-11-04 12:54:15.0787|10800|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'AppDbContext'. 
+2022-11-04 12:54:15.0862|10801|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'AppDbContext'. 
+2022-11-04 12:54:15.0958|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:15.0958|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:15.0958|20209|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2022-11-04 12:54:15.1015|20200|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2022-11-04 12:54:15.1086|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The 'Address' entity with key '{EmployeeId: 660bb318-649e-470d-9d2b-693bfb0b2744}' tracked by 'AppDbContext' changed state from 'Unchanged' to 'Modified'. 
+2022-11-04 12:54:15.1086|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The 'PersonName' entity with key '{EmployeeId: 660bb318-649e-470d-9d2b-693bfb0b2744}' tracked by 'AppDbContext' changed state from 'Unchanged' to 'Modified'. 
+2022-11-04 12:54:15.1308|20701|DEBUG|Microsoft.EntityFrameworkCore.Update|Executing update commands individually as the number of batchable commands (2) is smaller than the minimum batch size (4). 
+2022-11-04 12:54:15.1352|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-11-04 12:54:15.1352|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-11-04 12:54:15.1397|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p13='660bb318-649e-470d-9d2b-693bfb0b2744', @p0='2022-11-04T17:54:13.4290392' (Precision = 7), @p1='terri.phide@pipefitterssupply.com' (Nullable = false) (Size = 256), @p2='28.00' (Precision = 18) (Scale = 2), @p3='214-987-1234' (Nullable = false) (Size = 14), @p4='1', @p5='2014-09-22T00:00:00.0000000', @p6='True', @p7='False', @p8='2022-11-04T17:54:15.0273318Z' (Nullable = true) (Precision = 7), @p9='M' (Nullable = false) (Size = 1) (DbType = StringFixedLength), @p10='638912345' (Nullable = false) (Size = 9), @p11='4b900a74-e2d9-4837-b9a4-9e828752716e', @p12='1'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [HumanResources].[Employees] SET [CreatedDate] = @p0, [EmailAddress] = @p1, [PayRate] = @p2, [Telephone] = @p3, [EmployeeTypeId] = @p4, [StartDate] = @p5, [IsActive] = @p6, [IsSupervisor] = @p7, [LastModifiedDate] = @p8, [MaritalStatus] = @p9, [SSN] = @p10, [SupervisorId] = @p11, [Exemptions] = @p12
+WHERE [EmployeeId] = @p13;
+SELECT @@ROWCOUNT; 
+2022-11-04 12:54:15.1431|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@p13='660bb318-649e-470d-9d2b-693bfb0b2744', @p0='2022-11-04T17:54:13.4290392' (Precision = 7), @p1='terri.phide@pipefitterssupply.com' (Nullable = false) (Size = 256), @p2='28.00' (Precision = 18) (Scale = 2), @p3='214-987-1234' (Nullable = false) (Size = 14), @p4='1', @p5='2014-09-22T00:00:00.0000000', @p6='True', @p7='False', @p8='2022-11-04T17:54:15.0273318Z' (Nullable = true) (Precision = 7), @p9='M' (Nullable = false) (Size = 1) (DbType = StringFixedLength), @p10='638912345' (Nullable = false) (Size = 9), @p11='4b900a74-e2d9-4837-b9a4-9e828752716e', @p12='1'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [HumanResources].[Employees] SET [CreatedDate] = @p0, [EmailAddress] = @p1, [PayRate] = @p2, [Telephone] = @p3, [EmployeeTypeId] = @p4, [StartDate] = @p5, [IsActive] = @p6, [IsSupervisor] = @p7, [LastModifiedDate] = @p8, [MaritalStatus] = @p9, [SSN] = @p10, [SupervisorId] = @p11, [Exemptions] = @p12
+WHERE [EmployeeId] = @p13;
+SELECT @@ROWCOUNT; 
+2022-11-04 12:54:15.1464|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-11-04 12:54:15.1464|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-11-04 12:54:15.1464|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-11-04 12:54:15.1500|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='feaa2d9a-71bc-4e20-8ace-0a904d4e69d1', @p1='5', @p2='2022-11-04T17:54:14.9074643Z' (Precision = 7), @p3=NULL (Precision = 7) (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Shared].[ExternalAgents] ([AgentId], [AgentTypeId], [CreatedDate], [LastModifiedDate])
+VALUES (@p0, @p1, @p2, @p3); 
+2022-11-04 12:54:15.1500|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@p0='feaa2d9a-71bc-4e20-8ace-0a904d4e69d1', @p1='5', @p2='2022-11-04T17:54:14.9074643Z' (Precision = 7), @p3=NULL (Precision = 7) (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Shared].[ExternalAgents] ([AgentId], [AgentTypeId], [CreatedDate], [LastModifiedDate])
+VALUES (@p0, @p1, @p2, @p3); 
+2022-11-04 12:54:15.1500|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-11-04 12:54:15.1500|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-11-04 12:54:15.1500|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-11-04 12:54:15.1500|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p4='feaa2d9a-71bc-4e20-8ace-0a904d4e69d1', @p5='2022-11-04T17:54:14.0624010Z' (Precision = 7), @p6='ivanika.trumpster@pipefitterssupply.com' (Nullable = false) (Size = 256), @p7='25.00' (Precision = 18) (Scale = 2), @p8='732-555-5555' (Nullable = false) (Size = 14), @p9='1', @p10='2022-02-13T00:00:00.0000000', @p11='True', @p12='True', @p13=NULL (Precision = 7) (DbType = DateTime2), @p14='M' (Nullable = false) (Size = 1) (DbType = StringFixedLength), @p15='437679876' (Nullable = false) (Size = 9), @p16='4b900a74-e2d9-4837-b9a4-9e828752716e', @p17='3', @p18='139th Street NW' (Nullable = false) (Size = 30), @p19='B1' (Size = 30), @p20='Edison' (Nullable = false) (Size = 30), @p21='NJ' (Nullable = false) (Size = 2) (DbType = StringFixedLength), @p22='08837' (Nullable = false) (Size = 10), @p23='Ivanika' (Nullable = false) (Size = 25), @p24='Trumpster' (Nullable = false) (Size = 25), @p25='I' (Size = 1) (DbType = StringFixedLength)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [HumanResources].[Employees] ([EmployeeId], [CreatedDate], [EmailAddress], [PayRate], [Telephone], [EmployeeTypeId], [StartDate], [IsActive], [IsSupervisor], [LastModifiedDate], [MaritalStatus], [SSN], [SupervisorId], [Exemptions], [AddressLine1], [AddressLine2], [City], [StateCode], [Zipcode], [FirstName], [LastName], [MiddleInitial])
+VALUES (@p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25); 
+2022-11-04 12:54:15.1543|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@p4='feaa2d9a-71bc-4e20-8ace-0a904d4e69d1', @p5='2022-11-04T17:54:14.0624010Z' (Precision = 7), @p6='ivanika.trumpster@pipefitterssupply.com' (Nullable = false) (Size = 256), @p7='25.00' (Precision = 18) (Scale = 2), @p8='732-555-5555' (Nullable = false) (Size = 14), @p9='1', @p10='2022-02-13T00:00:00.0000000', @p11='True', @p12='True', @p13=NULL (Precision = 7) (DbType = DateTime2), @p14='M' (Nullable = false) (Size = 1) (DbType = StringFixedLength), @p15='437679876' (Nullable = false) (Size = 9), @p16='4b900a74-e2d9-4837-b9a4-9e828752716e', @p17='3', @p18='139th Street NW' (Nullable = false) (Size = 30), @p19='B1' (Size = 30), @p20='Edison' (Nullable = false) (Size = 30), @p21='NJ' (Nullable = false) (Size = 2) (DbType = StringFixedLength), @p22='08837' (Nullable = false) (Size = 10), @p23='Ivanika' (Nullable = false) (Size = 25), @p24='Trumpster' (Nullable = false) (Size = 25), @p25='I' (Size = 1) (DbType = StringFixedLength)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [HumanResources].[Employees] ([EmployeeId], [CreatedDate], [EmailAddress], [PayRate], [Telephone], [EmployeeTypeId], [StartDate], [IsActive], [IsSupervisor], [LastModifiedDate], [MaritalStatus], [SSN], [SupervisorId], [Exemptions], [AddressLine1], [AddressLine2], [City], [StateCode], [Zipcode], [FirstName], [LastName], [MiddleInitial])
+VALUES (@p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25); 
+2022-11-04 12:54:15.1543|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-11-04 12:54:15.1543|20210|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2022-11-04 12:54:15.2422|20202|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction. 
+2022-11-04 12:54:15.2422|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:15.2422|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Pipefitters_Test' on server 'tcp:mssql-server,1433'. 
+2022-11-04 12:54:15.2422|20204|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2022-11-04 12:54:15.2479|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The 'ExternalAgent' entity with key '{Id: feaa2d9a-71bc-4e20-8ace-0a904d4e69d1}' tracked by 'AppDbContext' changed state from 'Added' to 'Unchanged'. 
+2022-11-04 12:54:15.2499|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The 'Employee' entity with key '{Id: feaa2d9a-71bc-4e20-8ace-0a904d4e69d1}' tracked by 'AppDbContext' changed state from 'Added' to 'Unchanged'. 
+2022-11-04 12:54:15.2499|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The 'Address' entity with key '{EmployeeId: feaa2d9a-71bc-4e20-8ace-0a904d4e69d1}' tracked by 'AppDbContext' changed state from 'Added' to 'Unchanged'. 
+2022-11-04 12:54:15.2499|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The 'PersonName' entity with key '{EmployeeId: feaa2d9a-71bc-4e20-8ace-0a904d4e69d1}' tracked by 'AppDbContext' changed state from 'Added' to 'Unchanged'. 
+2022-11-04 12:54:15.2499|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The 'Employee' entity with key '{Id: 660bb318-649e-470d-9d2b-693bfb0b2744}' tracked by 'AppDbContext' changed state from 'Modified' to 'Unchanged'. 
+2022-11-04 12:54:15.2499|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The 'Address' entity with key '{EmployeeId: 660bb318-649e-470d-9d2b-693bfb0b2744}' tracked by 'AppDbContext' changed state from 'Modified' to 'Unchanged'. 
+2022-11-04 12:54:15.2499|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The 'PersonName' entity with key '{EmployeeId: 660bb318-649e-470d-9d2b-693bfb0b2744}' tracked by 'AppDbContext' changed state from 'Modified' to 'Unchanged'. 
+2022-11-04 12:54:15.2499|10005|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'AppDbContext' with 3 entities written to the database. 
+2022-11-04 12:54:15.2744|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2022-11-04 12:54:15.2744|6|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter based on Accept header 'application/json'. 
+2022-11-04 12:54:15.2744|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-11-04 12:54:15.2744|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'ReaAccountingSys.Shared.ReadModels.HumanResources.EmployeeReadModel'. 
+2022-11-04 12:54:15.2862|100|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints ReaAccountingSys.Server.Controllers.EmployeesController.Details (ReaAccountingSys.Server) for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-11-04 12:54:15.2862|102|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template api/{v:apiVersion}/Employees/detail/{employeeId:Guid} for ReaAccountingSys.Server.Controllers.EmployeesController.Details (ReaAccountingSys.Server) resulting in /api/1.0/Employees/detail/feaa2d9a-71bc-4e20-8ace-0a904d4e69d1 and  
+2022-11-04 12:54:15.2862|105|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints ReaAccountingSys.Server.Controllers.EmployeesController.Details (ReaAccountingSys.Server) with result /api/1.0/Employees/detail/feaa2d9a-71bc-4e20-8ace-0a904d4e69d1 
+2022-11-04 12:54:15.2997|2|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ReaAccountingSys.Server.Controllers.EmployeesController.CreateEmployeeInfo (ReaAccountingSys.Server) in 1617.1333ms 
+2022-11-04 12:54:15.2997|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ReaAccountingSys.Server.Controllers.EmployeesController.CreateEmployeeInfo (ReaAccountingSys.Server)' 
+2022-11-04 12:54:15.3020|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'AppDbContext' disposed. 
+2022-11-04 12:54:15.3020|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost/api/1.0/employees/create application/json 516 - 201 - application/json;+charset=utf-8 1672.0120ms 
+2022-11-04 12:54:15.3226|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2022-11-04 12:54:15.3226|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2022-11-04 12:54:15.3226|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2022-11-04 12:54:15.3226|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 

@@ -1,12 +1,29 @@
-using Microsoft.EntityFrameworkCore;
+using ReaAccountingSys.Application.Handlers.HumanResources;
 using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
 using ReaAccountingSys.Infrastructure.Persistence.DatabaseContext;
 using ReaAccountingSys.Infrastructure.Persistence.Repositories;
+using ReaAccountingSys.SharedKernel;
+using ReaAccountingSys.SharedKernel.Interfaces;
 
 namespace ReaAccountingSys.Server.Extensions
 {
     public static class ServiceExtensions
     {
+        public static IServiceCollection RegisterDomainEventHandlers(this IServiceCollection services)
+        {
+            var serviceProvider = new ServiceCollection()
+                .Scan(scan => scan
+                    .FromAssemblyOf<GroupMgrChangedEventHandler>()
+                    .AddClasses(classes =>
+                        classes.AssignableTo(typeof(IDomainEventHandler<>)))
+                    .AsImplementedInterfaces()
+                ).BuildServiceProvider();
+
+            DomainEventDispatcher._serviceProvider = serviceProvider;
+
+            return services;
+        }
+
         public static void ConfigureCors(this IServiceCollection services) =>
             services.AddCors(options =>
             {

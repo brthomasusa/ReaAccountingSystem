@@ -50,11 +50,18 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
 
                 if (addResult.Success)
                 {
-                    // If this is a new supervisor, set IsSupervisor flag
-                    // on current supervisor to false. Enforce rule that a
-                    // can only have one supervisor at a time                    
-                    employee.GroupManagerChangedEvent += GroupManagerChangedEventHandler;
-                    await employee.HandleNewManager();
+                    if (employee.IsSupervisor)
+                    {
+                        // If this is a new supervisor, set IsSupervisor flag
+                        // on current supervisor to false and set their SupervisorId
+                        // to the id of this new employee. Enforce rule that a
+                        // can only have one supervisor at a time                    
+                        // employee.GroupManagerChangedEvent += GroupManagerChangedEventHandler;
+                        // await employee.HandleNewManager();
+
+
+                        employee.TestEventDispatcher(new GroupMgrChangedEventArgs(employee));
+                    }
 
                     await _unitOfWork.Commit();
 

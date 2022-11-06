@@ -9,6 +9,11 @@ using ReaAccountingSys.Server.Extensions;
 using ReaAccountingSys.Server.GrpcServices.HumanResources;
 using ReaAccountingSys.Shared.WriteModels.HumanResources;
 
+
+using ReaAccountingSys.SharedKernel;
+using ReaAccountingSys.SharedKernel.Interfaces;
+using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.Events;
+
 var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 logger.Debug("init main");
 
@@ -60,6 +65,7 @@ try
     builder.Services.ConfigureEfCoreDbContext(builder.Configuration);
     builder.Services.ConfigureDapper(builder.Configuration);
     builder.Services.AddRepositoryServices();
+    builder.Services.RegisterDomainEventHandlers();
 
     var app = builder.Build();
 
