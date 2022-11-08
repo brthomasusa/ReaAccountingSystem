@@ -56,12 +56,13 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
                     // to false and set their SupervisorId to the id of this new employee.
 
                     Task<OperationResult<bool>> createTask = _writeRepository.EmployeeAggregate.AddAsync(employee);
+                    createEmplResult = createTask.Result;
+
                     Task<OperationResult<bool>> updateTask = ImplementOneManagerPerGroupRule(employee);
+                    updateMgrStatusResult = updateTask.Result;
 
-                    OperationResult<bool>[] combinedResults = await Task.WhenAll(createTask, updateTask);
-
-                    createEmplResult = combinedResults[0];
-                    updateMgrStatusResult = combinedResults[1];
+                    await createTask;
+                    await updateTask;
 
                     if ((createEmplResult is null || !createEmplResult.Success) ||
                         (updateMgrStatusResult is null || !updateMgrStatusResult.Success))
