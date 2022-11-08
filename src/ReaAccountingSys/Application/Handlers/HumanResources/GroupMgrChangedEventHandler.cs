@@ -13,15 +13,6 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
             Employee employee = evnt.Sender as Employee;
             Console.WriteLine($"Employee: {evnt.EventArgs.Employee.EmployeeName.FirstName} {evnt.EventArgs.Employee.EmployeeName.LastName}");
 
-            //     OperationResult<Employee> result =
-            //         await _writeRepository.EmployeeAggregate.GetByConditionAsync(emp => emp.IsSupervisor && emp.EmployeeType == EmployeeTypeEnum.Accountant, true);
-
-            //     if (result.Success)
-            //     {
-            //         Employee empl = result.Result;
-            //         empl.UpdateSupervisorId(EntityGuidID.Create(evnt.Employee.SupervisorId));
-            //         empl.UpdateIsSupervisor(false);
-            //         OperationResult<bool> updateResult = _writeRepository.EmployeeAggregate.Update(empl);            
         }
     }
 }

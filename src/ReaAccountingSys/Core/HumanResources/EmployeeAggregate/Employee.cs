@@ -1,7 +1,6 @@
 #pragma warning disable CS8618
 
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.Events;
-using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.EventArguments;
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.ValueObjects;
 using ReaAccountingSys.SharedKernel;
 using ReaAccountingSys.SharedKernel.CommonValueObjects;
@@ -91,7 +90,9 @@ namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate
             => OnGroupMgrChangedEvent(e);
 
         protected virtual void OnGroupMgrChangedEvent(GroupManagerChangedEventArgs e)
-            => DomainEventDispatcher.Raise<GroupMgrChangedEvent>(new GroupMgrChangedEvent(this, e));
+        {
+            DomainEventDispatcher.Raise<GroupMgrChangedEvent>(new GroupMgrChangedEvent(this, e));
+        }
 
         public EmployeeTypeEnum EmployeeType { get; private set; }
         public void UpdateEmployeeType(EmployeeTypeEnum employeeType)

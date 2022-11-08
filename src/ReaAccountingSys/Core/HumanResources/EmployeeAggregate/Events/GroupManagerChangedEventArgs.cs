@@ -1,4 +1,4 @@
-namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate.EventArguments
+namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate.Events
 {
     public class GroupManagerChangedEventArgs : EventArgs
     {

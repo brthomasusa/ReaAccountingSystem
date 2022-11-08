@@ -1,4 +1,3 @@
-using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.EventArguments;
 using ReaAccountingSys.SharedKernel.Interfaces;
 
 namespace ReaAccountingSys.Core.HumanResources.EmployeeAggregate.Events

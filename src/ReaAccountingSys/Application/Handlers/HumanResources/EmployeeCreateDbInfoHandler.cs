@@ -1,9 +1,8 @@
 using ReaAccountingSys.Application.Commands.HumanResources;
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate;
-using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.EventArguments;
+using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.Events;
 using ReaAccountingSys.Core.HumanResources.EmployeeAggregate.ValueObjects;
 using ReaAccountingSys.Infrastructure.Persistence.Interfaces;
-using ReaAccountingSys.Shared.ReadModels.HumanResources;
 using ReaAccountingSys.SharedKernel;
 using ReaAccountingSys.SharedKernel.CommonValueObjects;
 using ReaAccountingSys.SharedKernel.Utilities;
@@ -12,17 +11,18 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
 {
     public class EmployeeCreateDbInfoHandler : CommandHandler<CreateEmployeeCommand>
     {
+        // The delegate below can be replaced with Func<Employee, Task<OperationResult<bool>>> (Func<T,TResult>)
+        // private delegate Task<OperationResult<bool>> HandleEmployeeAsync(Employee employee);
+
         private readonly IWriteRepositoryManager _writeRepository;
-        private readonly IReadRepositoryManager _readRepository;
         private readonly IUnitOfWork _unitOfWork;
 
         public EmployeeCreateDbInfoHandler
         (
             IWriteRepositoryManager writeRepo,
-            IReadRepositoryManager readRepo,
             IUnitOfWork uow
         )
-            => (_writeRepository, _readRepository, _unitOfWork) = (writeRepo, readRepo, uow);
+            => (_writeRepository, _unitOfWork) = (writeRepo, uow);
 
         public override async Task<OperationResult<bool>> Handle(CreateEmployeeCommand command)
         {
@@ -46,32 +46,92 @@ namespace ReaAccountingSys.Application.Handlers.HumanResources
                     command.WriteModel.IsSupervisor
                 );
 
-                OperationResult<bool> addResult = await _writeRepository.EmployeeAggregate.AddAsync(employee);
+                OperationResult<bool>? createEmplResult = null;
+                OperationResult<bool>? updateMgrStatusResult = null;
 
-                if (addResult.Success)
+                if (employee.IsSupervisor)
                 {
-                    if (employee.IsSupervisor)
+                    // Enforce rule that a group can only have one supervisor at a time.
+                    // If this is a new supervisor, set IsSupervisor flag of current supervisor
+                    // to false and set their SupervisorId to the id of this new employee.
+
+                    Task<OperationResult<bool>> createTask = _writeRepository.EmployeeAggregate.AddAsync(employee);
+                    Task<OperationResult<bool>> updateTask = ImplementOneManagerPerGroupRule(employee);
+
+                    OperationResult<bool>[] combinedResults = await Task.WhenAll(createTask, updateTask);
+
+                    createEmplResult = combinedResults[0];
+                    updateMgrStatusResult = combinedResults[1];
+
+                    if ((createEmplResult is null || !createEmplResult.Success) ||
+                        (updateMgrStatusResult is null || !updateMgrStatusResult.Success))
                     {
-                        // If this is a new supervisor, set IsSupervisor flag
-                        // on current supervisor to false and set their SupervisorId
-                        // to the id of this new employee. Enforce rule that a
-                        // group can only have one supervisor at a time                   
+                        string createErrMsg = !string.IsNullOrEmpty(createEmplResult!.NonSuccessMessage) ? createEmplResult!.NonSuccessMessage : "Create new employee manager failed!";
+                        string updateErrMsg = !string.IsNullOrEmpty(updateMgrStatusResult!.NonSuccessMessage) ? updateMgrStatusResult!.NonSuccessMessage : "Update existing manager status failed!";
 
-                        employee.ChangeGroupManager(new GroupManagerChangedEventArgs(employee));
+                        System.Text.StringBuilder builder = new();
+
+                        if (createErrMsg is not null)
+                            builder.Append(createErrMsg);
+
+                        if (updateErrMsg is not null)
+                            builder.Append(updateErrMsg);
+
+                        return OperationResult<bool>.CreateFailure($"{builder.ToString()}");
                     }
-
-                    await _unitOfWork.Commit();
-
-                    if (Next is not null)
-                    {
-                        await Next.Handle(command);
-                    }
-
-                    return OperationResult<bool>.CreateSuccessResult(true);
                 }
                 else
                 {
-                    return OperationResult<bool>.CreateFailure(addResult.NonSuccessMessage!);
+                    Task<OperationResult<bool>> createTask = _writeRepository.EmployeeAggregate.AddAsync(employee);
+                    createEmplResult = createTask.Result;
+
+                    await createTask;
+
+                    if ((createEmplResult is null || !createEmplResult.Success))
+                    {
+                        string createErrMsg = !string.IsNullOrEmpty(createEmplResult!.NonSuccessMessage) ? createEmplResult!.NonSuccessMessage : "Create new employee info failed!";
+
+                        return OperationResult<bool>.CreateFailure($"{createErrMsg!}");
+                    }
+                }
+
+                await _unitOfWork.Commit();
+
+                if (Next is not null)
+                {
+                    await Next.Handle(command);
+                }
+
+                return OperationResult<bool>.CreateSuccessResult(true);
+            }
+            catch (Exception ex)
+            {
+                return OperationResult<bool>.CreateFailure(GetExceptionMessage(ex));
+            }
+        }
+
+        private async Task<OperationResult<bool>> ImplementOneManagerPerGroupRule(Employee employee)
+        {
+            try
+            {
+                OperationResult<Employee> getResult =
+                    await _writeRepository.EmployeeAggregate.GetByConditionAsync(emp => emp.IsSupervisor && emp.EmployeeType == employee.EmployeeType, true);
+
+                if (getResult.Success)
+                {
+                    Employee empl = getResult.Result;
+                    empl.UpdateSupervisorId(EntityGuidID.Create(employee.SupervisorId));
+                    empl.UpdateIsSupervisor(false);
+
+                    OperationResult<bool> updateResult = _writeRepository.EmployeeAggregate.Update(empl);
+                    if (updateResult.Success)
+                        return OperationResult<bool>.CreateSuccessResult(true);
+
+                    return OperationResult<bool>.CreateFailure(updateResult.NonSuccessMessage!);
+                }
+                else
+                {
+                    return OperationResult<bool>.CreateFailure(getResult.NonSuccessMessage!);
                 }
             }
             catch (Exception ex)
